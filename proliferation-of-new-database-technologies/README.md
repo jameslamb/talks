@@ -12,4 +12,5 @@
 ## Links
 
 **video link:** https://dominodatalab.wistia.com/medias/0z04na8njm
+
 **slides:** https://www.slideshare.net/dominodatalab/the-proliferation-of-new-database-technologies-and-implications-for-data-science-workflows-82384589
