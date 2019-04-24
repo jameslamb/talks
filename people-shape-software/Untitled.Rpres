@@ -1,0 +1,43 @@
+People Shape Software
+========================================================
+author: James Lamb
+date: April 2019
+autosize: true
+
+A common problem: "Package in R and Python that do the same thing"
+==================================================================
+
+Don't believe me?
+
+- argparse
+- Apache Arrow
+- CatBoost
+- feather
+- LightGBM
+- Apache Spark
+- uptasticsearch
+- xgboost
+- xlearn
+
+A common solution: Different developers work on the different parts
+====================================================================
+
+- PLACEHOLDER: example from LightGBM CONTRIBUTORS.md showing different responsibilities
+
+As a result, the packages in different languages are wildly different
+=====================================================================
+
+- stats from `doppel-cli` here + shoutout to it
+
+Sometimes this happens for technical reasons
+============================================
+
+- ecosystem conventions:
+    - scikit-learn interface in Python
+    - `predict()` interface in base R and used in e.g. `caret`, `parsnip`
+    - `%>%` syntax in R
+- language-specific enhancements:
+    - decorators in Python
+    - S3 methods in R
+- language-specific quirks
+    - nothing in Python is "private"

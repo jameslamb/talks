@@ -1,0 +1,1 @@
+{"name":"feather [r]","language":"r","functions":{"read_feather":{"args":["path","columns"]},"feather_metadata":{"args":"path"},"feather":{"args":"path"},"write_feather":{"args":["x","path"]},"feather_example":{"args":"x"},"feather_examples":{"args":[]}},"classes":{}}
