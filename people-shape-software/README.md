@@ -6,6 +6,6 @@
 
 ## Where this talk has been given:
 
-* (Chicago, IL) [satRdays Chicago](https://chicago2019.satrdays.org)
+* (Chicago, IL) [satRdays Chicago, April 2019](https://chicago2019.satrdays.org)
 
 ## Links

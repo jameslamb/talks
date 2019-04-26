@@ -1,0 +1,592 @@
+---
+title       : Economics as a Science
+subtitle    : This Could be Fun
+author      : James Lamb
+job         : Analyst | Abbott Laboratories
+logo        : 
+framework   : io2012  # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [bootstrap]            # {mathjax, quiz}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+--- 
+
+<footer>
+  <hr></hr>
+  <span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Disclaimer</h2>
+
+<h3 style="color: #C94D00">This presentation contains the personal commentary of the author. It does not reflect the views or opinions of Abbott Laboratories.</h3>
+
+>- <center><img src="./assets/img/science.png"></center>
+
+--- &twocol
+
+<footer>
+  <hr></hr>
+  <span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Contents</h2>
+
+*** =left
+
+<FONT COLOR="#C94D00" SIZE=5><b>I. Introduction</b></FONT>
+<ol type="none">
+    <li><FONT COLOR="#C94D00" SIZE=4>Personal Introduction</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>5</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>"Big Data" is Not the Whole Story</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>6</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>Economics in the Age of Big Data</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>7</FONT></span> </li>
+</ol>
+
+<FONT COLOR="#C94D00" SIZE=5><b>II. What is Science?</b></FONT>
+<ol type="none">
+    <li><FONT COLOR="#C94D00" SIZE=4>Build to Break</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>9</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>The Shoulders of Giants</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>10</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>Big Bertha</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>11</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>Is Economics a Science?</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>12</FONT></span> </li>
+</ol>
+
+<FONT COLOR="#C94D00" SIZE=5><b>III. Doing What we Do Better</b></FONT>
+<ol type="none">
+    <li><FONT COLOR="#C94D00" SIZE=4>Reproducibility</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>14</FONT></span> </li>
+</ol>
+
+*** =right
+
+<ol type="none">
+    <li><FONT COLOR="#C94D00" SIZE=4>Modularity</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>15</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>Cross Validation: The Death of R<sup>2</sup></FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>16-18</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>Cross-Pollination: Tools from Other Disciplines</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>19-20</FONT></span> </li>
+</ol>
+
+<FONT COLOR="#C94D00" SIZE=5><b>IV. New Areas: A Seat at the Table</b></FONT>
+<ol type="none">
+    <li><FONT COLOR="#C94D00" SIZE=4>IoT/IIoT</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>22</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>Block Chain</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>23</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>Autonomous Transportation</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>24</FONT></span> </li>
+</ol>
+
+
+<FONT COLOR="#C94D00" SIZE=5><b>V. Concluding Remarks</b></FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>26-27</FONT></span>
+
+<FONT COLOR="#C94D00" SIZE=5><b>VI. Additional Resources</b></FONT>
+<ol type="none">
+    <li><FONT COLOR="#C94D00" SIZE=4>Tools & Techniques</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>29</FONT></span> </li>
+    <li><FONT COLOR="#C94D00" SIZE=4>Applications</FONT><span style="float:right"><FONT COLOR="#C94D00" SIZE=4>30</FONT></span> </li>
+</ol>    
+
+--- bg:#2554C7;
+
+<h2 style="color: #FFFFFF">Section I.</h2>
+<hr></hr>
+</br></br></br>
+<h2 style="color: #FFFFFF">Introduction</h2>
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3>&nbsp;I. Introduction</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Personal Introduction</h2>
+
+>- <b>My Marquette Experience:</b>
+    - B.S., Economics & Marketing (2013)
+    - M.S.A.E., Marketing Research Specialization (2014)
+    
+>- <b>Since Marquette:</b>
+    - Analyst @ [Abbott Laboratories](http://www.abbott.com/) in North Chicago, IL 2015-Present
+    - Analyst @ [IHS Economics](https://www.ihs.com/industry/economics-country-risk.html) in Lexington, MA 2014-2015
+    - Completed 2 Coursera specializations: [JHU Data Science](https://www.coursera.org/specializations/jhu-data-science) | [UMich Python/Web](https://www.coursera.org/specializations/python)
+    - Completed 20+ data science and computer science MOOCs
+    - Co-wrote an EViews add-in to perform time-series cross validation. [GitHub repo](https://github.com/jameslamb/ML4EVIEWS) | [EV Blog](http://blog.eviews.com/2016/04/add-in-round-up-for-2016-q1.html)
+    - Some outside research on IoT/IIoT, 3D printing, logistics, autonomous transportation...specifics to follow soon!
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3>&nbsp;I. Introduction</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">"Big Data" is Not the Whole Story</h2>
+
+<center><img src=".\\assets\\img\\dilbert_big_data.gif"></center>
+<FONT SIZE=2>&nbsp;&nbsp;&nbsp;Image credit: Scott Adams, [May 07, 2008](http://dilbert.com/strip/2008-05-07)</FONT>
+
+>- <b> Rich Data </b>
+    - [Berners-Lee (2014)](http://www.theguardian.com/technology/2014/oct/08/sir-tim-berners-lee-speaks-out-on-data-ownership): How we combine data is more important than how much we have
+    - Decision-making is context dependent --> We can rebuild context with [recombinant data](http://www.google.com/patents/US8768873)
+    - Imagine new transactions - [Varian (2014)](http://people.ischool.berkeley.edu/~hal/Papers/2013/BeyondBigDataPaperFINAL.pdf) --> reduction of information asymmetries
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cf;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;I. Introduction</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Economics in the Age of Big Data</h2>
+
+**From [Einav & Levin (2014)](http://www.sciencemag.org/content/346/6210/1243089.full.pdf?keytype=ref&siteid=sci&ijkey=Jj7wCy7hhth4M):**
+
+>- Economists increasingly using large data sets (private & administrative)
+    > "Economic models bring a simplifying conceptual framework to to help make sense of large data sets"
+    
+>- A major challenge:
+    > "...developing appropriate data management and programming capabilities, as well as designing creative 
+    > and scalable approaches to summarize, describe, and analyze...data sets"
+
+</br></br></br></br>
+>- Other Commentary: [Einav (2013)](http://www.stanford.edu/~leinav/pubs/IPE2014.pdf) | [Varian (2013)](http://people.ischool.berkeley.edu/~hal/Papers/2013/BeyondBigDataPaperFINAL.pdf) | [Varian (2014)](http://people.ischool.berkeley.edu/~hal/Papers/2013/ml.pdf) | [Cagle (2014)](http://blogs.avalonconsult.com/blog/generic/ontology-for-fun-and-profit/)
+
+--- bg:#2554C7;
+
+<h2 style="color: #FFFFFF">Section II.</h2>
+<hr></hr>
+</br></br></br>
+<h2 style="color: #FFFFFF">What is Science?</h2>
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;II. What is Science?</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Build to Break</h2>
+
+- <center><img src="./assets/img/josh_wills_plane.png"></center>
+
+- [Doing Data Science](http://shop.oreilly.com/product/0636920028529.do)
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf;  &#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;II. What is Science?</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">The Shoulders of Giants</h2>
+
+**Science is cumulative**
+
+>- Nate Silver, *The Signal and The Noise*:
+    > "In science, progress is possible. In fact, if one believes in Bayes' theorem, scientific progress is inevitable as predictions are made and as beliefs are tested and refined."
+
+>- [Josh Wills](https://twitter.com/josh_wills) (paraphrased), ODSC East 2015
+    > "You're doing science when you write code that's meant to be read by other people."
+    
+>- W. Brian Arthur, *[Complexity Economics](http://www.santafe.edu/media/workingpapers/13-04-012.pdf)*
+    > "We are in a world where beliefs, strategies, and actions of agents are being "tested" for survival within a situation or outcome or "ecology" that these beliefs, strategies and actions together create."
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf;  &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;II. What is Science?</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Big Bertha</h2>
+
+- Reproducibility + Modularity = Composibility | [build as you go](https://www.youtube.com/watch?v=XQxtJb4fbdY)
+
+<center><img src="./assets/img/bertha_medium.png"></center>
+
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;II. What is Science?</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Is Economics a Science?</h2>
+
+>- *The Guardian*: [No](http://www.telegraph.co.uk/finance/comment/10390981/Time-to-stop-this-pretence-economics-is-not-science.html)
+    > "The Nobel prize in economics isn't really a Nobel prize....economics, categorically, is no science."
+    
+>- Greg Mankiw: [Strong Maybe (2006)](http://gregmankiw.blogspot.com/2006/05/scientists-and-engineers.html) | [Maybe (2006)](http://gregmankiw.blogspot.com/2006/05/is-economics-science.html) | [Still Maybe (2013)](http://gregmankiw.blogspot.com/2013/10/yes-economics-is-science.html)
+
+>- Raj Chetty: [Maybe](http://www.nytimes.com/2013/10/21/opinion/yes-economics-is-a-science.html?_r=0)
+    > "...as the availability of data increases, economics will continue to become a more empirical, scientific field."
+    
+>- Bob Shiller: [Yes](https://www.project-syndicate.org/commentary/robert-j--shilleron-whether-he-is-a-scientist)
+    > "...while economics presents its own methodological problems, the basic challenges facing researchers are not fundamentally different from those faced by researchers in other fields."
+
+>- James Lamb: Yes, as some practice it...
+>   - [Hidalgo on complexity](https://www.youtube.com/watch?v=RuM-AtDjuxg)
+>   - [Arthur on technological progress and equilibria](https://www.youtube.com/watch?v=1YHSQeSmSZk)
+
+--- bg:#2554C7;
+
+<h2 style="color: #FFFFFF">Section III.</h2>
+<hr></hr>
+</br></br></br>
+<h2 style="color: #FFFFFF">Doing What We Do Better</h2>
+
+--- &twocol bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;III. Doing What We Do Better</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Reproducibility</h2>
+
+Guiding principles for [conducting reproducible analyses](https://github.com/jtleek/modules/blob/master/05_ReproducibleResearch/Checklist/index.md):
+</br></br>
+
+*** =left
+
+<center><FONT COLOR="#B22222" size=6> DON'T </FONT></center>
+<hr></hr>
+
+- Save multiple file versions
+- Manually edit spreadsheets
+- Split/reformat data files
+- Download data from a website
+- **Point and click**
+- Use 1-letter variable names
+- Write huge blocks of procedural code
+
+*** =right
+
+<center><FONT COLOR="#00800" size=6> DO </FONT></center>
+<hr></hr>
+
+- Use version control
+- Use code to manipulate data
+- Keep raw data intact
+- Write code to read in (if possible)
+- **Use code**
+- Use mnemonic names
+- Keep things modular
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;III. Doing What We Do Better</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Modularity</h2>
+
+- modularity enables complex problem-solving
+
+<center><img src="./assets/img/cell.png"></center>
+
+>- Prokaryote (simple organisms): disogranized soup of random nonsense
+>- Eurkaryote (plants & animals): specialized organelles w/in cells; 
+    - well-structured cells composible into organs, systems
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;III. Doing What We Do Better</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Cross Validation: The Death of R<sup>2</sup></h2>
+
+- when you're training models with the intent of making predictions, you should choose the model that makes the best predictions
+
+<center><img src="./assets/img/simple_smaller.jpg"></center>
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;III. Doing What We Do Better</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Cross Validation: The Death of R<sup>2</sup></h2>
+
+**What is Cross-Validation?**
+
+>- Rob Hyndman - "[why every statistician should know about cross-validation](http://robjhyndman.com/hyndsight/crossvalidation/)"
+>- The basics:
+    - Estimate your model (potentially many times) on *some* of the data
+    - Use that model to make predictions on *the data you left out*
+    - Use that out-of-sample error estimate as a "measure of goodness"
+    - Repeat for multiple models (different algorithms, tuning parameters)
+    - Choose as the "best" model the one with the lowest CV error
+>- Applications:
+    - model selection, parameter tuning, confidence assessment
+
+--- &twocol bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;III. Doing What We Do Better</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Shameless Plug</h2>
+
+**tscval: An EViews Add-in for Time-Series Cross-Validation**
+
+*** =left
+
+- see: [project repo](https://github.com/jameslamb/ML4EVIEWS) | [EViews blog](http://blog.eviews.com/2016/04/add-in-round-up-for-2016-q1.html)
+- Basic idea: 
+    - rolling estimation and out-of-sample forecasting 
+    - inspired by [Hyndman](http://robjhyndman.com/hyndsight/tscvexample/)
+- works with equation and VAR objects
+- available in EViews 9+ via the Add-ins manager
+
+*** =right
+
+<center><img src="./assets/img/tscval.png"></center>
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;III. Doing What We Do Better</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Cross-Pollination: Agent-Based Modeling</h2>
+
+**Some ABM Examples**
+
+- Farmer & Foley --> ["The economy needs agent-based modeling"](http://tuvalu.santafe.edu/~jdf/papers/EconomyNeeds.pdf)
+- ABM in economics:
+    - [Santa Fe Stock Exchange](https://www.phy.duke.edu/~palmer/papers/arob98.pdf)
+    - [Schelling's Segregation Model](https://www.youtube.com/watch?v=dFl3Cfw12bo)
+    - [innovation diffusion, market design](http://www.pnas.org/content/99/suppl_3/7280.full.pdf)
+- Benefits over equation-based modeling (EBM):
+    - breaks away from reliance on averages and claims of "representative agents"
+    - system description is more natural
+    - handles nonlinear dynamics in a more flexible way
+    - identification of non-obvious relationships
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;III. Doing What We Do Better</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Cross-Pollination: Machine Learning</h2>
+
+**What is machine learning?**
+
+>- Andrew Ng, Tom Mitchell:
+    > "...a computer program is set to learn from an experience E with respect to some
+task T and some performance measure P if its performance on T as measured by P
+improves with experience E."
+    
+>- [unsupervised learning](http://scikit-learn.org/stable/unsupervised_learning.html)
+    - discover structure in the data
+>- [supervised learning](http://scikit-learn.org/stable/supervised_learning.html)
+    - classification: predict categorical outcomes
+    - regression: predict the value of a continuous variable
+>- [ensembling](http://scikit-learn.org/stable/modules/ensemble.html)
+    - bagging --> many models, one prediction
+    - boosting --> handling rare or outlying cases
+
+--- bg:#2554C7;
+
+<h2 style="color: #FFFFFF">Section IV.</h2>
+<hr></hr>
+</br></br></br>
+<h2 style="color: #FFFFFF">New Areas: A Seat at the Table</h2>
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;IV. New Areas: A Seat at the Table</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">IoT/IIoT: Creative Destruction</h2>
+
+**Some Business Models Will Die**
+
+- 3D printing will eliminate spare-parts sales
+- 3D printing + cloud will eliminate "stock product" in consumer-facing industries
+- Why would insurers charge fixed premiums when sensor-laden vehicles enable perfect monitoring of driver behavior?
+
+**New Revenue Streams**
+
+- "micro-payments for micro-transactions"
+    - Pay-per-second parking in cities
+- Obsolescence of inventory:
+    - concurrent engineering in the cloud with customer collaboration
+    - Amazon literally [printing your product in a truck on its way to your door](https://3dprint.com/46934/amazon-3d-printing-patent/)
+- Software-defined everything | Everything-as-a-service
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;IV. New Areas: A Seat at the Table</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Block Chain: It's the Economics!</h2>
+
+**What is the block chain?**
+
+>- simple description:
+    > The block chain is a distributed digital ledger that enables secure, trustless, peer-to-peer transactions.
+    
+>- better descriptions:
+    - [minimum viable blockchain](https://www.igvita.com/2014/05/05/minimum-viable-block-chain/) | [IBM Device Democracy](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=XB&infotype=PM&appname=GBSE_GB_TI_USEN&htmlfid=GBE03620USEN&attachment=GBE03620USEN.PDF)
+    
+>- Security in the block chain comes from good economics:
+    - Transactions must be peer-verified
+    - Users verify with "proof-of-work" that is costly (in terms of computational time)
+    - Users earn small fees for verifying transactions...they make a profit by verifying "blocks" of transactions
+    - Higher "margins" attract malicious actors...lower "margins" suck value from the market
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf; &#x25cf;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;IV. New Areas: A Seat at the Table</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Autonomous Transportation</h2>
+
+**Moving Products**
+
+- Autonomous long-haul freight could widen the radius of 1-day deliveries
+    - Lightens inventory burden
+- [Software-defined supply chain](http://www-935.ibm.com/services/multimedia/The_new_software-defined_supply_chain_Exec_Report.pdf):
+    - the era of the multi-tiered global supply chain will end
+    - replaced with compositions of locally-optimized small transportation networks
+    - ["digital twins"](https://dspace.mit.edu/bitstream/handle/1721.1/86935/TBS-VERY-FUNNY.pdf?sequence=264) allow for complex simulations, testing strategies
+    
+**Moving People**
+
+- will you own a car 10 years from now? 30? 50?
+- we could replace traffic lights with [slot-based intersections](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0149607):
+    - could double the capacity of our current road system
+    - reduce traffic time uncertainty
+
+--- bg:#2554C7;
+
+<h2 style="color: #FFFFFF">Section V.</h2>
+<hr></hr>
+</br></br></br>
+<h2 style="color: #FFFFFF">Concluding Remarks</h2>
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;V. Concluding Remarks</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Conclusion</h2>
+
+</br>
+The next time your find yourself economics-ing around, ask:
+
+</br></br></br></br>
+<center>*does this feel like science?*</center>
+</br></br></br></br></br></br></br>
+I hope that the answer is yes!
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;V. Concluding Remarks</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Thank You for Your Time</h2>
+
+</br>
+
+<b>Questions? Comments? Profanity-Laced Criticisms?</b>
+
+- email --> jaylamb20@gmail.com
+- Twitter --> @_jameslamb
+- LinkedIn --> [https://www.linkedin.com/in/jameslamb1](https://github.com/jameslamb)
+- GitHub --> [https://github.com/jameslamb](https://github.com/jameslamb)
+ 
+</br>
+
+<b>Not sure what you said, but the slides looked nice!</b>
+
+- Thanks! They're at [https://jameslamb.github.io/MSAE_Alumni_2016/index.html#1](https://jameslamb.github.io/MSAE_Alumni_2016/index.html#1)
+
+--- bg:#2554C7;
+
+<h2 style="color: #FFFFFF">Section VI.</h2>
+<hr></hr>
+</br></br></br>
+<h2 style="color: #FFFFFF">Additional Resources</h2>
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;VI. Additional Resources</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Tools & Techniques</h2>
+
+- Agent-Based Modeling (ABM): [PyCX](http://casmodeling.springeropen.com/articles/10.1186/2194-3206-1-2) | [NetLogo](https://ccl.northwestern.edu/netlogo/) | [Tesfatsion](http://www2.econ.iastate.edu/tesfatsi/ace.htm)
+- Complexity Economics: [Atlas of Economic Complexity](http://atlas.cid.harvard.edu/book/) | [Niazi: Complex Systems Roadmap](http://casmodeling.springeropen.com/articles/10.1186/2194-3206-1-1) | [Graph databases](http://neo4j.com/developer/graph-db-vs-rdbms/)
+- Machine Learning + Regression: [Tibshirani](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf) | [Regression Trees in R](http://www.statmethods.net/advstats/cart.html)
+- Machine Learning: [Andrew Ng](https://www.coursera.org/learn/machine-learning/) | [ML Mastery](http://machinelearningmastery.com/) | [Practical Predictive Analytics](https://www.coursera.org/learn/predictive-analytics/) | 
+- Nowcasting: [Varian & Choi on Google Trends](http://people.ischool.berkeley.edu/~hal/Papers/2011/ptp.pdf) | [ECB](http://www.ecb.europa.eu/pub/pdf/scpwps/ecbwp1564.pdf) | [MIDAS in EViews](http://www.eviews.com/EViews9/ev95midas.html)
+- R: [Microsoft](https://www.edx.org/course/introduction-r-data-science-microsoft-dat204x) | [Johns Hopkins](https://www.coursera.org/specializations/jhu-data-science) | [Datacamp](https://www.datacamp.com/) | [swirl](http://swirlstats.com/)
+- Python: [Codecademy](https://www.codecademy.com/learn/python) | [UMichigan](https://www.coursera.org/specializations/python) | [Rice University](https://www.coursera.org/specializations/computer-fundamentals)
+- Git + Web Stack: [Codecademy](https://www.codecademy.com/learn/learn-git) | [Code SChool](https://try.github.io/levels/1/challenges/1) | [Codecademy](https://www.codecademy.com/learn) | [w3schools](http://www.w3schools.com/)
+- SQL/Databases: [University of Washington](https://www.coursera.org/specializations/data-science)
+- Cross validation: [SK-learn](http://scikit-learn.org/stable/modules/cross_validation.html) | [Hyndman](http://robjhyndman.com/hyndsight/crossvalidation/) | [r-bloggers](http://www.r-bloggers.com/time-series-cross-validation-5/)
+- Conferences: [Open Data Science Conference](http://www.odsc.com/) | [American Economics Association](https://www.aeaweb.org/conference/)
+
+--- bg:#FFFFFF;
+
+<footer>
+  <hr></hr>
+  <span><FONT COLOR="#C94D00" SIZE=3>&#x25cf; &#x25cf;</FONT>
+  <FONT COLOR="#C94D00" SIZE=3> &nbsp;VI. Additional Resources</FONT></span><span style="float:right"><FONT COLOR="#C94D00" SIZE=3>Economics as a Science</FONT></span>
+</footer>
+
+<h2 style="color: #C94D00">Applications & Datasets</h2>
+
+**Macro**
+
+- [Billion Prices Project](http://bpp.mit.edu/)
+- [Prattle - text analysis of central bank policy](http://prattle.co/)
+- [Observatory of Economic Complexity](http://atlas.media.mit.edu/en/)
+
+**Micro**
+
+- [StreetScore - automated urban development discovery](http://streetscore.media.mit.edu/about.html)
+- [DataUSA portal](http://datausa.io/)
+
+**Treasure Chest of Datasets/APIs**
+
+- [Quandl](https://www.quandl.com/) | [Data.gov](https://www.data.gov/) | [openFDA](https://open.fda.gov/index.html) | [FRED API](https://research.stlouisfed.org/docs/api/fred/)
+- [Eurostat](https://github.com/rOpenGov/eurostat) | [UN Data API](https://www.undata-api.org/) 
+- [all of this stuff](https://r-dir.com/reference/datasets.html) | [KDnuggets mega-list](http://www.kdnuggets.com/datasets/index.html)
