@@ -1,0 +1,3 @@
+﻿slides > slide:not(.nobackground):after {
+  content: "
+}

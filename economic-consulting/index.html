@@ -1,0 +1,3685 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Economic Consulting</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Economic Consulting">
+  <meta name="author" content="James Lamb">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/suppress_pagenum.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Economic Consulting</h1>
+    <h2>Practicing Economics in the Hellabyte Era</h2>
+    <p>James Lamb<br/>Analyst | IHS Economics | Market Planning &amp; Consulting</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Disclaimer</h2>
+
+<p></br></br></p>
+
+<h3 style="color: #00C990">This presentation contains the personal commentary of the author. It does not reflect the views or opinions of IHS Inc.</h3>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Contents</h2>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><FONT COLOR="#00C990" SIZE=5><b>I. Introduction</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Personal Introduction</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>6</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>The Hellabyte Era</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>7</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>"Big Data" is Not the Whole Story</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>8</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Economics in the Age of Big Data</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>9</FONT></span> </li>
+</ol>
+
+<p><FONT COLOR="#00C990" SIZE=5><b>II. Reproducible Research</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>What is Reproducibility?</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>11</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Why Should I Care?</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>12</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Reproducibility Checklist</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>13</FONT></span> </li>
+</ol>
+
+<p><FONT COLOR="#00C990" SIZE=5><b>III. Programming Principles</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Getting Started</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>15</FONT></span> </li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>The Humble Programmer</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>16</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Introduction to Version Control</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>17</FONT></span> </li>
+</ol>
+
+<p><FONT COLOR="#00C990" SIZE=5><b>IV. Getting &amp; Cleaning Data</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Data Types/Sources</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>19</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Data Manipulation</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>20</FONT></span> </li>
+</ol>
+
+<p><FONT COLOR="#00C990" SIZE=5><b>V. Statistical Analysis</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Tips & Tricks</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>22</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Making & Documenting Decisions</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>23</FONT></span> </li>
+</ol>
+
+<p><FONT COLOR="#00C990" SIZE=5><b>VI. Beautiful, Reproducible Output</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Deliverable Options</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>25</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Static Graphics: ggplot2</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>26</FONT></span> </li>
+</ol>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span style="float:right"><FONT COLOR="#00C990" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Contents</h2>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Animated Graphics: D3.js</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>27</FONT></span> </li>
+     <li><FONT COLOR="#71787D" SIZE=4>Interactive Graphics: googleVis</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>28</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Creating Deliverables with Code</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>29</FONT></span> </li>
+</ol>
+
+<p><FONT COLOR="#00C990" SIZE=5><b>VII. Putting it All Together</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Literate Statistical Programming</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>31</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Multi-Software Solutions</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>32</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Collaboration with Git</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>33</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Case Study: Collaboration with Git</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>34</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>The Checkpoint Approach</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>35</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Case Study: Checkpoint Approach</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>36</FONT></span> </li>
+</ol>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><FONT COLOR="#00C990" SIZE=4><b>VIII. Concluding Remarks</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Summary</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>38</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Contact Information</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>39</FONT></span> </li>
+</ol>
+
+<p><FONT COLOR="#00C990" SIZE=4><b>Appendices</b></FONT></p>
+
+<ol type="none">
+    <li><FONT COLOR="#71787D" SIZE=4>Training Resources</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>i</FONT></span> </li>
+    <li><FONT COLOR="#71787D" SIZE=4>Key Academic Papers</FONT><span style="float:right"><FONT COLOR="#71787D" SIZE=4>ii</FONT></span> </li>
+</ol>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Section I.</h2>
+
+<p><hr></hr>
+</br></br></br></p>
+
+<h2 style="color: #FFFFFF">Introduction</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3>&nbsp;I. Introduction</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Personal Introduction</h2>
+
+<ul class = "build incremental">
+<li><p><b>My Marquette Experience:</b></p>
+
+<ul>
+<li>B.S., Economics &amp; Marketing (2013)</li>
+<li>M.S.A.E., Marketing Research Specialization (2014)</li>
+</ul></li>
+<li><p><b>Since Marquette:</b></p>
+
+<ul>
+<li>Analyst @ <a href="https://www.ihs.com/industry/economics-country-risk.html">IHS Economics</a> in Lexington, MA</li>
+<li>Student in Johns Hopkins Data Science program via <a href="https://www.coursera.org/specialization/jhudatascience/1?utm_medium=listingPage">Coursera</a></li>
+</ul></li>
+<li><p><b>Research Interests:</b></p>
+
+<ul>
+<li>IoT/IIoT --&gt; Confluence of cybernetics, information theory, complex systems, economics, cognitive science. See <a href="http://dspace.mit.edu/bitstream/handle/1721.1/86935/EQM%20_%20work%20in%20progress.pdf?sequence=135">here</a> for more</li>
+<li>Economic Complexity --&gt; Just an observer for now. Guiding Projects: <a href="https://global.oup.com/academic/product/complexity-and-the-economy-9780199334292?cc=us&amp;lang=en&amp;"><em>Complexity and the Economy</em></a> | <a href="http://atlas.cid.harvard.edu/">Atlas of Economic Complexity</a> | <a href="http://www.epjdatascience.com/content/3/1/33">Retail as a Complex System</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3>&nbsp;I. Introduction</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">The Hellabyte Era</h2>
+
+<ul class = "build incremental">
+<li><p><b>Andrew McAfee, <a href="http://www.washingtonpost.com/blogs/innovations/wp/2013/10/25/welcome-to-the-hellabyte-era-as-in-a-helluva-lot-of-data/">Washington Post</a> 2013: </b> </p>
+
+<blockquote>
+<p>&quot;We started by measuring data creation in kilobytes and megabytes and gigabytes and we are now at exabytes,<br>
+zettabytes and yottabytes.
+...
+Andrew McAfee and others have actually proposed that we settle on <b>hellabyte, as in &#39;helluva lot of data&#39;</b>&quot;</p>
+</blockquote></li>
+<li><p>Drivers Behind the &quot;<a href="http://www.economist.com/node/15579717">Data Deluge</a>&quot;</p>
+
+<ul>
+<li>Proliferation of <a href="http://leeseshia.org/">embedded systems</a> (data creators)</li>
+<li>Resulting IP namespace explosion - <a href="http://securityintelligence.com/the-importance-of-ipv6-and-the-internet-of-things/#.VRFU4_nF_3c">IPv6</a></li>
+<li>Better tools for using high-dimension datasets: </li>
+<li><a href="http://www.zdnet.com/article/mapreduce-and-mpp-two-sides-of-the-big-data-coin/">Massive Parallelization</a> | <a href="http://en.wikipedia.org/wiki/Machine_learning">Machine Learning</a> | <a href="http://en.wikipedia.org/wiki/Apache_Hadoop">Distributed Storage</a></li>
+<li>Cloud Computing (e.g. <a href="http://aws.amazon.com/what-is-cloud-computing/">AWS</a>) --&gt; Convert fixed cost of capacity to variable cost</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3>&nbsp;I. Introduction</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">"Big Data" is Not the Whole Story</h2>
+
+<p><center><img src=".\\assets\\img\\dilbert_big_data.gif"></center>
+<FONT SIZE=2>&nbsp;&nbsp;&nbsp;Image credit: Scott Adams, <a href="http://dilbert.com/strip/2008-05-07">May 07, 2008</a></FONT></p>
+
+<ul class = "build incremental">
+<li><b> Rich Data </b>
+
+<ul>
+<li><a href="http://www.theguardian.com/technology/2014/oct/08/sir-tim-berners-lee-speaks-out-on-data-ownership">Berners-Lee (2014)</a>: How we combine data is more important than how much we have</li>
+<li>Decision-making is context dependent --&gt; We can rebuild context with <a href="http://www.google.com/patents/US8768873">recombinant data</a></li>
+<li>Imagine new transactions - <a href="http://people.ischool.berkeley.edu/%7Ehal/Papers/2013/BeyondBigDataPaperFINAL.pdf">Varian (2014)</a> --&gt; reduction of information asymmetries </li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; I. Introduction</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Economics in the Age of Big Data</h2>
+
+<p><strong>From <a href="http://www.sciencemag.org/content/346/6210/1243089.full.pdf?keytype=ref&amp;siteid=sci&amp;ijkey=Jj7wCy7hhth4M">Einav &amp; Levin (2014)</a>:</strong></p>
+
+<ul class = "build incremental">
+<li><p>Economists increasingly using large data sets (private &amp; administrative)</p>
+
+<blockquote>
+<p>&quot;Economic models bring a simplifying conceptual framework to to help make sense of large data sets&quot;</p>
+</blockquote></li>
+<li><p>A major challenge:</p>
+
+<blockquote>
+<p>&quot;...developing appropriate data management and programming capabilities, as well as designing creative 
+and scalable approaches to summarize, describe, and analyze...data sets&quot;</p>
+</blockquote></li>
+</ul>
+
+<p></br></br></p>
+
+<ul class = "build incremental">
+<li>Other Commentary: <a href="http://www.stanford.edu/%7Eleinav/pubs/IPE2014.pdf">Einav (2013)</a> | <a href="http://people.ischool.berkeley.edu/%7Ehal/Papers/2013/BeyondBigDataPaperFINAL.pdf">Varian (2013)</a> | <a href="http://people.ischool.berkeley.edu/%7Ehal/Papers/2013/ml.pdf">Varian (2014)</a> | <a href="http://blogs.avalonconsult.com/blog/generic/ontology-for-fun-and-profit/">Cagle (2014)</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Section II.</h2>
+
+<p><hr></hr>
+</br></br></br></p>
+
+<h2 style="color: #FFFFFF">Introduction to Reproducibility</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; II. Reproducible Research</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">What is Reproducibility?</h2>
+
+<ul class = "build incremental">
+<li>NOT about replication in the empirical sense
+
+<ul>
+<li>i.e. &quot;Do other people with different data find similar results?&quot; </li>
+</ul></li>
+<li><p>More like:</p>
+
+<ul>
+<li>&quot;If you give someone else your data (in its rawest form) and code, do they get the same results you presented?&quot;
+</br></br></br></br></br></br></br></li>
+</ul></li>
+<li><p><em>Note: Much of the content in this section is adopted from <a href="https://www.coursera.org/course/repdata">&quot;Reproducible Research&quot;</a>, a MOOC from Johns Hopkins. See <a href="https://github.com/jtleek/modules/tree/master/05_ReproducibleResearch">here</a> for more.</em></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; II. Reproducible Research</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Why Should I Care?</h2>
+
+<ul class = "build incremental">
+<li><b><a href="http://www.thebylinegroup.com/article6.html">Clients are demanding</a> --&gt; they might change their minds many times</b>
+
+<ul>
+<li>Need to make changes (including reproduction of deliverables) quickly</li>
+<li>Need an accurate project history
+</br></li>
+</ul></li>
+<li><b>Development requires testing</b>
+
+<ul>
+<li>Need to be able to change inputs and see impact on the entire project environment
+</br></li>
+</ul></li>
+<li><b>Reproducibility begets clear thinking</b>
+
+<ul>
+<li>The exercise will make you assess many dimensions of project work</li>
+<li>Participate in &quot;big picture&quot; thinking that might be lost in piecemeal efforts</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; II. Reproducible Research</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Reproducibility Checklist</h2>
+
+<p>Guiding principles for <a href="https://github.com/jtleek/modules/blob/master/05_ReproducibleResearch/Checklist/index.md">conducting reproducible analyses</a>:
+</br></br></p>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><center><FONT COLOR="#B22222" size=6> DON&#39;T </FONT></center>
+<hr></hr></p>
+
+<ul>
+<li>Save multiple file versions</li>
+<li>Manually edit spreadsheets</li>
+<li>Split/reformat data files</li>
+<li>Download data from a website</li>
+<li><strong>Point and click</strong></li>
+<li>Save output</li>
+<li>Document at the end</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center><FONT COLOR="#00800" size=6> DO </FONT></center>
+<hr></hr></p>
+
+<ul>
+<li>Use version control</li>
+<li>Use code to manipulate data</li>
+<li>Keep raw data intact</li>
+<li>Write code to read in (if possible)</li>
+<li><strong>Use code</strong></li>
+<li>Save data + code for generating output</li>
+<li>Edit documentation as you go</li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Section III.</h2>
+
+<p><hr></hr>
+</br></br></br></p>
+
+<h2 style="color: #FFFFFF">Programming Principles</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; III. Programming Principles</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Getting Started</h2>
+
+<p>Reproducible economic research requires programming. There is no way around it. Here are a few lessons I&#39;ve learned:</p>
+
+<ul class = "build incremental">
+<li><b>Use a preamble</b>
+
+<ul>
+<li>Your code should start with a set of key strings, scalars to be used throughout</li>
+<li>These might include file paths, mnemonic lists, samples (for time series)</li>
+</ul></li>
+<li><b>Keep it modular</b>
+
+<ul>
+<li>Different functions should be accomplished by separate subroutines</li>
+<li>Facilitates trial-and-error testing; Improves readability of your code</li>
+</ul></li>
+<li><b>Use comments</b>
+
+<ul>
+<li>Every programmer makes choices</li>
+<li>The code provides a record of these choices; Comments give a record of the decision-making process that led to them</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; III. Programming Principles</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">The Humble Programmer</h2>
+
+<ul class = "build incremental">
+<li>From <i>Djikstra&#39;s</i> (1972) famous talk, &quot;The Humble Programmer&quot;.</li>
+<li><p>Avoid putting clever tricks in your code just to prove how clever you are:</p>
+
+<blockquote>
+<p>&quot;I suggest the we confine ourselves to ... intellectually manageable problems.&quot;</p>
+</blockquote></li>
+<li><p>More parsimonious code is not necessarily desirable:</p>
+
+<blockquote>
+<p>&quot;...one programmer places a one-line program on the desk of another and either he proudly tells 
+what is does and adds the questions &quot;Can you code this in less symbols?&quot; - as if this were of 
+any conceptual relevance!- or he just asks &#39;Guess what it does!&#39; &quot;</p>
+</blockquote></li>
+<li><p>A given programming task can be approached many ways </p>
+
+<ul>
+<li>A commitment to &quot;intellectually manageable&quot; programs reduces the set of possible programs to choose from. </li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; III. Programming Principles</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Introduction to Version Control</h2>
+
+<p>&quot;Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.&quot; - <a href="http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Git documentation</a></p>
+
+<ul>
+<li>The software: <a href="http://en.wikipedia.org/wiki/Git_%28software%29">Git</a> | <a href="https://github.com/JayLamb20/MSAE_Alumni_2015/commits/gh-pages">GitHub</a> (online extension)
+
+<ul>
+<li>Distributed revision control and collaboration system</li>
+<li>Tracks project history, lets you revert back to old versions</li>
+</ul></li>
+<li>An example:</li>
+</ul>
+
+<p><center><img src=".\\assets\\img\\git_log.png"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Section IV.</h2>
+
+<p><hr></hr>
+</br></br></br></p>
+
+<h2 style="color: #FFFFFF">Getting & Cleaning Data</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; IV. Getting &amp; Cleaning Data</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Data Types/Sources</h2>
+
+<p>Now we have the guiding motivation. Let&#39;s start building a real project! We begin, as always, with the data.</p>
+
+<ul class = "build incremental">
+<li><b>Consider interopability</b>
+
+<ul>
+<li>Proprietary (SAS, EViews, SPSS, MS Access)</li>
+<li>Non-proprietary (txt, csv)</li>
+</ul></li>
+<li><b>Consider the size of your data (<a href="http://people.ischool.berkeley.edu/%7Ehal/Papers/2013/BeyondBigDataPaperFINAL.pdf">Varian (2013)</a>):</b>
+
+<ul>
+<li>Small-Medium (less than 1m observations) --&gt; Spreadsheets</li>
+<li>Large (a few GB) --&gt; MySQL, other relational DBs</li>
+<li>Very Large (more than a few GB) --&gt; <a href="http://en.wikipedia.org/wiki/NoSQL">NoSQL DBs</a>, <a href="http://en.wikipedia.org/wiki/Apache_Hadoop#HDFS">HDFS</a>, <a href="http://en.wikipedia.org/wiki/Apache_Cassandra">Cassandra</a></li>
+</ul></li>
+<li><b>Consider diff-ability</b>
+
+<ul>
+<li>Diff-able (able to track in Git): csv, txt, vbs, other text files</li>
+<li>Non-diff-able: <a href="http://en.wikipedia.org/wiki/Binary_file">binary files</a>; More on this <a href="http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes">HERE</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; IV. Getting &amp; Cleaning Data</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Data Manipulation</h2>
+
+<p>Not all data are tidy and clean.</p>
+
+<ul class = "build incremental">
+<li><b>You will need to do some manipulation</b>
+
+<ul>
+<li>Data scientists call this <a href="http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes">data wrangling</a></li>
+<li>Might be 50%-80% of project time - <a href="http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">NY Times (2014)</a></li>
+</ul></li>
+<li><b>Some suggestions</b>
+
+<ul>
+<li>Don&#39;t edit data manually in Excel</li>
+<li>Use programming to make manipulations</li>
+</ul></li>
+<li><b>An example</b>
+
+<ul>
+<li>You have observations of rural poverty levels from 2006-2014</li>
+<li>Need to make some assumptions to backcast to 1990</li>
+<li>Put assumptions (maybe a CAGR) in a program scalar, change it and see what the results look like</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Section V.</h2>
+
+<p><hr></hr>
+</br></br></br></p>
+
+<h2 style="color: #FFFFFF">Statistical Analysis</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; V. Statistical Analysis</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Tips & Tricks</h2>
+
+<ul class = "build incremental">
+<li><b>Explicitly specify defaults</b>
+
+<ul>
+<li>Many statistical software have algorithms with preset defaults</li>
+<li>Rather than call <code>randomForest(x)</code> in R, for example, specify the defaults of interest</li>
+<li>e.g. <code>randomForest(x, ntree=1000, replace=TRUE)</code></li>
+</ul></li>
+<li><b>Set your seed</b>
+
+<ul>
+<li>Random number generators are actually &quot;<a href="http://en.wikipedia.org/wiki/Random_seed">pseudorandom generators</a>&quot;</li>
+<li>The seed is the vector used to initialize the random-number generator</li>
+<li>If your work has any stochastic elements, someone else might get slightly different results as a result of using a different seed</li>
+</ul></li>
+<li><b>Consider the use case</b>
+
+<ul>
+<li>Understand how your analyses will be used </li>
+<li>e.g. Multicollinearity matters more if clients can introduce exogenous shocks</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; V. Statistical Analysis</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Making & Documenting Decisions</h2>
+
+<ul class = "build incremental">
+<li><b>Assumptions are unavoidable</b>
+
+<ul>
+<li>In the absence of data, we use heuristic decision-making - <a href="http://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow">Kahneman(2011)</a></li>
+<li>When problems are not well-defined, we form our own hypotheses and use them to fill gaps in the data - <a href="https://global.oup.com/academic/product/complexity-and-the-economy-9780199334292?cc=us&amp;lang=en&amp;">Arthur (2014)</a></li>
+</ul></li>
+<li><b>Document these decisions</b>
+
+<ul>
+<li>Store exogenously-set parameters in program scalars</li>
+<li>Link to academic papers, other commentary as justification</li>
+</ul></li>
+<li><b>Keep it simple</b>
+
+<ul>
+<li>If a relationship is truly linear, using more complex models won&#39;t improve performance - <a href="http://www-users.cs.umn.edu/%7Ekumar/dmbook/index.php">Pang-Ning et. al (2006)</a></li>
+<li>Where there exists no clear choice between competing alternatives, no shame in decisions which &quot;minimize the sum of squared client questions&quot;</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Section VI.</h2>
+
+<p><hr></hr>
+</br></br></br></p>
+
+<h2 style="color: #FFFFFF">Beautiful, Reproducible Output</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VI. Beautiful, Reproducible Output</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Deliverable Options</h2>
+
+<p>You got the data, cleaned it, and analyzed it. But you can&#39;t give the client an EViews workfile or a folder full of R scripts. Now you make the real money...creating the deliverable.</p>
+
+<ul class = "build incremental">
+<li><b>Formats</b>
+
+<ul>
+<li>Reports (Word documents, pdf, custom web pages)</li>
+<li>Presentations (<a href="http://slidify.org/">slidify</a>, <a href="https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations">RStudio Presenter</a>, <a href="http://en.wikipedia.org/wiki/Beamer_%28LaTeX%29">Beamer</a>, PowerPoint)</li>
+<li>Web Applications (<a href="http://www.shinyapps.io/">Shiny</a>, custom front-end + <a href="https://yhathq.com/">yhat</a> background, <a href="https://pages.github.com/">GitHub pages</a>, custom web portals)</li>
+</ul></li>
+<li><b>Elements</b>
+
+<ul>
+<li>Text (contextual, tied to the data)</li>
+<li>Static graphics (png, bmp) vs. Interactive (<a href="http://rcharts.io/">rCharts</a>, <a href="http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis.pdf">GoogleVis</a>, <a href="http://techslides.com/over-2000-d3-js-examples-and-demos">JavaScript D3.js</a>)<br></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VI. Beautiful, Reproducible Output</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Static Graphics: ggplot2</h2>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src=".\\assets\\img\\stacked_bar.png" height="400" width="550"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src=".\\assets\\img\\facets_bar.png" height="400" width="550"></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="myslide" style="background:;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VI. Beautiful, Reproducible Output</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<p><span><h2 style="color: #00C990">Animated Graphics: D3.js</h2> <FONT SIZE=2>Via bl.ocks.org: <a href="http://bl.ocks.org/mbostock/raw/1256572/">About</a> | <a href="http://bl.ocks.org/mbostock/1256572/">Graph</a></FONT></span></p>
+
+<script>
+$('#myslide').on('slideenter', function(){
+  $(this).find('article')
+    .append('<iframe src="http://bl.ocks.org/mbostock/raw/1256572/"></iframe>')
+});
+$('#myslide').on('slideleave', function(){
+  $(this).find('iframe').remove();
+});
+</script>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VI. Beautiful, Reproducible Output</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Interactive Graphics: googleVis</h2>
+
+<!-- MotionChart generated in R 3.1.2 by googleVis 0.5.8 package -->
+
+<!-- Sun Mar 22 21:59:46 2015 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataMotionChartID110c153e1781 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Austria",
+2001,
+30135,
+0.04348154299 
+],
+[
+ "Belgium",
+2001,
+24549,
+0.2653664303 
+],
+[
+ "Bulgaria",
+2001,
+2428,
+0.171875 
+],
+[
+ "Switzerland",
+2001,
+20633,
+0.1025816145 
+],
+[
+ "Cyprus",
+2001,
+1766,
+0.08888888889 
+],
+[
+ "Czech Republic",
+2001,
+18094,
+0.005842031469 
+],
+[
+ "Germany",
+2001,
+88287,
+0.2201272064 
+],
+[
+ "Denmark",
+2001,
+12512,
+0.2124957089 
+],
+[
+ "Estonia",
+2001,
+12,
+0 
+],
+[
+ "Spain",
+2001,
+9489,
+0.03340780934 
+],
+[
+ "Finland",
+2001,
+1651,
+0.001847575058 
+],
+[
+ "France",
+2001,
+54291,
+0.1700926765 
+],
+[
+ "United Kingdom",
+2001,
+91600,
+0.09464400257 
+],
+[
+ "Greece",
+2001,
+5499,
+0.09051724138 
+],
+[
+ "Hungary",
+2001,
+9554,
+0.02025375393 
+],
+[
+ "Ireland",
+2001,
+10325,
+0.03721841332 
+],
+[
+ "Italy",
+2001,
+9620,
+0.1590135411 
+],
+[
+ "Lithuania",
+2001,
+256,
+0 
+],
+[
+ "Luxembourg",
+2001,
+687,
+0.04349951124 
+],
+[
+ "Latvia",
+2001,
+14,
+0.06666666667 
+],
+[
+ "Malta",
+2001,
+116,
+0.414893617 
+],
+[
+ "the Netherlands",
+2001,
+32579,
+0.006581076707 
+],
+[
+ "Norway",
+2001,
+14782,
+0.01991678603 
+],
+[
+ "Poland",
+2001,
+4506,
+0.0548916346 
+],
+[
+ "Portugal",
+2001,
+234,
+0.0393258427 
+],
+[
+ "Romania",
+2001,
+2431,
+0.03432588916 
+],
+[
+ "Sweden",
+2001,
+23515,
+0.009876099838 
+],
+[
+ "Slovenia",
+2001,
+1511,
+9.960159363e-05 
+],
+[
+ "Slovakia",
+2001,
+8151,
+0.003336422614 
+],
+[
+ "Austria",
+2002,
+39354,
+0.03590910612 
+],
+[
+ "Belgium",
+2002,
+18805,
+0.2082514735 
+],
+[
+ "Bulgaria",
+2002,
+2888,
+0.02280328367 
+],
+[
+ "Switzerland",
+2002,
+26125,
+0.06865197538 
+],
+[
+ "Cyprus",
+2002,
+951,
+0.07931034483 
+],
+[
+ "Czech Republic",
+2002,
+8484,
+0.008183438665 
+],
+[
+ "Germany",
+2002,
+71127,
+0.06603339972 
+],
+[
+ "Denmark",
+2002,
+6068,
+0.1266897553 
+],
+[
+ "Estonia",
+2002,
+9,
+0 
+],
+[
+ "Spain",
+2002,
+6309,
+0.02525639063 
+],
+[
+ "Finland",
+2002,
+3443,
+0.004199160168 
+],
+[
+ "France",
+2002,
+58971,
+0.1621957041 
+],
+[
+ "United Kingdom",
+2002,
+103080,
+0.1062348961 
+],
+[
+ "Greece",
+2002,
+5664,
+0.003547846654 
+],
+[
+ "Hungary",
+2002,
+6412,
+0.01341070277 
+],
+[
+ "Ireland",
+2002,
+11634,
+0.05827840501 
+],
+[
+ "Italy",
+2002,
+16015,
+0.0761911235 
+],
+[
+ "Lithuania",
+2002,
+294,
+0.00625 
+],
+[
+ "Luxembourg",
+2002,
+1043,
+null 
+],
+[
+ "Latvia",
+2002,
+30,
+0 
+],
+[
+ "Malta",
+2002,
+350,
+0.05899705015 
+],
+[
+ "the Netherlands",
+2002,
+18667,
+0.005780178076 
+],
+[
+ "Norway",
+2002,
+17480,
+0.01859631434 
+],
+[
+ "Poland",
+2002,
+5153,
+0.046142488 
+],
+[
+ "Portugal",
+2002,
+245,
+0.07446808511 
+],
+[
+ "Romania",
+2002,
+1151,
+0.03333333333 
+],
+[
+ "Sweden",
+2002,
+33016,
+0.009862890873 
+],
+[
+ "Slovenia",
+2002,
+702,
+0.001231527094 
+],
+[
+ "Slovakia",
+2002,
+9700,
+0.002394349336 
+],
+[
+ "Austria",
+2003,
+32359,
+0.05732992215 
+],
+[
+ "Belgium",
+2003,
+16940,
+0.194872627 
+],
+[
+ "Bulgaria",
+2003,
+1549,
+0.009528585757 
+],
+[
+ "Switzerland",
+2003,
+20806,
+0.06022058824 
+],
+[
+ "Cyprus",
+2003,
+4411,
+0.08845208845 
+],
+[
+ "Czech Republic",
+2003,
+11396,
+0.01359209187 
+],
+[
+ "Germany",
+2003,
+50563,
+0.04069643086 
+],
+[
+ "Denmark",
+2003,
+4593,
+0.1448016218 
+],
+[
+ "Estonia",
+2003,
+14,
+0 
+],
+[
+ "Spain",
+2003,
+5918,
+0.033203125 
+],
+[
+ "Finland",
+2003,
+3221,
+0.002409638554 
+],
+[
+ "France",
+2003,
+59768,
+0.1406447535 
+],
+[
+ "United Kingdom",
+2003,
+60050,
+0.06694040065 
+],
+[
+ "Greece",
+2003,
+8178,
+0.0006402048656 
+],
+[
+ "Hungary",
+2003,
+2401,
+0.05634694524 
+],
+[
+ "Ireland",
+2003,
+7900,
+0.04211939934 
+],
+[
+ "Italy",
+2003,
+13455,
+0.05406613047 
+],
+[
+ "Lithuania",
+2003,
+183,
+0.009836065574 
+],
+[
+ "Luxembourg",
+2003,
+1549,
+0.05236486486 
+],
+[
+ "Latvia",
+2003,
+5,
+0 
+],
+[
+ "Malta",
+2003,
+568,
+0.08797127469 
+],
+[
+ "the Netherlands",
+2003,
+13402,
+0.0180573424 
+],
+[
+ "Norway",
+2003,
+15959,
+0.03510800122 
+],
+[
+ "Poland",
+2003,
+6921,
+0.02784076594 
+],
+[
+ "Portugal",
+2003,
+88,
+0.0206185567 
+],
+[
+ "Romania",
+2003,
+1077,
+0.05303030303 
+],
+[
+ "Sweden",
+2003,
+31348,
+0.01457286432 
+],
+[
+ "Slovenia",
+2003,
+1100,
+0.01459227468 
+],
+[
+ "Slovakia",
+2003,
+10358,
+0.001076320939 
+],
+[
+ "Austria",
+2004,
+24634,
+0.1952755906 
+],
+[
+ "Belgium",
+2004,
+15357,
+0.2576152191 
+],
+[
+ "Bulgaria",
+2004,
+1127,
+0.01743589744 
+],
+[
+ "Switzerland",
+2004,
+14248,
+0.08117137339 
+],
+[
+ "Cyprus",
+2004,
+9859,
+0.005610622779 
+],
+[
+ "Czech Republic",
+2004,
+5459,
+0.01751094434 
+],
+[
+ "Germany",
+2004,
+35607,
+0.03836595893 
+],
+[
+ "Denmark",
+2004,
+3235,
+0.04872389791 
+],
+[
+ "Estonia",
+2004,
+14,
+0 
+],
+[
+ "Spain",
+2004,
+5535,
+0.02570162482 
+],
+[
+ "Finland",
+2004,
+3861,
+0.01394901395 
+],
+[
+ "France",
+2004,
+58545,
+0.09333803106 
+],
+[
+ "United Kingdom",
+2004,
+40623,
+0.03897674754 
+],
+[
+ "Greece",
+2004,
+4469,
+0.002507408252 
+],
+[
+ "Hungary",
+2004,
+1600,
+0.09777227723 
+],
+[
+ "Ireland",
+2004,
+4769,
+0.06165758532 
+],
+[
+ "Italy",
+2004,
+9722,
+0.08699531564 
+],
+[
+ "Lithuania",
+2004,
+167,
+0.05687203791 
+],
+[
+ "Luxembourg",
+2004,
+1577,
+0.04322614655 
+],
+[
+ "Latvia",
+2004,
+7,
+0 
+],
+[
+ "Malta",
+2004,
+997,
+0.05511811024 
+],
+[
+ "the Netherlands",
+2004,
+9782,
+0.03066308931 
+],
+[
+ "Norway",
+2004,
+7945,
+0.04970633022 
+],
+[
+ "Poland",
+2004,
+8079,
+0.0517124449 
+],
+[
+ "Portugal",
+2004,
+113,
+0.03703703704 
+],
+[
+ "Romania",
+2004,
+662,
+0.1715265866 
+],
+[
+ "Sweden",
+2004,
+23161,
+0.0108686125 
+],
+[
+ "Slovenia",
+2004,
+1278,
+0.01688888889 
+],
+[
+ "Slovakia",
+2004,
+11391,
+0.001142595978 
+],
+[
+ "Austria",
+2005,
+22461,
+0.2365088246 
+],
+[
+ "Belgium",
+2005,
+15957,
+0.236161507 
+],
+[
+ "Bulgaria",
+2005,
+822,
+0.008421052632 
+],
+[
+ "Switzerland",
+2005,
+10061,
+0.1179204411 
+],
+[
+ "Cyprus",
+2005,
+7745,
+0.007076285813 
+],
+[
+ "Czech Republic",
+2005,
+4160,
+0.05768788784 
+],
+[
+ "Germany",
+2005,
+28914,
+0.03962264151 
+],
+[
+ "Denmark",
+2005,
+2260,
+0.07013574661 
+],
+[
+ "Estonia",
+2005,
+11,
+0 
+],
+[
+ "Spain",
+2005,
+5254,
+0.04798387097 
+],
+[
+ "Finland",
+2005,
+3574,
+0.00575815739 
+],
+[
+ "France",
+2005,
+49733,
+0.08160399438 
+],
+[
+ "United Kingdom",
+2005,
+30841,
+0.07443765244 
+],
+[
+ "Greece",
+2005,
+9050,
+0.003714639489 
+],
+[
+ "Hungary",
+2005,
+1609,
+0.06221937139 
+],
+[
+ "Ireland",
+2005,
+4324,
+0.08679893171 
+],
+[
+ "Italy",
+2005,
+9548,
+0.06281598449 
+],
+[
+ "Lithuania",
+2005,
+118,
+0.1807228916 
+],
+[
+ "Luxembourg",
+2005,
+802,
+0.06545209177 
+],
+[
+ "Latvia",
+2005,
+20,
+0 
+],
+[
+ "Malta",
+2005,
+1166,
+0.02936096718 
+],
+[
+ "the Netherlands",
+2005,
+12347,
+0.04881012658 
+],
+[
+ "Norway",
+2005,
+5402,
+0.07616872649 
+],
+[
+ "Poland",
+2005,
+6860,
+0.03529411765 
+],
+[
+ "Portugal",
+2005,
+114,
+0.1129032258 
+],
+[
+ "Romania",
+2005,
+594,
+0.09963099631 
+],
+[
+ "Sweden",
+2005,
+17530,
+0.01557442417 
+],
+[
+ "Slovenia",
+2005,
+1834,
+0.007099391481 
+],
+[
+ "Slovakia",
+2005,
+3549,
+0.006652474721 
+],
+[
+ "Austria",
+2006,
+13349,
+0.2477892297 
+],
+[
+ "Belgium",
+2006,
+16973,
+0.1798490566 
+],
+[
+ "Bulgaria",
+2006,
+639,
+0.02054794521 
+],
+[
+ "Switzerland",
+2006,
+17345,
+0.1101441484 
+],
+[
+ "Cyprus",
+2006,
+7172,
+0.006208769887 
+],
+[
+ "Czech Republic",
+2006,
+5132,
+0.06904109589 
+],
+[
+ "Germany",
+2006,
+30100,
+0.04382457167 
+],
+[
+ "Denmark",
+2006,
+1918,
+0.1234643735 
+],
+[
+ "Estonia",
+2006,
+7,
+0 
+],
+[
+ "Spain",
+2006,
+5297,
+0.039464243 
+],
+[
+ "Finland",
+2006,
+2331,
+0.01567656766 
+],
+[
+ "France",
+2006,
+69809,
+0.1528938975 
+],
+[
+ "United Kingdom",
+2006,
+46031,
+0.1445041389 
+],
+[
+ "Greece",
+2006,
+12267,
+0.004861005621 
+],
+[
+ "Hungary",
+2006,
+2117,
+0.05158936946 
+],
+[
+ "Ireland",
+2006,
+7486,
+0.104482425 
+],
+[
+ "Italy",
+2006,
+10348,
+0.05865282661 
+],
+[
+ "Lithuania",
+2006,
+139,
+0.09230769231 
+],
+[
+ "Luxembourg",
+2006,
+1051,
+0.0243902439 
+],
+[
+ "Latvia",
+2006,
+8,
+0.1428571429 
+],
+[
+ "Malta",
+2006,
+1272,
+0.02314049587 
+],
+[
+ "the Netherlands",
+2006,
+14465,
+0.01857328145 
+],
+[
+ "Norway",
+2006,
+10411,
+0.0532249873 
+],
+[
+ "Poland",
+2006,
+5722,
+0.05720014153 
+],
+[
+ "Portugal",
+2006,
+128,
+0.2277227723 
+],
+[
+ "Romania",
+2006,
+460,
+0.09255898367 
+],
+[
+ "Sweden",
+2006,
+24317,
+0.03424695613 
+],
+[
+ "Slovenia",
+2006,
+518,
+0.001142857143 
+],
+[
+ "Slovakia",
+2006,
+2871,
+0.002822865208 
+],
+[
+ "Austria",
+2007,
+11921,
+0.2938648572 
+],
+[
+ "Belgium",
+2007,
+15529,
+0.2310553633 
+],
+[
+ "Bulgaria",
+2007,
+975,
+0.01579586877 
+],
+[
+ "Switzerland",
+2007,
+14371,
+0.1266428687 
+],
+[
+ "Cyprus",
+2007,
+8925,
+0.004192432659 
+],
+[
+ "Czech Republic",
+2007,
+3347,
+0.07480957563 
+],
+[
+ "Germany",
+2007,
+30303,
+0.2518899622 
+],
+[
+ "Denmark",
+2007,
+1852,
+0.1163895487 
+],
+[
+ "Estonia",
+2007,
+14,
+0.1333333333 
+],
+[
+ "Spain",
+2007,
+7662,
+0.04425106462 
+],
+[
+ "Finland",
+2007,
+1434,
+0.03475103734 
+],
+[
+ "France",
+2007,
+58196,
+0.2087012673 
+],
+[
+ "United Kingdom",
+2007,
+41948,
+0.1909965035 
+],
+[
+ "Greece",
+2007,
+42185,
+0.005131588593 
+],
+[
+ "Hungary",
+2007,
+3425,
+0.08848167539 
+],
+[
+ "Ireland",
+2007,
+6623,
+0.1017932489 
+],
+[
+ "Italy",
+2007,
+14053,
+0.06992041952 
+],
+[
+ "Lithuania",
+2007,
+125,
+0.05555555556 
+],
+[
+ "Luxembourg",
+2007,
+764,
+0.09003831418 
+],
+[
+ "Latvia",
+2007,
+34,
+0.2272727273 
+],
+[
+ "Malta",
+2007,
+1672,
+0.006289308176 
+],
+[
+ "the Netherlands",
+2007,
+7102,
+0.04549886253 
+],
+[
+ "Norway",
+2007,
+11259,
+0.08602935214 
+],
+[
+ "Poland",
+2007,
+13248,
+0.03053874964 
+],
+[
+ "Portugal",
+2007,
+224,
+0.0162601626 
+],
+[
+ "Romania",
+2007,
+659,
+0.2134328358 
+],
+[
+ "Sweden",
+2007,
+36370,
+0.02646219686 
+],
+[
+ "Slovenia",
+2007,
+425,
+0.003546099291 
+],
+[
+ "Slovakia",
+2007,
+2643,
+0.004720161834 
+],
+[
+ "Austria",
+2008,
+12841,
+0.22136369 
+],
+[
+ "Belgium",
+2008,
+17115,
+0.1492058221 
+],
+[
+ "Bulgaria",
+2008,
+746,
+0.03643724696 
+],
+[
+ "Switzerland",
+2008,
+16606,
+0.1469231269 
+],
+[
+ "Cyprus",
+2008,
+6933,
+0.008047359171 
+],
+[
+ "Czech Republic",
+2008,
+2719,
+0.06636500754 
+],
+[
+ "Germany",
+2008,
+28018,
+0.3502425902 
+],
+[
+ "Denmark",
+2008,
+2360,
+0.2059219381 
+],
+[
+ "Estonia",
+2008,
+14,
+0.3076923077 
+],
+[
+ "Spain",
+2008,
+4517,
+0.02915057915 
+],
+[
+ "Finland",
+2008,
+4016,
+0.04688279302 
+],
+[
+ "France",
+2008,
+42599,
+0.2533014781 
+],
+[
+ "United Kingdom",
+2008,
+30547,
+0.1788281338 
+],
+[
+ "Greece",
+2008,
+33252,
+0.01485230667 
+],
+[
+ "Hungary",
+2008,
+3118,
+0.07380073801 
+],
+[
+ "Ireland",
+2008,
+6756,
+0.08542786576 
+],
+[
+ "Italy",
+2008,
+30324,
+0.08322842356 
+],
+[
+ "Lithuania",
+2008,
+215,
+0.07638888889 
+],
+[
+ "Luxembourg",
+2008,
+809,
+0.0664845173 
+],
+[
+ "Latvia",
+2008,
+51,
+0.06451612903 
+],
+[
+ "Malta",
+2008,
+2607,
+0.006998158379 
+],
+[
+ "the Netherlands",
+2008,
+13399,
+0.04714821935 
+],
+[
+ "Norway",
+2008,
+20505,
+0.07996662263 
+],
+[
+ "Poland",
+2008,
+7745,
+0.01895501866 
+],
+[
+ "Portugal",
+2008,
+161,
+0.09756097561 
+],
+[
+ "Romania",
+2008,
+1172,
+0.1229742612 
+],
+[
+ "Sweden",
+2008,
+40490,
+0.04589883231 
+],
+[
+ "Slovenia",
+2008,
+238,
+0.009230769231 
+],
+[
+ "Slovakia",
+2008,
+910,
+0.02308499475 
+],
+[
+ "Austria",
+2009,
+15821,
+0.149129656 
+],
+[
+ "Belgium",
+2009,
+22277,
+0.1561156235 
+],
+[
+ "Bulgaria",
+2009,
+853,
+0.05298913043 
+],
+[
+ "Switzerland",
+2009,
+16005,
+0.1226437158 
+],
+[
+ "Cyprus",
+2009,
+6920,
+0.007762879323 
+],
+[
+ "Czech Republic",
+2009,
+1832,
+0.1056376574 
+],
+[
+ "Germany",
+2009,
+33033,
+0.2816143809 
+],
+[
+ "Denmark",
+2009,
+4562,
+0.2054726368 
+],
+[
+ "Estonia",
+2009,
+36,
+0.04545454545 
+],
+[
+ "Spain",
+2009,
+3007,
+0.03823969237 
+],
+[
+ "Finland",
+2009,
+5910,
+0.02579737336 
+],
+[
+ "France",
+2009,
+47686,
+0.1949035813 
+],
+[
+ "United Kingdom",
+2009,
+46023,
+0.1983220315 
+],
+[
+ "Greece",
+2009,
+28023,
+0.002319288751 
+],
+[
+ "Hungary",
+2009,
+4672,
+0.02535899786 
+],
+[
+ "Ireland",
+2009,
+5260,
+0.05119887165 
+],
+[
+ "Italy",
+2009,
+17603,
+0.09313397928 
+],
+[
+ "Lithuania",
+2009,
+211,
+0.04564315353 
+],
+[
+ "Luxembourg",
+2009,
+642,
+0.1946902655 
+],
+[
+ "Latvia",
+2009,
+52,
+0.1388888889 
+],
+[
+ "Malta",
+2009,
+3216,
+0.006877579092 
+],
+[
+ "the Netherlands",
+2009,
+14905,
+0.04248945406 
+],
+[
+ "Norway",
+2009,
+27990,
+0.07361912951 
+],
+[
+ "Poland",
+2009,
+10587,
+0.008427142947 
+],
+[
+ "Portugal",
+2009,
+139,
+0.02912621359 
+],
+[
+ "Romania",
+2009,
+835,
+0.06627680312 
+],
+[
+ "Sweden",
+2009,
+37897,
+0.04594272076 
+],
+[
+ "Slovenia",
+2009,
+183,
+0.08333333333 
+],
+[
+ "Slovakia",
+2009,
+822,
+0.01555555556 
+],
+[
+ "Austria",
+2010,
+11012,
+0.1450214341 
+],
+[
+ "Belgium",
+2010,
+33140,
+0.1285860884 
+],
+[
+ "Bulgaria",
+2010,
+1025,
+0.02475247525 
+],
+[
+ "Switzerland",
+2010,
+15567,
+0.1596907121 
+],
+[
+ "Cyprus",
+2010,
+6446,
+0.007419620775 
+],
+[
+ "Czech Republic",
+2010,
+1401,
+0.1681528662 
+],
+[
+ "Germany",
+2010,
+48589,
+0.1598771453 
+],
+[
+ "Denmark",
+2010,
+4965,
+0.1859733978 
+],
+[
+ "Estonia",
+2010,
+30,
+0.25 
+],
+[
+ "Spain",
+2010,
+2744,
+0.1029411765 
+],
+[
+ "Finland",
+2010,
+4018,
+0.03101970865 
+],
+[
+ "France",
+2010,
+80207,
+0.1874356026 
+],
+[
+ "United Kingdom",
+2010,
+40536,
+0.1950495463 
+],
+[
+ "Greece",
+2010,
+11921,
+0.01974641447 
+],
+[
+ "Hungary",
+2010,
+2104,
+0.03104026846 
+],
+[
+ "Ireland",
+2010,
+4857,
+0.02801171732 
+],
+[
+ "Italy",
+2010,
+10052,
+0.1601624406 
+],
+[
+ "Lithuania",
+2010,
+373,
+0.002688172043 
+],
+[
+ "Luxembourg",
+2010,
+815,
+0.09752547307 
+],
+[
+ "Latvia",
+2010,
+61,
+0.1166666667 
+],
+[
+ "Malta",
+2010,
+306,
+0.1128205128 
+],
+[
+ "the Netherlands",
+2010,
+15148,
+0.04759137967 
+],
+[
+ "Norway",
+2010,
+22856,
+0.1185521364 
+],
+[
+ "Poland",
+2010,
+6534,
+0.01610738255 
+],
+[
+ "Portugal",
+2010,
+160,
+0.04081632653 
+],
+[
+ "Romania",
+2010,
+887,
+0.09921962096 
+],
+[
+ "Sweden",
+2010,
+45114,
+0.05151020591 
+],
+[
+ "Slovenia",
+2010,
+246,
+0.1024390244 
+],
+[
+ "Slovakia",
+2010,
+541,
+0.02431118314 
+],
+[
+ "Austria",
+2011,
+14416,
+0.1855777224 
+],
+[
+ "Belgium",
+2011,
+41152,
+0.1198844765 
+],
+[
+ "Bulgaria",
+2011,
+893,
+0.01168224299 
+],
+[
+ "Switzerland",
+2011,
+19439,
+0.1814226351 
+],
+[
+ "Cyprus",
+2011,
+4167,
+0.009532595326 
+],
+[
+ "Czech Republic",
+2011,
+756,
+0.2950391645 
+],
+[
+ "Germany",
+2011,
+53347,
+0.1636917116 
+],
+[
+ "Denmark",
+2011,
+3811,
+0.2178629125 
+],
+[
+ "Estonia",
+2011,
+67,
+0.1194029851 
+],
+[
+ "Spain",
+2011,
+3414,
+0.1125584502 
+],
+[
+ "Finland",
+2011,
+3086,
+0.04769968953 
+],
+[
+ "France",
+2011,
+89320,
+0.1100791656 
+],
+[
+ "United Kingdom",
+2011,
+36872,
+0.2297301038 
+],
+[
+ "Greece",
+2011,
+15292,
+0.007449277532 
+],
+[
+ "Hungary",
+2011,
+1693,
+0.0319510537 
+],
+[
+ "Ireland",
+2011,
+3337,
+0.03400309119 
+],
+[
+ "Italy",
+2011,
+34117,
+0.08455261677 
+],
+[
+ "Lithuania",
+2011,
+406,
+0.01496259352 
+],
+[
+ "Luxembourg",
+2011,
+2375,
+0.0253968254 
+],
+[
+ "Latvia",
+2011,
+335,
+0.05625 
+],
+[
+ "Malta",
+2011,
+2547,
+0.02874743326 
+],
+[
+ "the Netherlands",
+2011,
+14631,
+0.04490323972 
+],
+[
+ "Norway",
+2011,
+18222,
+0.1557546173 
+],
+[
+ "Poland",
+2011,
+6887,
+0.01554763319 
+],
+[
+ "Portugal",
+2011,
+275,
+0.2288135593 
+],
+[
+ "Romania",
+2011,
+2061,
+0.04103165299 
+],
+[
+ "Sweden",
+2011,
+43759,
+0.06477385574 
+],
+[
+ "Slovenia",
+2011,
+373,
+0.04092071611 
+],
+[
+ "Slovakia",
+2011,
+491,
+0.01263157895 
+],
+[
+ "Austria",
+2012,
+17413,
+0.2005121778 
+],
+[
+ "Belgium",
+2012,
+38570,
+0.1127413991 
+],
+[
+ "Bulgaria",
+2012,
+1387,
+0.02057142857 
+],
+[
+ "Switzerland",
+2012,
+32359,
+0.07697267424 
+],
+[
+ "Cyprus",
+2012,
+2892,
+0.02564102564 
+],
+[
+ "Czech Republic",
+2012,
+753,
+0.0601965602 
+],
+[
+ "Germany",
+2012,
+77651,
+0.1417526607 
+],
+[
+ "Denmark",
+2012,
+7529,
+0.2568993506 
+],
+[
+ "Estonia",
+2012,
+9,
+0 
+],
+[
+ "Spain",
+2012,
+2579,
+0.08535660091 
+],
+[
+ "Finland",
+2012,
+2922,
+0.1516789983 
+],
+[
+ "France",
+2012,
+97643,
+0.09233693477 
+],
+[
+ "United Kingdom",
+2012,
+37066,
+0.2674432826 
+],
+[
+ "Greece",
+2012,
+17338,
+0.007843846015 
+],
+[
+ "Hungary",
+2012,
+2157,
+0.03083900227 
+],
+[
+ "Ireland",
+2012,
+2256,
+0.04993312528 
+],
+[
+ "Italy",
+2012,
+17352,
+0.08542019428 
+],
+[
+ "Lithuania",
+2012,
+526,
+0.02466793169 
+],
+[
+ "Luxembourg",
+2012,
+2146,
+0.01686166552 
+],
+[
+ "Latvia",
+2012,
+189,
+0.04048582996 
+],
+[
+ "Malta",
+2012,
+2211,
+0.7340301974 
+],
+[
+ "the Netherlands",
+2012,
+13102,
+0.04827253293 
+],
+[
+ "Norway",
+2012,
+18309,
+0.2056615577 
+],
+[
+ "Poland",
+2012,
+12266,
+0.01029314888 
+],
+[
+ "Portugal",
+2012,
+299,
+0.02222222222 
+],
+[
+ "Romania",
+2012,
+2511,
+0.06323644933 
+],
+[
+ "Sweden",
+2012,
+43876,
+0.09400752874 
+],
+[
+ "Slovenia",
+2012,
+305,
+0.06493506494 
+],
+[
+ "Slovakia",
+2012,
+732,
+0.04227212682 
+] 
+];
+data.addColumn('string','Country');
+data.addColumn('number','Year');
+data.addColumn('number','Asylum.applications');
+data.addColumn('number','Asylum.recognition.rate');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMotionChartID110c153e1781() {
+var data = gvisDataMotionChartID110c153e1781();
+var options = {};
+options["width"] =   1000;
+options["height"] =    450;
+options["state"] = "\n{\"iconType\":\"BUBBLE\",\"uniColorForNonSelected\":false,\"orderedByX\":false,\"playDuration\":15000,\"xZoomedIn\":false,\"xZoomedDataMin\":5,\"yZoomedIn\":false,\"xLambda\":0,\"time\":\"2001\",\"orderedByY\":false,\"xZoomedDataMax\":103080,\"yLambda\":0,\"sizeOption\":\"2\",\"nonSelectedAlpha\":0.4,\"colorOption\":\"_UNIQUE_COLOR\",\"iconKeySettings\":[{\"key\":{\"dim0\":\"the Netherlands\"},\"trailStart\":\"2001\"}],\"xAxisOption\":\"2\",\"yZoomedDataMax\":0.7340301974,\"duration\":{\"multiplier\":1,\"timeUnit\":\"Y\"},\"yAxisOption\":\"3\",\"yZoomedDataMin\":0,\"dimensions\":{\"iconDimensions\":[\"dim0\"]},\"showTrails\":true}\n";
+
+    var chart = new google.visualization.MotionChart(
+    document.getElementById('MotionChartID110c153e1781')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "motionchart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMotionChartID110c153e1781);
+})();
+function displayChartMotionChartID110c153e1781() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID110c153e1781"></script>
+ 
+
+<!-- divChart -->
+
+<div id="MotionChartID110c153e1781" 
+  style="width: 1000; height: 450;">
+</div>
+
+<p><FONT SIZE=2>From <a href="http://www.dimiter.eu/Asylum.html">&quot;Visualizing asylum policy&quot;</a> - <a href="http://www.dimiter.eu/Research.html">Dimiter Toshkov</a></FONT></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VI. Beautiful, Reproducible Output</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Creating Deliverables with Code</h2>
+
+<p>When the data or statistical analyses change, your deliverables should change with them! Using code to create final output ensures that your deliverables are flexible and reproducible.</p>
+
+<ul class = "build incremental">
+<li><b>HTML/CSS</b>
+
+<ul>
+<li>Web pages, HTML slides (e.g. slidify), local HTML documents</li>
+<li>Relied upon by web developers, bloggers</li>
+</ul></li>
+<li><b><a href="http://www.latex-project.org/">LaTeX</a></b>
+
+<ul>
+<li>pdf reports, journal articles, glossaries (<a href="http://en.wikibooks.org/wiki/LaTeX/Glossary">makeglossary</a>), bibliographies (<a href="http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX">BibTex</a>)</li>
+<li>Used primarily by academics</li>
+</ul></li>
+<li><b>Markdown</b>
+
+<ul>
+<li>Same output and logic as HTML, simpler syntax</li>
+<li>Can take raw HTML, LaTeX, CSS, JS for customizing certain parts</li>
+<li>R-specific version (<a href="http://rmarkdown.rstudio.com/">R Markdown</a>) allows embedded, evaluated R code chunks</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Section VII.</h2>
+
+<p><hr></hr>
+</br></br></br></p>
+
+<h2 style="color: #FFFFFF">Putting It All Together</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VI. Beautiful, Reproducible Output</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Literate Statistical Programming</h2>
+
+<ul class = "build incremental">
+<li><p><b>Main Idea</b></p>
+
+<ul>
+<li>Usual workflow: Do stuff to data, get the output, use it to create a final report</li>
+<li>LSP workflow: code and final text live in one document. Code is run when report is compiled.</li>
+<li><a href="https://www.youtube.com/watch?v=YcJb1HBc-1Q&amp;t=18m15s">Example video</a> (Click me!)</li>
+</ul></li>
+<li><p><b><a href="http://www.literateprogramming.com/index.html">Knuth (1992)</a></b></p>
+
+<blockquote>
+<p>&quot;The practitioner of literate programming can be regarded as an essayist, whose main concern is with exposition&quot;</p>
+</blockquote></li>
+<li><p><b>Practical Applications</b></p>
+
+<ul>
+<li>LSP offers a uniquely powerful method for authoring documentation.</li>
+<li>It is superior to commenting code (but don&#39;t stop commenting!)</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VII. Putting it All Together</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Multi-Software Solutions</h2>
+
+<p>All software have strengths and weaknesses. You might, for example, want to do data wrangling in R, forecasting in EViews, and deliverable preparation in Excel. How can this be accomplished? A few options are given below.</p>
+
+<ul class = "build incremental">
+<li><b>Read/write: &quot;baton-passing&quot;</b>
+
+<ul>
+<li>Step 1 gets raw data, does stuff, exports to a csv</li>
+<li>Step 2 reads that csv (maybe in to EViews), does some stuff, dumps its output to Excel</li>
+<li>Step 3 pulls data from the FCST_DATA range in Excel, does stuff, creates deliverable</li>
+</ul></li>
+<li><b>An alternative: &quot;quarterbacking&quot;</b>
+
+<ul>
+<li>Choose a single software to control the other software; e.g. <a href="http://www.eviews.com/download/whitepapers/EViews_COM_Automation.pdf">COM Automation in EViews</a></li>
+<li>Most software can pass commands directly to the Windows command line</li>
+<li>Store commands in a <a href="http://en.wikipedia.org/wiki/VBScript">VBScript file</a> and execute it with a one-line command call</li>
+<li>Examples in: <a href="https://stat.ethz.ch/R-manual/R-patched/library/base/html/system.html">R</a> | <a href="http://sarge.readthedocs.org/en/latest/">Python</a> | <a href="https://remote.bus.brocku.ca/files/Published_Resources/EViews_7/Docs/EViews%207%20Command%20Ref.pdf#105">EViews</a> (see &quot;shell&quot;) | <a href="http://blogs.mathworks.com/community/2010/05/17/calling-shell-commands-from-matlab/">MATLAB</a> | <a href="http://support.sas.com/documentation/cdl/en/hostwin/63285/HTML/default/viewer.htm#exittemp.htm">SAS</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VII. Putting it All Together</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Collaboration with Git</h2>
+
+<ul class = "build incremental">
+<li><b>Put project files in a shared repo</b>
+
+<ul>
+<li>Examples: GitHub, Google Drive, Dropbox, shared network (corporate setting), BitBucket, others</li>
+</ul></li>
+<li><b>Work locally</b>
+
+<ul>
+<li>Each team member &quot;<a href="http://git-scm.com/docs/git-clone">clones</a>&quot; the repo (i.e. makes a local copy)</li>
+<li>Testing and development are done locally, changes are &quot;pushed&quot; to the shared, central repo</li>
+</ul></li>
+<li><b>Advantages</b>
+
+<ul>
+<li>Complete project history (with ability to revert to old versions)</li>
+<li>Multiple local copies of the repo minimizes risk of data loss</li>
+<li>Avoid unwieldy shared folders with many file versions</li>
+<li>Mitigated risk of over-writing or writing <a href="http://githowto.com/resolving_conflicts">conflicting code</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VII. Putting it All Together</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Case Study: Collaboration with Git</h2>
+
+<p><b>Use case:</b> You are working on a forecasting project for a large diversified manufacturer. The client wants country-level revenue forecasts for three divisions, each of which has 5 business units. You and three colleagues (lets call them Farrokh, Joe, and David) divvy up the work, with your colleagues taking responsibility for individual divisions, and you building the structure of the project (data manipulation, data banking, deliverable creation). Without version control, this is the result:</p>
+
+<p></br></p>
+
+<p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=".\\assets\\img\\version_control_data.png" height="500" width="400"></span><span style="float:right"><img src=".\\assets\\img\\version_control_prog.png" height="500" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VII. Putting it All Together</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">The Checkpoint Approach</h2>
+
+<ul class = "build incremental">
+<li><b>Main Idea</b>
+
+<ul>
+<li>Decide, early on, the format of your outputs. Tell your collaborators.</li>
+<li>Cooperation through shared commitment to consistent structures.</li>
+</ul></li>
+<li><b>Benefits</b>
+
+<ul>
+<li>Different teams can work in parallel on their pieces</li>
+<li>Mitigate the threat of &quot;breaking everything&quot;, reduce time spent retrofitting</li>
+</ul></li>
+<li><b>An Analogy</b>
+
+<ul>
+<li>Kellogg&#39;s engineers might make changes to the Rice Krispies formula to make them sweeter or crunchier...but the result will always be a dry solid in a rectangular box.</li>
+<li>Partners downstream (e.g. retailers) can make improvements to their processes (e.g. inventory management, automated checkouts) with confidence that these improvements will always be compatible with changes from Kellogg&#39;s</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cb;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VII. Putting it All Together</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Case Study: Checkpoint Approach</h2>
+
+<ul class = "build incremental">
+<li><b>The Setup</b>
+
+<ul>
+<li>Team 1 (economists) uses SAS to pull data from the Bureau of Labor Statistics and generate forecasts at the census tract, state, and national level. These forecasts are exported to <code>forecast.csv</code></li>
+<li>Team 2 (analysts) uses R to import <code>forecast.csv</code> and create graphs and summary tables. These are stored in folder called <code>Assets</code></li>
+<li>Team 3 (consultants) uses VBA PowerPoint to pull in the figures from <code>Assets</code> and, with pre-made slide templates, generate a slide deck which can be compiled into a pdf to be delivered to the client.</li>
+</ul></li>
+<li><b>What Do You Notice?</b>
+
+<ul>
+<li>Freezing the output/input formats strategically lets teams work in isolation without breaking each others&#39; processes</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Section VIII.</h2>
+
+<p><hr></hr>
+</br></br></br></p>
+
+<h2 style="color: #FFFFFF">Concluding Remarks</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VIII. Concluding Remarks</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">In Summary...</h2>
+
+<ul class = "build incremental">
+<li><b>Economics is Changing</b>
+
+<ul>
+<li>Complexity problems are coming into focus</li>
+<li>The nature of transactions and information flow is changing rapidly</li>
+<li>New and richer data sources are available</li>
+</ul></li>
+<li><b>Economists Should Change Too</b>
+
+<ul>
+<li>Learn to code...not just the stats, but deliverable creation too</li>
+<li>Reproducibility is critical</li>
+<li>Don&#39;t change with your clients. Change before them.</li>
+</ul></li>
+<li><b>This Could be Really Fun</b>
+
+<ul>
+<li>You can do <a href="http://www.brookings.edu/research/reports2/2014/11/06-mapping-freight-tomer-kane#%2EVFuHgBW0-Dq%2E">this</a></li>
+<li>And <a href="http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html?pagewanted=all&amp;_r=0">this</a> and even <a href="http://atlas.cid.harvard.edu/">this</a></li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-38" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <span><FONT COLOR="#00C990" SIZE=3>&#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf; &#x25cf;</FONT>
+  <FONT COLOR="#71787D" SIZE=3> &nbsp; VIII. Concluding Remarks</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Thank You for Your Time</h2>
+
+<p></br></p>
+
+<p><center><b>Not sure what you said, but the slides looked nice!</b></center></p>
+
+<p></br></p>
+
+<p><center>Umm thanks? You can click through the slides <a href="http://jaylamb20.github.io/MSAE_Alumni_2015/index.html#1">here</a> or view the raw code <a href="https://github.com/JayLamb20/MSAE_Alumni_2015">here</a>.</p>
+
+<p></br></p>
+
+<p><center><b>Questions? Comments? Profanity-Laced Criticisms?</b></center></p>
+
+<p></br></p>
+
+<p><center><a href="jaylamb20@gmail.com">jaylamb20@gmail.com</a> | <a href="https://twitter.com/i/notifications">Twitter</a> | <a href="https://www.linkedin.com/in/jameslamb1">LinkedIN</a> | <a href="https://github.com/JayLamb20">GitHub</a></center></p>
+
+<p></br></p>
+
+<p><center><b>Want to Work with me at IHS? Or pay my team to forecast stuff?</b></center></p>
+
+<p><br></p>
+
+<p><center><a href="james.lamb@ihs.com">james.lamb@ihs.com</a></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-39" style="background:#3C8C75;;">
+  <article data-timings="">
+    <h2 style="color: #FFFFFF">Appendices</h2>
+
+<p><hr></hr></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-40" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <FONT COLOR="#71787D" SIZE=3>Appendices</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Appendix A. Training Resources</h2>
+
+<p>The list below is given only as a starting point. There are a LOT of resources out there. Go forth and explore!
+</br></p>
+
+<ul>
+<li><b>General Data Science</b> - <a href="https://www.coursera.org/specialization/jhudatascience/1?utm_medium=listingPage">JHU MOOC Specialization</a> | <a href="https://www.edx.org/">edX</a> | <a href="http://www.kaggle.com/">kaggle</a> | <a href="http://datasciencemasters.org/">&quot;Open Source DS M.S&quot;</a></li>
+<li><b>Git/GitHub</b> - <a href="https://www.codeschool.com/paths/git">Code School</a> | <a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">GitHub-Recommend Sources</a></li>
+<li><b>EViews</b> - <a href="http://www.eviews.com/Training/webinars.html">Webinars</a> | <a href="http://register1.eviews.com/demo/">Demo</a> | <a href="http://forums.eviews.com/">Forums</a></li>
+<li><b>Python</b> - <a href="https://www.coursera.org/specialization/fundamentalscomputing2/37?utm_medium=listingPage">Rice U MOOCs</a> | <a href="http://www.codecademy.com/tracks/python">CodeAcademy</a> | <a href="http://www.learnpython.org/">LearnPython</a> | <a href="https://www.coursera.org/course/pythonlearn">UMich MOOC</a></li>
+<li><b>R</b> - <a href="https://www.datacamp.com/">DataCamp</a> | <a href="http://cran.r-project.org/">CRAN</a> | <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">R Reference Card</a></li>
+<li><b>HTML/CSS</b> - <a href="http://www.codecademy.com/en/tracks/web">CodeAcademy</a> | <a href="http://www.w3schools.com/html/">w3schools</a> | <a href="https://www.codeschool.com/paths/html-css">CodeSchool</a></li>
+<li><b>LaTeX</b> - <a href="http://en.wikibooks.org/wiki/LaTeX">WikiBooks</a> | <a href="https://www.ctan.org/">CTAN</a> | <a href="http://miktex.org/download">MiKTex Download</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-41" style="background:#FFFFFF;;">
+  <article data-timings="">
+    <p><footer>
+  <hr></hr>
+  <FONT COLOR="#71787D" SIZE=3>Appendices</FONT></span><span style="float:right"><FONT COLOR="#71787D" SIZE=3>Practicing Economics in the Hellabyte Era</FONT></span>
+</footer></p>
+
+<h2 style="color: #00C990">Appendix B. Key Academic Papers</h2>
+
+<p>The resources listed here have shaped my view of the near-term future of economic thought and the economics profession. I hope you find them as interesting and useful as I did.</p>
+
+<ul>
+<li><a href="https://global.oup.com/academic/product/complexity-and-the-economy-9780199334292?cc=us&amp;lang=en&amp;">Arthur (2014)</a>. <em>Complexity and the Economy</em>.</li>
+<li><a href="http://blogs.avalonconsult.com/blog/generic/ontology-for-fun-and-profit/">Cagle (2014)</a>. Ontology for Fun and Profit.</li>
+<li><a href="http://dspace.mit.edu/handle/1721.1/86935">Datta (2014)</a>. Future IoT.</li>
+<li><a href="http://dspace.mit.edu/bitstream/handle/1721.1/41897/WiFi%20Meet%20FuFi%20_%20MIT%20ESD%20WP.pdf?sequence=1">Datta (n.d.)</a>. WiFi Meet FuFi: Disruptive Innovation in Logistics Catalysed by Energy.</li>
+<li><a href="http://www.sciencemag.org/content/346/6210/1243089.abstract">Einav &amp; Levin (2014)</a>. Economics in the age of big data.</li>
+<li><a href="http://atlas.cid.harvard.edu/book/">Hausmann &amp; Hidalgo, et. al (2011)</a>. <em>The Atlas of Economic Complexity</em>.</li>
+<li><a href="http://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555">Kahneman (2013)</a>. <em>Thinking, Fast and Slow</em>.</li>
+<li><a href="http://people.ischool.berkeley.edu/%7Ehal/Papers/2013/BeyondBigDataPaperFINAL.pdf">Varian (2014)</a>. Beyond Big Data.</li>
+<li><a href="http://people.ischool.berkeley.edu/%7Ehal/Papers/2013/ml.pdf">Varian (2013)</a>. Big Data: New Tricks for Econometrics.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='NA'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='NA'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='NA'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='NA'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='NA'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='NA'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='NA'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='NA'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='NA'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='NA'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='NA'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='NA'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='NA'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='NA'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='NA'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='NA'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='NA'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='NA'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='NA'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='NA'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='NA'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='NA'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='NA'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='NA'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='NA'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='NA'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='NA'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='NA'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='NA'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='NA'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='NA'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='NA'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='NA'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='NA'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='NA'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='NA'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='NA'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='NA'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='NA'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='NA'>
+         41
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

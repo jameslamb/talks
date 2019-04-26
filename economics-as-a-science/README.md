@@ -6,7 +6,7 @@
 
 ## Where this talk has been given:
 
-* (Milwaukee, WI) Marquette University M.S. Applied Economics Alumni Meetup, April 2015
+* (Milwaukee, WI) Marquette University M.S. Applied Economics Alumni Meetup, April 2016
 
 ## Links
 
