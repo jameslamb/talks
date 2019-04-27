@@ -1,34 +1,10 @@
 #!/bin/bash
 
 # [description]
-#     Install 'feather' from source
+#     Install 'feather' from package managers
 # [usage]
 # ./install_scriptsinstall_feather.sh $(pwd)/repos
 
-REPO_LOCATION=${1}
+pip install feather-format
 
-pushd ${REPO_LOCATION}
-    
-    git clone \
-        --depth=1 \
-        https://github.com/wesm/feather.git
-
-    echo "installing python"
-    
-    pushd $(pwd)/feather/python
-
-        python setup.py install
-
-    popd
-
-    echo "done installing python"
-
-    echo "install R"
-
-    pushd $(pwd)/feather/R
-        R CMD INSTALL .
-    popd
-
-    echo "done installing R"
-
-popd
+Rscript -e "install.packages('feather', repos = 'http://cran.rstudio.com')"

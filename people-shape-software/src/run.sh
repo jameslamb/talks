@@ -1,23 +1,11 @@
 #!/bin/bash
 
-DATA_DIR=${1:-doppel_results}
-REPO_LOCATION=${2:-repos}
+PKG=${1}
+DATA_DIR=${2:-doppel_results}
 
 mkdir -p ${DATA_DIR}
 
-for pkg in $(cat PACKAGES); do
 
-    ./install_scripts/install_${pkg}.sh ${REPO_LOCATION}
+./install_scripts/install_${PKG}.sh
 
-    # The R package
-    doppel-describe \
-        -p ${pkg} \
-        --language R \
-        --data-dir ${DATA_DIR}
-
-    doppel-describe \
-        -p ${pkg} \
-        --language python \
-        --data-dir ${DATA_DIR}
-
-done
+./test_scripts/test_${PKG}.sh ${DATA_DIR}

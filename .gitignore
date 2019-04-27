@@ -1,3 +1,8 @@
 
 # just to be safe
 **/*.pdf
+**/*.json
+**/*.log
+
+# ranodm nonsense
+**/*.DS_Store
