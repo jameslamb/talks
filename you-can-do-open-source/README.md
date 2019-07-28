@@ -7,8 +7,5 @@
 
 ## Where this talk has been given:
 
-* (Chicago, IL) [satRdays Chicago, April 2019](https://chicago2019.satrdays.org)
+* (Chicago, IL) [satRdays Chicago, April 2019](https://chicago2019.satrdays.org) [video](https://www.youtube.com/watch?v=quFhQvizBE8&t=4h35m15s)
 * (Chicago, IL) [Uptake Hacktoberfest, October 2018](https://www.eventbrite.com/e/uptake-hacktoberfest-open-source-hack-night-uptake-tickets-51227185892#)
-
-## Links
-
