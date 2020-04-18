@@ -130,7 +130,7 @@ response <- httr::GET(
 )
 ```
 
-This `response` has a status code
+This response has a `status code`
 
 ```r
 httr::status_code(response)
@@ -174,4 +174,3 @@ str(response_list, max.levl = 1)
  $ html_url         : chr "https://github.com/jayqi/spongebob"
  $ description      : chr "spongebob : SPoNgeBOb-CAse cONveRSioN iN R"
  $ fork             : logi FALSE
-
