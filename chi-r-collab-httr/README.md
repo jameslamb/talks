@@ -1,5 +1,13 @@
 # httr-talk
 
+#### Contents
+
+* [HTTP Basics](#http-basics)
+    - [Request](#request)
+    - [Response](#response)
+* [JSON Basics](#json-basics)
+* [R Examples](#r-examples)
+
 ## HTTP Basics
 
 This is a lightweight introduction to HTTP. For moore, see [Mozilla's excellent docs](https://developer.mozilla.org/en-US/docs/Web/HTTP).
@@ -56,7 +64,7 @@ A `response` has the following important components.
 
 ## JSON Basics
 
-As mentioned above, sometimes the server sends the client a "body" containing some data. It's common for that body to a text file with information stored in Javascript Object Notation ([JSON](https://en.wikipedia.org/wiki/JSON)).
+As mentioned above, sometimes the server sends the client a "body" containing some data. It's common for that body to be a text file with information stored in Javascript Object Notation ([JSON](https://en.wikipedia.org/wiki/JSON)).
 
 It looks something like this.
 
@@ -108,4 +116,62 @@ social_profile <- list(
 )
 ```
 
-My favorite library for taking JSON text and turning it into an R object is `jsonlite`. It has very few dependencies, is fast, and is reasonably easy to use.
+My favorite R package for taking JSON text and turning it into an R object is `jsonlite`. It has very few dependencies, is fast, and is reasonably easy to use.
+
+## HTTTP in R with `httr`
+
+My favorite R package for making HTTP requests is `httr`. You can learn more about it [in the vignetttets](https://cran.r-project.org/web/packages/httr/index.html).
+
+`httr` is awesome for writing *clients*. Recall that clients make `requests`.
+
+```r
+response <- httr::GET(
+    url = "api.github.com/repos/jayqi/spongebob"
+)
+```
+
+This `response` has a status code
+
+```r
+httr::status_code(response)
+```
+
+> [1] 200
+
+and it has a `body`, in this case some details about a repo stored in JSON.
+
+```r
+cat(httr::content(response, as = "text"))
+```
+
+> {
+  "id": 162783634,
+  "node_id": "MDEwOlJlcG9zaXRvcnkxNjI3ODM2MzQ=",
+  "name": "spongebob",
+  "full_name": "jayqi/spongebob",
+  "private": false,
+  "owner": {
+    "login": "jayqi",
+
+The body is just a string, but it can be converted into an R list witth `jsonlite::fromJSON()`.
+
+```r
+response_list <- jsonlite::fromJSON(
+    httr::content(response, as = "txt")
+    , simplifyVector = FALSE
+    , simplifyDataFrame = FALSE
+)
+str(response_list, max.levl = 1)
+```
+
+> List of 76
+ $ id               : int 162783634
+ $ node_id          : chr "MDEwOlJlcG9zaXRvcnkxNjI3ODM2MzQ="
+ $ name             : chr "spongebob"
+ $ full_name        : chr "jayqi/spongebob"
+ $ private          : logi FALSE
+ $ owner            :List of 18
+ $ html_url         : chr "https://github.com/jayqi/spongebob"
+ $ description      : chr "spongebob : SPoNgeBOb-CAse cONveRSioN iN R"
+ $ fork             : logi FALSE
+
