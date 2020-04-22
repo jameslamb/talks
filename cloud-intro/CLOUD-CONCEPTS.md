@@ -57,7 +57,7 @@ Examples:
 
 This can get extra confusing, because the biggest `Cloud Infrastructture` companies also offer many `Cloud Services`. For examples, Google has a `Cloud Infrastructure` (GCP) and many `Cloud Services` ([GMail](https://www.google.com/gmail/about/), [Google Drive](https://www.google.com/docs/about/), etc.
 
-<img src="./img/google-cloud-services.png" height="400" width="550">
+![](./img/google-cloud-services.png)
 
 </details>
 
@@ -69,7 +69,7 @@ Companies that sell cloud infrastructure are telling their customers:
 
 > ...even if a bunch of fiber-optic cables are damaged by construction
 
-<img src="./img/fiber-optic-cable-cut height="400" width="550">
+![](./img/fiber-optic-cable-cut.jpg)
 
 **AWS**
 
