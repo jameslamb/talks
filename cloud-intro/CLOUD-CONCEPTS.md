@@ -120,7 +120,7 @@ In the public cloud, "provisioning" involves sending requests over the internet 
     
 This could be done by clicking buttons in a console:
     
-![](./img/console-provisioning.png)
+![](./img/gcp-provision-instance.png)
 
 or by running code with a client library or command-line tool
  
@@ -187,6 +187,21 @@ resource "digitalocean_droplet" "mywebserver" {
 
 <details><summary>Serverless</summary>
 
-In the examples so far, you've learned to think about `Cloud Infrastructure` as 
-    
+In the examples so far, you've learned to think about `Cloud Infrastructure` as "some computers someone else owns".
+
+In that setting, it's true that you don't own the computer, but you still have to think about where it is once your provision it. You have to install software on it, deal with the details of making it available for communication with other computers, and handle the case w here it fails.
+
+A new model has emerged in recent years which allows you to build systems where you don't have to care about the underlying computers at all. This is called `Serverless`.
+
+![](./serverless-example.png)
+
+Look at the example above. You configure services like:
+
+* Amazon CloudFront: make your application available via a friendly name like "mywebsite.com"
+* Amazon API Gateway: organize different parts of the application that respond to requests, and handle authenticat
+* Amazon Lambda: call some code on-demand and return the result
+* Amazon S3: store data reliably and make it available for others to access
+
+None of those services require you to know about the underlying computers that power them! This is more of that "declarative" model discussed earlier. You say what you want to happen (e.g. for your code to run when asked), and the infrastructure handles the details.
+
 </details>
