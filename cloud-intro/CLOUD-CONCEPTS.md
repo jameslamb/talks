@@ -35,8 +35,7 @@ When you hear about "cloud", think of multiple buildings full of computers.
 
 </details>
 
-
-### Cloud Platform vs. Cloud Services
+<details><summary>Cloud Platform vs. Cloud Services</summary>
 
 `Cloud Infrastructure`: You can pay to reserve storage and compute and do anything you want with them.
 
@@ -58,17 +57,36 @@ Examples:
 
 This can get extra confusing, because the biggest `Cloud Infrastructture` companies also offer many `Cloud Services`. For examples, Google has a `Cloud Infrastructure` (GCP) and many `Cloud Services` ([GMail](https://www.google.com/gmail/about/), [Google Drive](https://www.google.com/docs/about/), etc.
 
-![](./img/google-cloud-services.png)
+<img src="./img/google-cloud-services.png" height="400" width="550">
+
+</details>
+
+<details><summary>How Cloud Infrastructure works</summary>
+
+Companies that sell cloud infrastructure are telling their customers:
+
+> Let us handle the hard stuff. We'll set up the data centers, puts lots of different types of computers and storage in them, and make sure your code and data are accessible.
+
+> ...even if a bunch of fiber-optic cables are damaged by construction
+
+<img src="./img/fiber-optic-cable-cut height="400" width="550">
+
+**AWS**
 
 ![](./img/aws-regions.png)
 
 *source: [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/)*
 
+**Azure**
+
 ![](./img/azure-regions.png)
 
 *source: [Azure Global Infrastructure](https://azure.microsoft.com/en-us/global-infrastructure/regions/)*
+
+**GCP**
 
 ![](./img/google-regions.png)
 
 *source: [Google Cloud locations](https://cloud.google.com/about/locations)*
 
+</details>
