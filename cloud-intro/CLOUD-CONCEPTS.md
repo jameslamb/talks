@@ -71,6 +71,23 @@ Companies that sell cloud infrastructure are telling their customers:
 
 ![](./img/fiber-optic-cable-cut.jpg)
 
+> ...or one of the data centers burns down
+
+![](./img/data-center-fire.jpg)
+
+*source: [IWGCR](http://iwgcr.org/fire-destroys-wisconsin-data-center/)*
+
+> ...
+
+Infrastructure providers set up multiple data centers in different geographic areas, and carefully choose their locations to minimize the risk of a single event like a natural disaster destroying multiple data centers.
+
+The terminology is a bit different from cloud provider to cloud provider, but understanding the AWS terms will give you a good idea of how this works.
+
+* `Availability Zone`: One or more data centers that are very close to each other. Communication between computers within an availability zone is fast and cheap.
+* `Region`: A large geographic area with at least 3 `Availability Zones`. Communication between two `Availability Zones` within a `Region` is faster and cheaper than communication between `Availability Zones` in different `Regions`.
+* `Backbone Network`: A physical network (think a LOT of fiber-optic cable) which connects Availability Zones within and between regions.
+    - This infrastructure is only used for the Cloud Infrastructure provider's traffic, so the provider can sell privileged access to it and can make better guarantees about its speed, reliability, and security (compared to the internet).
+
 **AWS**
 
 ![](./img/aws-regions.png)
