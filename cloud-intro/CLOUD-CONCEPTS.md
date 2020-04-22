@@ -88,6 +88,8 @@ The terminology is a bit different from cloud provider to cloud provider, but un
 * `Backbone Network`: A physical network (think a LOT of fiber-optic cable) which connects Availability Zones within and between regions.
     - This infrastructure is only used for the Cloud Infrastructure provider's traffic, so the provider can sell privileged access to it and can make better guarantees about its speed, reliability, and security (compared to the internet).
 
+![](./img/az-and-region.png)
+
 **AWS**
 
 ![](./img/aws-regions.png)
