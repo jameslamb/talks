@@ -77,8 +77,6 @@ Companies that sell cloud infrastructure are telling their customers:
 
 *source: [IWGCR](http://iwgcr.org/fire-destroys-wisconsin-data-center/)*
 
-> ...
-
 Infrastructure providers set up multiple data centers in different geographic areas, and carefully choose their locations to minimize the risk of a single event like a natural disaster destroying multiple data centers.
 
 The terminology is a bit different from cloud provider to cloud provider, but understanding the AWS terms will give you a good idea of how this works.
@@ -89,6 +87,10 @@ The terminology is a bit different from cloud provider to cloud provider, but un
     - This infrastructure is only used for the Cloud Infrastructure provider's traffic, so the provider can sell privileged access to it and can make better guarantees about its speed, reliability, and security (compared to the internet).
 
 ![](./img/az-and-region.png)
+
+These options allow people to create systems which are `Highly Available`. In short, a system is `Highly Available` if itt can be proven that the system will continue to operate correctly even if some of the computers it uses fail.
+
+The relatively low cost of achieving `High Availability` is a major benefit of the public cloud compared to private clouds, and it is one major reason that `Cloud Infrastructure` providers invest so much in building Availability Zones and Regions.
 
 **AWS**
 
@@ -107,5 +109,15 @@ The terminology is a bit different from cloud provider to cloud provider, but un
 ![](./img/google-regions.png)
 
 *source: [Google Cloud locations](https://cloud.google.com/about/locations)*
+
+</details>
+
+<details><summary>Provisioning Cloud Infrastructure</summary>
+
+The act of reserving some infrastructure is often called `provisioning`. In a `Private Cloud` setting, it means you literally have to buy computers, storage media, wiring, and other equipment
+
+</details>
+
+<details><summary>Provisioning Cloud Infrastructure</summary>
 
 </details>
