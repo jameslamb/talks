@@ -114,10 +114,79 @@ The relatively low cost of achieving `High Availability` is a major benefit of t
 
 <details><summary>Provisioning Cloud Infrastructure</summary>
 
-The act of reserving some infrastructure is often called `provisioning`. In a `Private Cloud` setting, it means you literally have to buy computers, storage media, wiring, and other equipment
+The act of reserving some infrastructure is often called `provisioning`. In a `Private Cloud` setting, it means you literally have to buy computers, storage media, wiring, and other equipment.
+    
+In the public cloud, "provisioning" involves sending requests over the internet to claim access to resources that the `Cloud Infrastructure` provider maintains in their data centers.
+    
+This could be done by clicking buttons in a console:
+    
+![](./img/console-provisioning.png)
+
+or by running code with a client library or command-line tool
+ 
+```shell
+gcloud \
+    compute instances \
+    create \
+        example-instance \
+        --zone us-central1-f
+```
 
 </details>
 
-<details><summary>Provisioning Cloud Infrastructure</summary>
+<details><summary>Infrastructure as Code</summary>
 
+The examples above are *imperative* code.
+    
+**Imperative Code**
+    
+* provision 1 virtual machine with 100 GB of storage and 32 GB of RAM in the us-east-1 region
+* set firewall rules on that virtual machine
+* open port 80 on that virtual machine
+    
+**Declarative Code**
+  
+* Make sure that a virtual machine exists with certain firewall rules and port 80 open
+    
+With declarative code, instead of saying "do this, then this, then this", you say "do whatever you have to to make this true".
+    
+It's like when you place you an order at a drive-thru. You don't say "take the burgers out of the freezer and put them on the grill, drop some frieds in the oil, take the burger out and put it on a bun...". You *declare* what you want, and when you show up at the window that thing is true.
+    
+In the world of `Cloud Infrastructure`, using *declarative* tools to be sure that infrastructure exists is referred to as "infrastructure-as-code". This typically looks like writing up a *template*, like this:
+    
+    
+```shell
+resource "digitalocean_droplet" "mywebserver" {
+  ssh_keys           = [12345678]         # Key example
+  image              = "${var.ubuntu}"
+  region             = "${var.do_ams3}"
+  size               = "s-1vcpu-1gb"
+  private_networking = true
+  backups            = true
+  ipv6               = true
+  name               = "mywebserver-ams3"
+
+  provisioner "remote-exec" {
+    inline = [
+      "export PATH=$PATH:/usr/bin",
+      "sudo apt-get update",
+      "sudo apt-get -y install nginx",
+    ]
+
+    connection {
+      type     = "ssh"
+      private_key = "${file("~/.ssh/id_rsa")}"
+      user     = "root"
+      timeout  = "2m"
+    }
+  }
+} 
+```
+    
+</details>
+
+<details><summary>Serverless</summary>
+
+In the examples so far, you've learned to think about `Cloud Infrastructure` as 
+    
 </details>
