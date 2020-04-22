@@ -20,7 +20,9 @@ When you hear about "cloud", think of multiple buildings full of computers.
 
 * use the computers by clicking buttons or writing code
 
-### Public vs. Private Cloud
+![](./img/statler-waldorf-typing.gif)
+
+<details><summary>Public vs. Private Cloud</summary>
 
 `Private Cloud`: Only people working for your company get to use the computers.
 
@@ -31,9 +33,12 @@ When you hear about "cloud", think of multiple buildings full of computers.
 
 `Public Cloud`: Many organizations can pay to use the computers.
 
+</details>
+
+
 ### Cloud Platform vs. Cloud Services
 
-`Cloud Platform`: You can pay to reserve storage and compute and do anything you want with them.
+`Cloud Infrastructure`: You can pay to reserve storage and compute and do anything you want with them.
 
 Examples:
 
@@ -51,7 +56,7 @@ Examples:
 * [SalesForce CRM](https://www.salesforce.com/ap/cloudcomputing/)
 * [WorkDay](https://www.workday.com/)
 
-This can get extra confusing, because the biggest `Cloud Platform` companies also offer many `Cloud Services`. For examples, Google has a `Cloud Platfoorm` (GCP) and many `Cloud Services` ([GMail](https://www.google.com/gmail/about/), [Google Drive](https://www.google.com/docs/about/), etc.
+This can get extra confusing, because the biggest `Cloud Infrastructture` companies also offer many `Cloud Services`. For examples, Google has a `Cloud Infrastructure` (GCP) and many `Cloud Services` ([GMail](https://www.google.com/gmail/about/), [Google Drive](https://www.google.com/docs/about/), etc.
 
 ![](./img/google-cloud-services.png)
 
