@@ -7,4 +7,4 @@ Some directories contain source files used to create the talks, while others jus
 If you attended one of these talks and have follow-up questions:
 
 1. Thank you so much for attending!
-2. Open [an issues](https://github.com/jameslamb/talks/issues) or email me at jaylamb20@gmail.com
+2. Open [an issue](https://github.com/jameslamb/talks/issues) or email me at jaylamb20@gmail.com
