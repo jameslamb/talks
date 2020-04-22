@@ -1,8 +1,24 @@
 # cloud-intro
 
+## Description
+
 > In this presentation, you'll get a light introduction to the public cloud. You'll learn concepts like infrastructure-as-code, high availability, and serverless. You'll see a real-world example of how the public cloud makes it easy to conduct analyses that don't work well on your local machine. This will be a highly interactive demo, where attendees are encouraged to interrupt the presenter and ask questions.
 
-## The Problem
+## Where this talk has been given:
+
+* (virtual) University of Illinois, Urbana-Champaign, [IRisk Lab](https://math.illinois.edu/illinois-risk-lab/home) Virtual Workshop series, April 2020
+
+## Agenda
+
+The talk is structured as follows
+
+* [Cloud Concepts](./CLOUD-CONCEPTS.md)
+* [Training a model on your laptop](./TRAIN-LOCAL.md)
+* [Serving a model on your laptop](./SCORE-LOCAL.md)
+* [Training a model with cloud services](./TRAIN-CLOUD.md)
+* [Serving a model with cloud services](./SCORE-CLOUD.md)
+* [How to learn more](./LEARN-CLOUD.md)
+* Question & Answer
 
 ## Set up conda env
 
