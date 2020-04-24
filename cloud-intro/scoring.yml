@@ -1,0 +1,113 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: 'Scoring infrastructure for ticket-closure example'
+Parameters:
+  pTrainingArtifactBucketName:
+    Description: 'Name of the S3 bucket with training artifacts (models, configurations)'
+    Type: 'String'
+  pScoringArtifactFileKey:
+    Description: >
+      Key of the .pkl file that holds the model to use for scoring.
+      Should be a key in the bucket you passed to pTrainingArtifactBucketName.
+    Type: 'String'
+Resources:
+  #############
+  # IAM roles #
+  #############
+  rLambdaExecutionRole:
+    Type: 'AWS::IAM::Role'
+    DeletionPolicy: 'Delete'
+    Properties:
+      RoleName: "ticket-closure-lambda-role"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          -
+            Effect: 'Allow'
+            Principal:
+              Service:
+                - 'lambda.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+      Policies:
+        - PolicyName: 'ticket-closure-lambda-policy'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+            - Resource:
+                - !Sub "arn:aws:s3:::${pTrainingArtifactBucketName}"
+              Effect: 'Allow'
+              Action:
+                - 's3:ListBucket'
+                - 's3:ListBucketVersion'
+            - Resource:
+                - !Sub "arn:aws:s3:::${pTrainingArtifactBucketName}/*"
+              Effect: 'Allow'
+              Action:
+                - 's3:GetObject'
+                - 's3:GetObjectVersion'
+  #################
+  # Lambda Layers #
+  #################
+  rPandasLayer:
+    Type: 'AWS::Serverless::LayerVersion'
+    Properties:
+      LayerName: 'pandas-layer'
+      Description: 'Use pandas in Lambda functions'
+      ContentUri: './lambda-layers/pandas-layer.zip'
+      CompatibleRuntimes:
+        - 'python3.7'
+      RetentionPolicy: 'Delete'
+  rScikitLayer:
+    Type: 'AWS::Serverless::LayerVersion'
+    Properties:
+      LayerName: 'sklearn-layer'
+      Description: 'Use scikit-learn in Lambda functions'
+      ContentUri: './lambda-layers/sklearn-layer.zip'
+      CompatibleRuntimes:
+        - 'python3.7'
+      RetentionPolicy: 'Delete'
+  rLightgbmLayer:
+    Type: 'AWS::Serverless::LayerVersion'
+    Properties:
+      LayerName: 'lightgbm-layer'
+      Description: 'Use lightgbm in Lambda functions'
+      ContentUri: './lambda-layers/lightgbm-layer.zip'
+      CompatibleRuntimes:
+        - 'python3.7'
+      RetentionPolicy: 'Delete'
+  rTicketClosureLibLayer:
+    Type: 'AWS::Serverless::LayerVersion'
+    Properties:
+      LayerName: 'ticket-closure-lib-layer'
+      Description: 'Use custom library the ticket-closure project in a Lambda'
+      ContentUri: './lambda-layers/ticket-closure-lib-layer.zip'
+      CompatibleRuntimes:
+        - 'python3.7'
+      RetentionPolicy: 'Delete'
+  ###################
+  # Lambda function #
+  ###################
+  rScoringLambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: 'ticket-closure-scoring'
+      Description: 'Given details of tickets, predict how long it will be until they are closed'
+      Handler: 'predict.lambda_handler'
+      Runtime: 'python3.7'
+      CodeUri: './lambdas'
+      MemorySize: 2432
+      Timeout: 900
+      Role: !GetAtt rLambdaExecutionRole.Arn
+      Layers:
+        - 'arn:aws:lambda:us-east-1:668099181075:layer:AWSLambda-Python37-SciPy1x:2'
+        - !Ref rPandasLayer
+        - !Ref rScikitLayer
+        - !Ref rLightgbmLayer
+        - !Ref rTicketClosureLibLayer
+      Environment:
+        Variables:
+          TRAINING_ARTIFACT_BUCKET: !Ref pTrainingArtifactBucketName
+          MODEL_FILE: !Ref pScoringArtifactFileKey

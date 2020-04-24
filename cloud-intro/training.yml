@@ -1,0 +1,75 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Training infrastructure for ticket-closure example'
+Resources:
+  #############
+  # S3 bucket #
+  #############
+  rTrainingArtifactBucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: 'Delete'
+    Properties:
+      BucketName: !Sub "ticket-closure-model-artifacts-${AWS::AccountId}-${AWS::Region}"
+      VersioningConfiguration:
+        Status: 'Suspended'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: 'AES256'
+      PublicAccessBlockConfiguration:
+        IgnorePublicAcls: true
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        RestrictPublicBuckets: true
+  #############
+  # IAM roles #
+  #############
+  rSageMakerTrainingRole:
+    Type: 'AWS::IAM::Role'
+    DeletionPolicy: 'Delete'
+    Properties:
+      RoleName: !Sub "ticket-closure-sagemaker-training-role"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          -
+            Effect: 'Allow'
+            Principal:
+              Service:
+                - 'sagemaker.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/AmazonSageMakerFullAccess'
+      Policies:
+        - PolicyName: 'sagemaker-training-code-policy'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Resource:
+                  - !Sub "arn:aws:s3:::${rTrainingArtifactBucket}"
+                Effect: 'Allow'
+                Action:
+                  - 's3:ListBucket'
+                  - 's3:ListBucketVersions'
+              - Resource:
+                  - !Sub "arn:aws:s3:::${rTrainingArtifactBucket}/*"
+                Effect: 'Allow'
+                Action:
+                  - 's3:PutObject*'
+                  - 's3:GetObject*'
+              - Resource:
+                  - '*'
+                Effect: 'Allow'
+                Action:
+                  - 'cloudformation:DescribeStacks'
+Outputs:
+  oSagemakerTrainingRoleArn:
+    Description: 'ARN for the IAM role used for SageMaker notebook instances'
+    Value: !GetAtt rSageMakerTrainingRole.Arn
+    Export:
+      Name: !Sub "${AWS::StackName}-oSagemakerTrainingRoleArn"
+  oTrainingArtifactsBucketName:
+    Description: 'S3 bucket to store models and other artifacts from training'
+    Value: !Ref rTrainingArtifactBucket
+    Export:
+      Name: !Sub "${AWS::StackName}-oTrainingArtifactsBucketName"

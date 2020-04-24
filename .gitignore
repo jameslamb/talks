@@ -1,7 +1,32 @@
+# builds
+**/*.tar.gz
+**/*.zip
 
-# just to be safe
-**/*.json
-**/*.log
+# python stuff
+**/__pycache__
+**/.ipynb_checkpoints
+*.whl
+*.egg-info
 
-# ranodm nonsense
-**/*.DS_Store
+# docs
+*.doc
+*.docx
+*.docm
+*.ppt
+*.pptm
+*.pptx
+*.xls
+*.xlm
+*.xlsx
+
+# data
+*.csv
+*.json
+
+# temporary build stuff
+temp-layer-dir/
+sam-*.yml
+*.pkl
+
+# misc other garbage
+**/.DS_Store
