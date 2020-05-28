@@ -45,25 +45,6 @@ python -m ipykernel install \
     --display-name "Python (${CONDA_ENV_NAME})"
 ```
 
-## Serve the model locally
-
-```shell
-gunicorn \
-    --access-logfile=- \
-    --error-logfile=- \
-    serve:app
-```
-
-test making some predictions
-
-```
-python create-random-tickets.py 20 > preds.json
-
-curl -X POST \
-    -d @preds.json \
-    http://localhost:8000/api/predict
-```
-
 ## Serverless Scoring
 
 ```shell
