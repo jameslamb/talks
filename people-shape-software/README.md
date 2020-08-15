@@ -6,5 +6,5 @@
 
 ## Where this talk has been given:
 
-* (Chicago, IL) [satRdays Chicago, April 2019](https://chicago2019.satrdays.org) [video](https://www.youtube.com/watch?v=quFhQvizBE8&t=2h24m30s)
+* (Chicago, IL) [satRdays Chicago, April 2019](https://chicago2019.satrdays.org) ([video](https://www.youtube.com/watch?v=quFhQvizBE8&t=2h24m30s))
 * (Chicago, IL) [ChiPy Data SIG presents A Night of Lightning Talks, June 2019](https://www.meetup.com/_ChiPy_/events/261469892/)
