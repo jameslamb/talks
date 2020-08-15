@@ -2,8 +2,7 @@
 
 ## Description
 
-> "In this talk, we’ll describe NoSQL (“not-only SQL”) and document-oriented databases and the value they provide for data science companies like Uptake. We will walk through the unique challenges such datastores pose for data science workflows. To make these challenges and lessons learned concrete, we’ll explore data science workflows through a discussion of the development efforts that led to [uptasticsearch](https://cran.r-project.org/web/packages/uptasticsearch/index.html), an R package released by the Uptake Data Science team to reduce friction in interacting with a document store called [Elasticsearch](https://github.com/UptakeOpenSource/uptasticsearch). The talk will conclude with a discussion of recent developments in NoSQL technologies and implications for data scientists."
-
+> In this talk, attendees will get an introduction to contributing to open source software projects. This talk is intended for anyone who wants to contribute to open source but never has because they're unsure where to start, or afraid that they'll "do it wrong". After this talk, atttendees should feel prepared to make their first open source contribution!
 
 ## Where this talk has been given:
 
