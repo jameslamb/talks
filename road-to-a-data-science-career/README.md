@@ -8,4 +8,4 @@
 
 ## Where this talk has been given:
 
-* (virtual) University of Illinois, Urbana-Champaign, [IRisk Lab](https://math.illinois.edu/illinois-risk-lab/home) Hack Night series, August 2020
+* (virtual) University of Illinois, Urbana-Champaign, [IRisk Lab](https://math.illinois.edu/illinois-risk-lab/home) Hack Night series, August 2020 ([video](https://illinois.zoom.us/rec/share/uZZEDrf1q3NLcI3G5kiBYZQbNbm5X6a8higZ__UJzEiBazasihCpkg7TTtE-b_GX))
