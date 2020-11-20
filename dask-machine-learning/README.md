@@ -6,4 +6,4 @@
 
 ## Where this talk has been given:
 
-* (virtual) [Chicago Cloud Conference](https://www.chicagocloudconference.com/), September 2020 ([slides](https://docs.google.com/presentation/d/1JOKOic-zIqp20vDA8_Jx2XrQ65edowxGb9RiN5b4WY8/edit?usp=sharing))
+* (virtual) [Chicago Cloud Conference](https://www.chicagocloudconference.com/), September 2020 ([slides](https://docs.google.com/presentation/d/1JOKOic-zIqp20vDA8_Jx2XrQ65edowxGb9RiN5b4WY8/edit?usp=sharing) | [video](https://www.youtube.com/watch?v=qglSZktDz40&t=1800s))
