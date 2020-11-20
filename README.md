@@ -13,7 +13,7 @@ If you attended one of these talks and have follow-up questions:
 
 Click the "title" links below for links to slides, code, and other background information.
 
-| title                                              | video(s)                                |
+|: title                                             :| video(s)                                |
 |:---------------------------------------------------|:---------------------------------------:|
 |["Road to a Data Science Career"][3]                | [iRisk Lab hack night (Aug 2020)][4]    |
 |["Scaling Machine Learning with Python and Dask"][5]| [Chicago Cloud Conference (Sep 2020)][6]|
