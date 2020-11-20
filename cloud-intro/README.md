@@ -6,7 +6,7 @@
 
 ## Where this talk has been given:
 
-* (virtual) University of Illinois, Urbana-Champaign, [IRisk Lab](https://math.illinois.edu/illinois-risk-lab/home) Virtual Workshop series, April 2020
+* (virtual) University of Illinois, Urbana-Champaign, [IRisk Lab](https://math.illinois.edu/illinois-risk-lab/home) Virtual Workshop series, April 2020 ([video](https://www.youtube.com/watch?v=495GqB_xcqE&feature=emb_title))
 
 ## Agenda
 
