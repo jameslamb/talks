@@ -15,9 +15,10 @@ Click the "title" links below for links to slides, code, and other background in
 
 | title                                                                               | video(s)                                |
 |:------------------------------------------------------------------------------------|:---------------------------------------:|
+|["Economics as a Science"][13]                                                       | ---                                     |
 |["LightGBM's Road to CRAN"][7]                                                       | [satRdays Chicago (Apr 2020)][8]        |
 |["People Shape Software"][9]                                                         | [satRdays Chicago (Apr 2019)][10]       |
-|["Proliferation of New Database Technologies <br>and Implications for Data Science"][11] | [Domino Data Science Pop-Up][12]        |
+|["Proliferation of New Database Technologies <br>and Implications for Data Science"][11] | [Domino Data Science Pop-Up][12]    |
 |["Road to a Data Science Career"][3]                                                 | [iRisk Lab hack night (Aug 2020)][4]    |
 |["Scaling Machine Learning with Python and Dask"][5]                                 | [Chicago Cloud Conference (Sep 2020)][6]|
 |["You can do Open Source"][1]                                                        | [satRdays Chicago (Apr 2019)][2]        |
@@ -35,3 +36,4 @@ Click the "title" links below for links to slides, code, and other background in
 [10]: https://www.youtube.com/watch?v=quFhQvizBE8&t=2h24m30s
 [11]: ./proliferation-of-new-database-technologies
 [12]: https://dominodatalab.wistia.com/medias/0z04na8njm
+[13]: ./economics-as-a-science
