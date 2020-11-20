@@ -13,11 +13,11 @@ If you attended one of these talks and have follow-up questions:
 
 Click the "title" links below for links to slides, code, and other background information.
 
-| title                                               | video(s)                                |
-|:---------------------------------------------------:|:---------------------------------------:|
-|["Road to a Data Science Career"][3]                 | [iRisk Lab hack night (Aug 2020)][4]    |
-|["Scaling Machine Learning with Python and Dask"][5] | [Chicago Cloud Conference (Sep 2020)][6]|
-|["You can do Open Source"][1]                        | [satRdays Chicago (Apr 2019)][2]        |
+| title                                              | video(s)                                |
+|:---------------------------------------------------|:---------------------------------------:|
+|["Road to a Data Science Career"][3]                | [iRisk Lab hack night (Aug 2020)][4]    |
+|["Scaling Machine Learning with Python and Dask"][5]| [Chicago Cloud Conference (Sep 2020)][6]|
+|["You can do Open Source"][1]                       | [satRdays Chicago (Apr 2019)][2]        |
 
 
 [1]: ./you-can-do-open-source
