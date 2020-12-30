@@ -55,6 +55,9 @@ People typically like to use this to avoid checking in the following types of fi
 *.xlsx
 
 # credentials and key material
+config
+credentials
+credentials.csv
 *.env
 *.pem
 *.pub
