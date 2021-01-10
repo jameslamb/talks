@@ -8,7 +8,7 @@ for f in ${shell_scripts}; do
     shellcheck \
         --norc \
         --exclude=SC2002,SC2045 \
-            ${f} \
+            "${f}" \
     || exit 1
 done
 echo "done checking shell scripts"
