@@ -23,7 +23,7 @@ jobs:
         if: matrix.task == 'linting'
         shell: bash
         run: |
-          pip install --upgrade black flake8 nbqa
+          pip install --upgrade black flake8 nbqa shellcheck
           make lint
   all-successful:
     # https://github.community/t/is-it-possible-to-require-all-github-actions-tasks-to-pass-without-enumerating-them/117957/4?u=graingert

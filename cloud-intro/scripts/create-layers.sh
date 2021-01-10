@@ -4,16 +4,16 @@ set  -e
 
 UPLOAD_DIR=$(pwd)/lambda-layers
 TEMP_LAYER_DIR=$(pwd)/temp-layer-dir
-mkdir -p ${TEMP_LAYER_DIR}
+mkdir -p "${TEMP_LAYER_DIR}"
 
 echo "Creating 'pandas-layer'"
 docker run \
     --rm \
-    -v ${TEMP_LAYER_DIR}:/var/task \
+    -v "${TEMP_LAYER_DIR}:/var/task" \
     lambci/lambda:build-python3.7 \
         pip install --no-deps -t python/lib/python3.7/site-packages pandas==0.24.1 pytz
 
-pushd ${TEMP_LAYER_DIR}
+pushd "${TEMP_LAYER_DIR}"
     pushd python/lib/python3.7/site-packages/pytz
         rm -r zoneinfo/Africa     || echo "does not exist"
         rm -r zoneinfo/Antarctica || echo "does not exist"
@@ -50,7 +50,7 @@ pushd ${TEMP_LAYER_DIR}
         --exclude \*/tests/\* \*dist-info\* \*/__pycache__\* \
         -r pandas-layer.zip \
         python
-    mv *.zip ${UPLOAD_DIR}/
+    mv ./*.zip "${UPLOAD_DIR}/"
     rm -r python
 popd
 echo "Done creating 'pandas-layer'"
@@ -58,16 +58,16 @@ echo "Done creating 'pandas-layer'"
 echo "Creating 'sklearn-layer'"
 docker run \
     --rm \
-    -v ${TEMP_LAYER_DIR}:/var/task \
+    -v "${TEMP_LAYER_DIR}:/var/task" \
     lambci/lambda:build-python3.7 \
         pip install --no-deps -t python/lib/python3.7/site-packages/ joblib==0.14.1 scikit-learn==0.22.1
 
-pushd ${TEMP_LAYER_DIR}
+pushd "${TEMP_LAYER_DIR}"
     zip \
         --exclude \*/tests/\* \*/test/\* \*dist-info\* \*/__pycache__\* \*/_build_utils\* \
         -r sklearn-layer.zip \
         python
-    mv *.zip ${UPLOAD_DIR}/
+    mv ./*.zip "${UPLOAD_DIR}/"
     rm -r python
 popd
 echo "Done creating 'sklearn-layer'"
@@ -75,28 +75,28 @@ echo "Done creating 'sklearn-layer'"
 echo "Creating 'lightgbm-layer'"
 docker run \
     --rm \
-    -v ${TEMP_LAYER_DIR}:/var/task \
+    -v "${TEMP_LAYER_DIR}:/var/task" \
     lambci/lambda:build-python3.7 \
         pip install --no-deps -t python/lib/python3.7/site-packages/ lightgbm==2.3.1
 
-pushd ${TEMP_LAYER_DIR}
+pushd "${TEMP_LAYER_DIR}"
     zip \
         --exclude \*/tests/\* \*/test/\* \*dist-info\* \*/__pycache__\* \*plotting\* \
         -r lightgbm-layer.zip \
         python
-    mv *.zip ${UPLOAD_DIR}/
+    mv ./*.zip "${UPLOAD_DIR}/"
     rm -r python
 popd
 echo "Done creating 'lightgbm-layer'"
 
 echo "Creatting 'ticket-closure-lib-layer'"
-    mkdir -p ${TEMP_LAYER_DIR}/python/lib/python3.7/site-packages/
-    cp -R ticket_closure_lib ${TEMP_LAYER_DIR}/python/lib/python3.7/site-packages/
-    pushd ${TEMP_LAYER_DIR}
+    mkdir -p "${TEMP_LAYER_DIR}/python/lib/python3.7/site-packages/"
+    cp -R ticket_closure_lib "${TEMP_LAYER_DIR}/python/lib/python3.7/site-packages/"
+    pushd "${TEMP_LAYER_DIR}"
         zip \
             -r ticket-closure-lib-layer.zip \
             python
-        mv *.zip ${UPLOAD_DIR}/
+        mv ./*.zip "${UPLOAD_DIR}/"
         rm -r python
     popd
 echo "Done creating 'ticket-closure-lib-layer"

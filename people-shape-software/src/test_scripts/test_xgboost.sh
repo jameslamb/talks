@@ -9,14 +9,14 @@ DATA_DIR=${1}
 doppel-describe \
     -p xgboost \
     --language R \
-    --data-dir ${DATA_DIR}
+    --data-dir "${DATA_DIR}"
 
 doppel-describe \
     -p xgboost \
     --language python \
-    --data-dir ${DATA_DIR}
+    --data-dir "${DATA_DIR}"
 
 doppel-test \
-    --files ${DATA_DIR}/python_xgboost.json,${DATA_DIR}/r_xgboost.json \
+    --files "${DATA_DIR}/python_xgboost.json,${DATA_DIR}/r_xgboost.json" \
     | tee out.log \
     | cat
