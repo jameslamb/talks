@@ -4,9 +4,9 @@ import os
 import numpy as np
 import pickle
 import pandas as pd
-from ticket_closure_lib.transformers import OrdinalConverter
-from ticket_closure_lib.transformers import DateColTransformer
-from ticket_closure_lib.transformers import FeatureRemover
+from ticket_closure_lib.transformers import OrdinalConverter  # noqa
+from ticket_closure_lib.transformers import DateColTransformer  # noqa
+from ticket_closure_lib.transformers import FeatureRemover  # noqa
 
 
 class TicketPredictor:
@@ -31,7 +31,7 @@ class TicketPredictor:
             "assignment_group",
             "u_priority_confirmation",
             "notify",
-            "problem_id"
+            "problem_id",
         ]
 
     def predict_json(self, in_data):
@@ -42,10 +42,7 @@ class TicketPredictor:
         # make sure column order is right
         in_df = in_df[self.columns]
         for date_col in ["opened_at", "sys_created_at", "sys_updated_at"]:
-            in_df[date_col] = pd.to_datetime(
-                in_df[date_col],
-                format="%d/%m/%Y %H:%M"
-            )
+            in_df[date_col] = pd.to_datetime(in_df[date_col], format="%d/%m/%Y %H:%M")
         preds = self.mod.predict(in_df)
         return list(np.round(preds, 2))
 
@@ -54,24 +51,15 @@ def lambda_handler(event, context):
     model_file = "/tmp/model.pkl"
     if not os.path.isfile(model_file):
         print("file not found, getting it from S3")
-        S3 = boto3.resource('s3')
+        S3 = boto3.resource("s3")
         S3.meta.client.download_file(
-            os.environ["TRAINING_ARTIFACT_BUCKET"],
-            os.environ["MODEL_FILE"],
-            model_file
+            os.environ["TRAINING_ARTIFACT_BUCKET"], os.environ["MODEL_FILE"], model_file
         )
     predictor = TicketPredictor(model_file=model_file)
-    return {
-        "predictions": predictor.predict_json(event["data"])
-    }
+    return {"predictions": predictor.predict_json(event["data"])}
 
 
 if __name__ == "__main__":
     with open("test-preds.json", "r") as f:
-        pred_json = {
-            "data": json.loads(f.read())
-        }
-    print(lambda_handler(
-        event=pred_json,
-        context=False
-    ))
+        pred_json = {"data": json.loads(f.read())}
+    print(lambda_handler(event=pred_json, context=False))
