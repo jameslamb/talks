@@ -1,0 +1,27 @@
+name: Continuous Integration
+
+# alwas run CI on new commits to any branch
+on: push
+
+jobs:
+  test:
+    name: ${{ matrix.task }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - task: linting
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Set up Python 3.7
+        uses: s-weigand/setup-conda@v1
+        with:
+          python-version: 3.7
+      - name: linting
+        if: matrix.task == 'linting'
+        shell: bash
+        run: |
+          pip install --upgrade black flake8 nbqa
+          make lint

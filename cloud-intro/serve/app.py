@@ -1,16 +1,12 @@
-import importlib
 import json
 import falcon
-import os
 
 from lambdas.predict import TicketPredictor
 
 
 class PredictionEndpoint(object):
     def __init__(self):
-        self.model = TicketPredictor(
-            "model.pkl"
-        )
+        self.model = TicketPredictor("model.pkl")
 
     def on_post(self, req, resp):
         """
@@ -25,6 +21,7 @@ class PredictionEndpoint(object):
             return
         resp.body = json.dumps(self.model.predict_json(in_data))
 
+
 # for each function, create an endpoint with the function name
 app = falcon.API()
-app.add_route(f"/api/predict", PredictionEndpoint())
+app.add_route("/api/predict", PredictionEndpoint())
