@@ -1,32 +1,81 @@
-# builds
-**/*.tar.gz
-**/*.zip
+# build artifacts
+*.7z
+*.a
+**/build/
+*.bz2
+**/dist/
+*.dll
+*.dylib
+**/*.egg-info/
+*.exe
+*.msi
+*.o
+**/__pycache__/
+*.py[cod]
+*.rar
+*.so
+*.tar.gz
+*.zip
 
-# python stuff
-**/__pycache__
-**/.ipynb_checkpoints
-*.whl
-*.egg-info
-
-# docs
+# documentation
 *.doc
-*.docx
 *.docm
+*.docx
+*.pdf
 *.ppt
 *.pptm
 *.pptx
+
+# notebook stuff
+*.ipynb_checkpoints/
+*.ipynb
+
+# misc files
+*.DS_Store
+*.log
+*.cache
+*history
+
+# backup files from tools like aspell and sed
+*.bak
+
+# data files
+*.csv
+*.db
+*.json
+*.ndjson
+*.npy
+*.parquet
+*.pkl
+*.pq
+*.sqlite
 *.xls
-*.xlm
+*.xlsm
 *.xlsx
 
-# data
-*.csv
-*.json
+# files from local testing
+.coverage
+dask-worker-space/
+**/htmlcov/
+.mypy_cache/
+prefect-fork/*
+.pytest_cache/
+
+# editor files
+**/.idea/
+**/.vscode
 
 # temporary build stuff
 temp-layer-dir/
 sam-*.yml
 *.pkl
 
-# misc other garbage
-**/.DS_Store
+# credentials and key material
+config
+credentials
+credentials.csv
+*.env
+*.pem
+*.pub
+*.rdp
+*_rsa

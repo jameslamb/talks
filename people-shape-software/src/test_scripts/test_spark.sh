@@ -9,14 +9,14 @@ DATA_DIR=${1}
 doppel-describe \
     -p SparkR \
     --language R \
-    --data-dir ${DATA_DIR}
+    --data-dir "${DATA_DIR}"
 
 doppel-describe \
     -p pyspark \
     --language python \
-    --data-dir ${DATA_DIR}
+    --data-dir "${DATA_DIR}"
 
 doppel-test \
-    --files ${DATA_DIR}/python_pyspark.json,${DATA_DIR}/r_sparkR.json \
+    --files "${DATA_DIR}/python_pyspark.json,${DATA_DIR}/r_sparkR.json" \
     | tee out.log \
     | cat

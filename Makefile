@@ -5,8 +5,12 @@ format:
 	black .
 	nbqa black . --nbqa-mutate
 
+.PHONY: shellcheck
+shellcheck:
+	./.ci/shellcheck.sh
+
 .PHONY: lint
-lint:
+lint: shellcheck
 	black --check --diff .
 	diff_lines=$$(nbqa black --nbqa-diff . | wc -l); \
 	if [ $${diff_lines} -gt 0 ]; then \

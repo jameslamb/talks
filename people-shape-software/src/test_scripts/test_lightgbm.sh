@@ -9,14 +9,14 @@ DATA_DIR=${1}
 doppel-describe \
     -p lightgbm \
     --language R \
-    --data-dir ${DATA_DIR}
+    --data-dir "${DATA_DIR}"
 
 doppel-describe \
     -p lightgbm \
     --language python \
-    --data-dir ${DATA_DIR}
+    --data-dir "${DATA_DIR}"
 
 doppel-test \
-    --files ${DATA_DIR}/python_lightgbm.json,${DATA_DIR}/r_lightgbm.json \
+    --files "${DATA_DIR}/python_lightgbm.json,${DATA_DIR}/r_lightgbm.json" \
     | tee out.log \
     | cat

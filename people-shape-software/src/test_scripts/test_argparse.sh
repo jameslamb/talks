@@ -9,14 +9,14 @@ DATA_DIR=${1}
 doppel-describe \
     -p argparse \
     --language R \
-    --data-dir ${DATA_DIR}
+    --data-dir "${DATA_DIR}"
 
 doppel-describe \
     -p argparse \
     --language python \
-    --data-dir ${DATA_DIR}
+    --data-dir "${DATA_DIR}"
 
 doppel-test \
-    --files ${DATA_DIR}/python_argparse.json,${DATA_DIR}/r_argparse.json \
+    --files "${DATA_DIR}/python_argparse.json,${DATA_DIR}/r_argparse.json" \
     | tee out.log \
     | cat
