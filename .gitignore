@@ -28,7 +28,6 @@
 
 # notebook stuff
 *.ipynb_checkpoints/
-*.ipynb
 
 # misc files
 *.DS_Store
@@ -79,3 +78,6 @@ credentials.csv
 *.pub
 *.rdp
 *_rsa
+
+# exclusions
+!new-developments-in-lightgbm/image.env
