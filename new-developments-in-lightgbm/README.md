@@ -43,3 +43,4 @@ Once that's done, open `aws.ipynb` in Jupyter Lab and run it.
 * https://docs.aws.amazon.com/cli/latest/reference/ecr-public/
 * https://docs.amazonaws.cn/en_us/AmazonECR/latest/public/docker-push-ecr-image.html
 * https://github.com/dask/dask-docker
+* https://docs.aws.amazon.com/AmazonECR/latest/public/public-registries.html
