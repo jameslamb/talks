@@ -20,6 +20,7 @@ Click the "title" links below for links to slides, code, and other background in
 |["LightGBM's Road to CRAN"][7]                                                           | [satRdays Chicago (Apr 2020)][8]        |
 |["People Shape Software"][9]                                                             | [satRdays Chicago (Apr 2019)][10]       |
 |["Proliferation of New Database Technologies <br>and Implications for Data Science"][11] | [Domino Data Science Pop-Up][12]        |
+|["Recent Developments in LightGBM"][19]                                                  | ---                                     |
 |["Road to a Data Science Career"][3]                                                     | [iRisk Lab Hack Night (Aug 2020)][4]    |
 |["Scaling Machine Learning with Python and Dask"][5]                                     | [Chicago Cloud Conference (Sep 2020)][6]|
 |["Using Retry Logic in R HTTP Clients"][17]                                              | ---                                     |
@@ -44,3 +45,4 @@ Click the "title" links below for links to slides, code, and other background in
 [16]: https://www.youtube.com/watch?v=495GqB_xcqE
 [17]: ./chi-r-collab-httr
 [18]: ./econ-learn-data-science
+[19]: https://docs.google.com/presentation/d/1eiom95e-rWtpj0qtZS9vjabc8lmRGgRko0VSneGaLKg/edit?usp=sharing
