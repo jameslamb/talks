@@ -13,10 +13,9 @@
 
 > Demos of the new (experimental) Dask integration will be shown. The talk will conclude with a summary of new features that are coming in the future, and a call for attendees who are interested to contribute their ideas, documentation, and code to LightGBM.
 
-
 ## Where this talk has been given:
 
-* (virtual) [LA Big Data Science, Deep Learning, & AI meetup](https://www.chicagocloudconference.com/), January 2021 ([slides](https://docs.google.com/presentation/d/1eiom95e-rWtpj0qtZS9vjabc8lmRGgRko0VSneGaLKg/edit?usp=sharing))
+* (virtual) [LA Big Data Science, Deep Learning, & AI meetup](https://www.meetup.com/Los-Angeles-Deep-Learning-Big-Data-Science-AI/events/275179363/), January 2021 ([slides](https://docs.google.com/presentation/d/1eiom95e-rWtpj0qtZS9vjabc8lmRGgRko0VSneGaLKg/edit?usp=sharing))
 
 <hr>
 
