@@ -80,4 +80,4 @@ credentials.csv
 *_rsa
 
 # exclusions
-!new-developments-in-lightgbm/image.env
+!recent-developments-in-lightgbm/image.env
