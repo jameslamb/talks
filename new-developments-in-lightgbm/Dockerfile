@@ -1,7 +1,5 @@
 FROM daskdev/dask-notebook:latest
 
-ARG SERVE_DIR=/root/testing
-
 # based on
 # https://github.com/microsoft/LightGBM/pull/3515#pullrequestreview-543175003
 ENV LIGHTGBM_DIR=${HOME}/LightGBM
@@ -28,4 +26,4 @@ RUN conda install -y -c conda-forge \
     pip install dist/lightgbm*.tar.gz && \
     conda clean --all
 
-WORKDIR ${SERVE_DIR}
+WORKDIR /home/jovyan/testing
