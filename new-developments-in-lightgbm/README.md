@@ -26,10 +26,20 @@ In Jupyter Lab, open `local.ipynb`. Run the code. Have fun!
 
 ## Run Examples on AWS
 
-In a shell on your machine, run the following to push the docker image to the ECR Public Repository.
+In a shell on your machine, run the following build and push an image that can be used for workers and the scheduler.
+
+You'll need to [configure authentication details for AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html).
 
 ```shell
+make cluster-image
 make push-image
 ```
 
+Once that's done, open `aws.ipynb` in Jupyter Lab and run it.
 
+## Useful Links
+
+* https://github.com/microsoft/LightGBM/pull/3515
+* https://docs.aws.amazon.com/cli/latest/reference/ecr-public/
+* https://docs.amazonaws.cn/en_us/AmazonECR/latest/public/docker-push-ecr-image.html
+* https://github.com/dask/dask-docker
