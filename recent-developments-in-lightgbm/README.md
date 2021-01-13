@@ -15,7 +15,7 @@
 
 ## Where this talk has been given:
 
-* (virtual) [LA Big Data Science, Deep Learning, & AI meetup](https://www.meetup.com/Los-Angeles-Deep-Learning-Big-Data-Science-AI/events/275179363/), January 2021 ([slides](https://docs.google.com/presentation/d/1eiom95e-rWtpj0qtZS9vjabc8lmRGgRko0VSneGaLKg/edit?usp=sharing))
+* (virtual) [LA Big Data Science, Deep Learning, & AI meetup](https://www.meetup.com/Los-Angeles-Deep-Learning-Big-Data-Science-AI/events/275179363/), January 2021 ([slides](https://docs.google.com/presentation/d/1eiom95e-rWtpj0qtZS9vjabc8lmRGgRko0VSneGaLKg/edit?usp=sharing) | [video](https://www.youtube.com/watch?list=PLVwJeG_Q73i7UpMciUK7ckTD8zQc7oT0W&v=5nKSMXBFhes&feature=emb_title))
 
 <hr>
 
