@@ -11,7 +11,7 @@ RUN apt update && \
         build-essential \
         cmake
 
-RUN git clone --recursive --depth=1 ${LIGHTGBM_URL} ${LIGHTGBM_DIR} && \
+RUN git clone --recursive ${LIGHTGBM_URL} ${LIGHTGBM_DIR} && \
     cd ${LIGHTGBM_DIR} && \
     git checkout ${LIGHTGBM_COMMIT}
 
