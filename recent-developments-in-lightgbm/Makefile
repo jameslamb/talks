@@ -7,14 +7,17 @@ cluster-image:
 	docker build --no-cache -t ${CLUSTER_IMAGE_NAME}:${IMAGE_TAG} -f Dockerfile-cluster .
 
 delete-repo:
-	aws ecr-public batch-delete-image \
-		--repository-name ${CLUSTER_IMAGE_NAME} \
-		--image-ids imageTag=${IMAGE_TAG}
-	aws ecr-public delete-repository \
-		--repository-name ${CLUSTER_IMAGE_NAME}
+	aws --region us-east-1 \
+		ecr-public batch-delete-image \
+			--repository-name ${CLUSTER_IMAGE_NAME} \
+			--image-ids imageTag=${IMAGE_TAG}
+	aws --region us-east-1 \
+		ecr-public delete-repository \
+			--repository-name ${CLUSTER_IMAGE_NAME}
+	rm ecr-details.json
 
 ecr-details.json:
-	aws ecr-public create-repository \
+	aws --region us-east-1 ecr-public create-repository \
 		--repository-name ${CLUSTER_IMAGE_NAME} \
 		> ecr-details.json
 
@@ -22,14 +25,16 @@ create-repo: ecr-details.json
 
 # https://docs.amazonaws.cn/en_us/AmazonECR/latest/public/docker-push-ecr-image.html
 push-image: create-repo
-	aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+	aws --region us-east-1 ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
 	docker tag ${CLUSTER_IMAGE_NAME}:${IMAGE_TAG} $$(cat ecr-details.json | jq .'repository'.'repositoryUri' | tr -d '"'):1
 	docker push $$(cat ecr-details.json | jq .'repository'.'repositoryUri' | tr -d '"'):1
 
 start-notebook:
 	docker run \
 		-v $$(pwd):/home/jovyan/testing \
-		-p 9000:8888 \
+		--env AWS_SECRET_ACCESS_KEY=$${AWS_SECRET_ACCESS_KEY:-notset} \
+		--env AWS_ACCESS_KEY_ID=$${AWS_ACCESS_KEY_ID:-notset} \
+		-p 8888:8888 \
 		-p 8787:8787 \
 		--name ${CONTAINER_NAME} \
 		${IMAGE_NAME}:${IMAGE_TAG}
