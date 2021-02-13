@@ -47,3 +47,7 @@ Click the "title" links below for links to slides, code, and other background in
 [18]: ./econ-learn-data-science
 [19]: ./recent-developments-in-lightgbm
 [20]: https://www.youtube.com/watch?list=PLVwJeG_Q73i7UpMciUK7ckTD8zQc7oT0W&v=5nKSMXBFhes&feature=emb_title
+
+## Writing
+
+* ["Scaling LightGBM with Dask"](https://opendatascience.com/scaling-lightgbm-with-dask/) (ODSC Blog)
