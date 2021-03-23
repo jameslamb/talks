@@ -48,6 +48,9 @@
 *.pkl
 *.pq
 *.sqlite
+*.rda
+*.Rdata
+*.rds
 *.xls
 *.xlsm
 *.xlsx
