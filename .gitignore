@@ -62,6 +62,7 @@ dask-worker-space/
 .mypy_cache/
 prefect-fork/*
 .pytest_cache/
+r-from-the-command-line/critiquer
 
 # editor files
 **/.idea/
