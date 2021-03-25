@@ -91,6 +91,21 @@ Rscript sample-r-code/print-random-numbers.R
 Rscript -e "library(data.table); data.table(m = rnorm(10))"
 ```
 
+### Redirection of Rscript output
+
+Some R functions, like `print()`, write to stdout of an R process.
+
+Others, like `message()`, `stop()`, and `warning()` print to stderr.
+
+The code below redirects stderr and stdout to two different files, so you can test this.
+
+```shell
+Rscript \
+    -e "print('printing'); message('messaging'); warning('warning'); stop('stopping')" \
+    1> stdout.txt \
+    2> stderr.txt
+```
+
 ### `--help`
 
 `--help` can be used to retrieve documentation about the available arguments.

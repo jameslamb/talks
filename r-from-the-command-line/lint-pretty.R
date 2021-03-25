@@ -1,6 +1,7 @@
 #!/usr/bin/env Rscript
 
 library(argparse)
+library(crayon)
 library(lintr)
 library(spongebob)
 

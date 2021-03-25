@@ -8,4 +8,4 @@ See [`DEMO.md`](./DEMO.md) for the examples used in the talk.
 
 ## Where this talk has been given
 
-* (virtual) [LA R Users](https://www.chicagocloudconference.com/), March 2021 ([slides](https://docs.google.com/presentation/d/1sA7lM752qDtHbmm-efNA_8KyJmk9iIp-le_HMIcccxA/edit?usp=sharing))
+* (virtual) [LA R Users](https://www.chicagocloudconference.com/), March 2021 ([slides](https://docs.google.com/presentation/d/1sA7lM752qDtHbmm-efNA_8KyJmk9iIp-le_HMIcccxA/edit?usp=sharing) | [video](https://www.youtube.com/watch?v=5kmUE-qHziA))
