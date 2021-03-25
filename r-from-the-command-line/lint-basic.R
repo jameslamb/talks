@@ -28,6 +28,7 @@ LINTERS_TO_USE <- list(
     , "unneeded_concatenation" = lintr::unneeded_concatenation_linter
 )
 
+
 lintr::lint_dir(
     path = DIR_TO_LINT
     , linters = LINTERS_TO_USE

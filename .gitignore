@@ -63,6 +63,8 @@ dask-worker-space/
 prefect-fork/*
 .pytest_cache/
 r-from-the-command-line/critiquer
+r-from-the-command-line/stderr.txt
+r-from-the-command-line/stdout.txt
 
 # editor files
 **/.idea/
