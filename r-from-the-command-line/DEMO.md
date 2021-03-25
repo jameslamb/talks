@@ -85,11 +85,15 @@ Rscript sample-r-code/print-random-numbers.R
 
 ### `-e`
 
+`-e` means "I'm passing you R code in a string, not a path to a file".
+
 ```shell
 Rscript -e "library(data.table); data.table(m = rnorm(10))"
 ```
 
 ### `--help`
+
+`--help` can be used to retrieve documentation about the available arguments.
 
 ```shell
 Rscript --help
@@ -97,17 +101,23 @@ Rscript --help
 
 ### `--version`
 
+`--version` prints the version of `Rscript`, which is almost always the same as the version of R.
+
 ```shell
 Rscript --version
 ```
 
 ### `--verbose`
 
+To get more information about what `Rscript` is doing when it runs your code, you can use `--verbose`.
+
 ```shell
 Rscript --verbose -e "library(data.table); data.table(m = rnorm(10))"
 ```
 
 ### `--default-packages`
+
+By default, R code runs with a few packages attached (e.g. `base`, `graphics`, `methods`, `stats`, `tools`). You can configure this by passing the argument `--default-packages`.
 
 ```shell
 Rscript -e "data.table(m = rnorm(10))"
@@ -136,9 +146,15 @@ Rscript --default-packages="data.table,stats" -e "data.table(m = rnorm(10))"
 
 ### `--save` and `--restore`
 
+If you want the state of the environment to be saved before exiting, you can pass `--save`. If this argument is provided, a file `.RData` will be created.
+
+To prove this, the code below creates a variable `some_var` and then exits.
+
 ```shell
 Rscript --save -e "some_var <- 11.5"
 ```
+
+Try running some code that references `some_var` with `--no-restore`. You'll see that R doesn't know anything about that variable.
 
 ```shell
 Rscript --no-restore -e "print(some_var)"
@@ -146,6 +162,8 @@ Rscript --no-restore -e "print(some_var)"
 
 > Error in print(some_var) : object 'some_var' not found
 > Execution halted
+
+If you run the same code with `--restore`, R will first load up the saved environment in `.RData`, and now your code can magically reference `some_var`!
 
 ```shell
 Rscript --restore -e "print(some_var)"
@@ -156,6 +174,10 @@ Rscript --restore -e "print(some_var)"
 `--no-site-file` and `--no-init-file` can be used to avoid loading specific R config files like `.Rprofile`. `--no-environ` can be used to prevent loading `.Renviron` files.
 
 See https://support.rstudio.com/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Re[…]on-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf for an overview of these different config files.
+
+### `--vanilla`
+
+Running with `--vanilla` combines the effects of `--no-site-file`, `--no-init-file`, `--no-environ`, and `--no-restore`. It's the safest way to ensure that your code's behavior is predictable when run in different environments.
 
 ## Linting Example
 
