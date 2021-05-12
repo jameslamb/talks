@@ -1,0 +1,66 @@
+---
+title: "Comparing lightgbm to other R GBDT libraries"
+output:
+  html_document:
+    code_folding: show
+    number_sections: false
+    toc: true
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    toc_depth: 2
+---
+
+```{r setOpts, echo = FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE
+  , echo = TRUE
+  , warning = FALSE
+  , message = FALSE
+  , tidy = FALSE
+)
+```
+
+# Intro to `{lightgbm}`
+
+## Setting Up Training Data
+
+### Creating a Dataset
+
+### Creating a new Dataset from a "reference" Dataset
+
+### Customizing Dataset Construction
+
+## Training
+
+### Choosing an Objective Function
+
+### Using a Custom Objective
+
+### Categorical Features
+
+### Customizing Tree Growth
+
+### Adding Validation Sets
+
+### Using Multiple Evaluation Metrics
+
+### Using Early Stopping
+
+### Using Custom Metrics
+
+## Inspecting Models
+
+## Tuning Hyperparameters
+
+### Model Structure
+
+### Feature Importance
+
+## Deployment
+
+# Other Libraries
+
+## `{catboost}` examples
+
+## `{xgboost}` examples
