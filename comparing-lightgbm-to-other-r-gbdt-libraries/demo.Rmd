@@ -6,9 +6,9 @@ output:
     number_sections: false
     toc: true
     toc_float:
-      collapsed: true
+      collapsed: false
       smooth_scroll: true
-    toc_depth: 2
+    toc_depth: 3
 ---
 
 ```{r setOpts, echo = FALSE}
@@ -23,17 +23,139 @@ knitr::opts_chunk$set(
 
 # Intro to `{lightgbm}`
 
+The examples in this demo use the `nycflights13::weather` dataset, to solve the following regression problem:
+
+> Given observations of other weather signals, what is the expected humidity?
+
 ## Setting Up Training Data
 
 ### Creating a Dataset
 
-### Creating a new Dataset from a "reference" Dataset
+```{r createDataset}
+library(lightgbm)
+library(nycflights13)
+
+# convert from data frame to matrix
+feature_names <- c(
+    "month"
+    , "day"
+    , "hour"
+    , "temp"
+    , "dewp"
+    , "wind_dir"
+    , "wind_speed"
+    , "precip"
+    , "pressure"
+)
+target_name <- "humid"
+
+X <- as.matrix(weather[, feature_names])
+y <- weather[[target_name]]
+
+dtrain <- lightgbm::lgb.Dataset(
+    data = X
+    , label = y
+    , colnames = feature_names
+)
+```
 
 ### Customizing Dataset Construction
+
+The parameter `categorical_feature` can be used to tell LightGBM which features to treat as categorical. This should result in a better-performing model than would be produced if LightGBM treated those columns as continuous.
+
+```{r categoricalData}
+library(data.table)
+library(lightgbm)
+library(nycflights13)
+
+weatherDT <- data.table::as.data.table(nycflights13::weather)
+
+# convert from data frame to matrix
+feature_names <- c(
+    "month"
+    , "day"
+    , "hour"
+    , "temp"
+    , "dewp"
+    , "wind_dir"
+    , "wind_speed"
+    , "precip"
+    , "pressure"
+)
+target_name <- "humid"
+
+X_train <- as.matrix(weatherDT[month <= 11, .SD, .SDcols = feature_names])
+y_train <- weatherDT[month <= 11,][[target_name]]
+
+# hold out December data
+X_test <- as.matrix(weatherDT[month == 12, .SD, .SDcols = feature_names])
+y_test <- weatherDT[month <= 12,][[target_name]]
+
+dtrain <- lightgbm::lgb.Dataset(
+    data = X_train
+    , label = y_train
+    , colnames = feature_names
+    , categorical_feature = c("month", "day", "hour")
+)
+```
+
+### Creating a new Dataset from a "reference" Dataset
+
+Once a `Dataset` object has been set up, you can create other `Dataset` objects from new raw data but using the same bins and other preprocessing rules from construction of that initial dataset.
+
+This is especially useful for the creation of evaluation datasets.
+
+TODO
 
 ## Training
 
 ### Choosing an Objective Function
+
+See [the LightGBM parameter documentation](https://lightgbm.readthedocs.io/en/latest/Parameters.html#objective) for a complete list of built-in regression objectives (sometimes referred to as "loss functions").
+
+The examples below use mean absolute error (L1 loss).
+
+```{r maeLoss}
+library(data.table)
+library(lightgbm)
+library(nycflights13)
+
+weatherDT <- data.table::as.data.table(nycflights13::weather)
+
+# convert from data frame to matrix
+feature_names <- c(
+    "month"
+    , "day"
+    , "hour"
+    , "temp"
+    , "dewp"
+    , "wind_dir"
+    , "wind_speed"
+    , "precip"
+    , "pressure"
+)
+target_name <- "humid"
+
+X_train <- as.matrix(weatherDT[month <= 11, .SD, .SDcols = feature_names])
+y_train <- weatherDT[month <= 11,][[target_name]]
+
+# hold out December data
+X_test <- as.matrix(weatherDT[month == 12, .SD, .SDcols = feature_names])
+y_test <- weatherDT[month == 12,][[target_name]]
+
+dtrain <- lightgbm::lgb.Dataset(
+    data = X_train
+    , label = y_train
+    , colnames = feature_names
+    , categorical_feature = c("month", "day", "hour")
+)
+
+mod <- lightgbm::lgb.train(
+  data = dtrain
+  , obj = "regression_l1"
+  , nrounds = 100L
+)
+```
 
 ### Using a Custom Objective
 
