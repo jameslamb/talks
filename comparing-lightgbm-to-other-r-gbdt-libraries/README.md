@@ -4,16 +4,6 @@
 
 > In this talk, attendees will learn about LightGBM, a popular gradient boosted decision tree (GBDT) framework. The talk begins with an overview of LightGBM and the features that allow it to be fast without sacrificing accuracy. After those fundamentals, attendees will learn about how {lightgbm} compares to two other popular GBDT projects with R packages: {catboost} and {xgboost}. That portion of the talk will cover why you might choose one library over the others, and will discuss issues ranging from ease-of-installation and data loading to algorithmic details like handling of sparse features and strategies used to decide which splits to evaluate.
 
-## Where this talk has been given:
-
-* (virtual) [New York Open Statistical Programming Meetup](https://www.meetup.com/nyhackr/events/277831968), May 2021 ([slides](https://docs.google.com/presentation/d/15KKUrzTrFVmT-XmjXLfLS1R0pP5r8qenSZHGzVg1LKI/edit?usp=sharing))
-
-## Promo Images
-
-![](./ny-rstats.png)
-
-<hr>
-
 ## demo code
 
 ### run without docker
@@ -85,3 +75,11 @@ pkgnet::CreatePackageReport(
     )
 )
 ```
+
+## Where this talk has been given:
+
+* (virtual) [New York Open Statistical Programming Meetup](https://www.meetup.com/nyhackr/events/277831968), May 2021 ([slides](https://docs.google.com/presentation/d/15KKUrzTrFVmT-XmjXLfLS1R0pP5r8qenSZHGzVg1LKI/edit?usp=sharing))
+
+## Promo Images
+
+![](./ny-rstats.png)
