@@ -1,5 +1,14 @@
 # Comparing `{lightgbm}` to other GBDT libraries
 
+## Description
+
+> In this talk, attendees will learn about LightGBM, a popular gradient boosted decision tree (GBDT) framework. The talk begins with an overview of LightGBM and the features that allow it to be fast without sacrificing accuracy. After those fundamentals, attendees will learn about how {lightgbm} compares to two other popular GBDT projects with R packages: {catboost} and {xgboost}. That portion of the talk will cover why you might choose one library over the others, and will discuss issues ranging from ease-of-installation and data loading to algorithmic details like handling of sparse features and strategies used to decide which splits to evaluate.
+
+## Where this talk has been given:
+
+* (virtual) [New York Open Statistical Programming Meetup](https://www.meetup.com/nyhackr/events/277831968), May 2021 ([slides](https://docs.google.com/presentation/d/15KKUrzTrFVmT-XmjXLfLS1R0pP5r8qenSZHGzVg1LKI/edit?usp=sharing))
+
+<hr>
 
 ## demo code
 
@@ -40,13 +49,13 @@ You can run all of the example code for this talk using a containerized version 
 
 3. Navigate to `127.0.0.1:8787` in your web browser
 
-```shell
-docker run --rm \
-    -v $(pwd):/opt/demo \
-    -p 127.0.0.1:8787:8787 \
-    -e DISABLE_AUTH=true \
-    rocker/rstudio:4.0.5
-```
+    ```shell
+    docker run --rm \
+        -v $(pwd):/opt/demo \
+        -p 127.0.0.1:8787:8787 \
+        -e DISABLE_AUTH=true \
+        rocker/rstudio:4.0.5
+    ```
 
 ### Updating the Dependencies slide
 
