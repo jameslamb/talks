@@ -49,8 +49,10 @@ feature_names <- c(
 )
 target_name <- "humid"
 
-X <- as.matrix(weather[, feature_names])
-y <- weather[[target_name]]
+X <- as.matrix(
+  nycflights13::weather[, feature_names]
+)
+y <- nycflights13::weather[[target_name]]
 
 dtrain <- lightgbm::lgb.Dataset(
     data = X
@@ -70,6 +72,9 @@ library(nycflights13)
 
 weatherDT <- data.table::as.data.table(nycflights13::weather)
 
+# drop records where the target is NA
+weatherDT <- weatherDT[!is.na(humid)]
+
 # convert from data frame to matrix
 feature_names <- c(
     "month"
@@ -84,12 +89,16 @@ feature_names <- c(
 )
 target_name <- "humid"
 
-X_train <- as.matrix(weatherDT[month <= 11, .SD, .SDcols = feature_names])
+X_train <- data.matrix(
+  weatherDT[month <= 11, .SD, .SDcols = feature_names]
+)
 y_train <- weatherDT[month <= 11,][[target_name]]
 
 # hold out December data
-X_test <- as.matrix(weatherDT[month == 12, .SD, .SDcols = feature_names])
-y_test <- weatherDT[month <= 12,][[target_name]]
+X_test <- data.matrix(
+  weatherDT[month == 12, .SD, .SDcols = feature_names]
+)
+y_test <- weatherDT[month == 12,][[target_name]]
 
 dtrain <- lightgbm::lgb.Dataset(
     data = X_train
@@ -98,14 +107,6 @@ dtrain <- lightgbm::lgb.Dataset(
     , categorical_feature = c("month", "day", "hour")
 )
 ```
-
-### Creating a new Dataset from a "reference" Dataset
-
-Once a `Dataset` object has been set up, you can create other `Dataset` objects from new raw data but using the same bins and other preprocessing rules from construction of that initial dataset.
-
-This is especially useful for the creation of evaluation datasets.
-
-TODO
 
 ## Training
 
@@ -116,40 +117,6 @@ See [the LightGBM parameter documentation](https://lightgbm.readthedocs.io/en/la
 The examples below use mean absolute error (L1 loss).
 
 ```{r maeLoss}
-library(data.table)
-library(lightgbm)
-library(nycflights13)
-
-weatherDT <- data.table::as.data.table(nycflights13::weather)
-
-# convert from data frame to matrix
-feature_names <- c(
-    "month"
-    , "day"
-    , "hour"
-    , "temp"
-    , "dewp"
-    , "wind_dir"
-    , "wind_speed"
-    , "precip"
-    , "pressure"
-)
-target_name <- "humid"
-
-X_train <- as.matrix(weatherDT[month <= 11, .SD, .SDcols = feature_names])
-y_train <- weatherDT[month <= 11,][[target_name]]
-
-# hold out December data
-X_test <- as.matrix(weatherDT[month == 12, .SD, .SDcols = feature_names])
-y_test <- weatherDT[month == 12,][[target_name]]
-
-dtrain <- lightgbm::lgb.Dataset(
-    data = X_train
-    , label = y_train
-    , colnames = feature_names
-    , categorical_feature = c("month", "day", "hour")
-)
-
 mod <- lightgbm::lgb.train(
   data = dtrain
   , obj = "regression_l1"
@@ -159,30 +126,291 @@ mod <- lightgbm::lgb.train(
 
 ### Using a Custom Objective
 
-### Categorical Features
+`{lightgbm}` also allows the use of custom objective functions written in R code. See [this example](https://github.com/microsoft/LightGBM/blob/b423cb47fe7fc648f1f3c79551e61f2ebac82cc8/R-package/demo/multiclass_custom_objective.R) for a more detailed treatment of that topic.
+
+The objective function should take in two inputs:
+
+* `preds` = a numeric vector of predicted values
+* `dtrain` = an `lgb.Dataset` object with the training data
+
+and it should produce a list with two outputs:
+
+* `grad` = matrix of gradients (first derivative of the loss function) for each training example
+* `hess` = Hessian (second derivative of the loss function) for each training example
+
+```{r customObjective}
+.reassuring_l2_loss <- function(preds, dtrain) {
+    labels <- getinfo(dtrain, "label")
+    grad <- preds - labels
+    hess <- rep(1, length(preds))
+    print(praise::praise())
+    return(list(grad = grad, hess = hess))
+}
+
+mod <- lightgbm::lgb.train(
+  data = dtrain
+  , nrounds = 10L
+  , objective = .reassuring_l2_loss
+  , valids = list(
+    "test" = dtest
+  )
+  , params = list(
+    metric = c("mae", "rmse", "mape")
+  )
+)
+```
+
+See ["Demystify Modern Gradient Boosting Trees"](https://everdark.github.io/k9/notebooks/ml/gradient_boosting/gbt.nb.html) for more examples of the underlying process at work here.
 
 ### Customizing Tree Growth
 
+The example above used the default value of most of LightGBM's parameters. Many details of the learning process can be changed through configuration, and you'll often find in practice that the default values are not ideal for your specific dataset and use-case.
+
+See ["Parameters"](https://lightgbm.readthedocs.io/en/latest/Parameters.html#learning-control-parameters) for a complete list of available parameters and ["Parameters Tuning"](https://lightgbm.readthedocs.io/en/latest/Parameters-Tuning.html) for some guidance on how to improve performance by changing these parameters' values.
+
+The example below changes a few of these parameters from their defaults, to show how this can be done.
+
+* `learning_rate` = controls the impact of one boosting iteration on the final model. Reducing this (default = 0.1) value should be accompanied by increasing `nrounds`
+* `min_data_in_leaf` = LightGBM will not create splits that result in a leaf node having fewer than this many observations. Increasing this (default = 20) could limit overfitting.
+* `num_leaves` = maximum number of leaves a tree could have. Decreasing this (default = 31) could limit overfitting.
+
+```{r deeperModel}
+mod <- lightgbm::lgb.train(
+  data = dtrain
+  , nrounds = 100L
+  , objective = "regression_l2"
+  , params = list(
+    learning_rate = 0.05
+    , min_data_in_leaf = 100L
+    , num_leaves = 48L
+  )
+)
+```
+
 ### Adding Validation Sets
+
+To get more insight into the training process, LightGBM allows you to provide additional "validation sets". These are `lgb.Dataset` objects, and at each iteration they'll be scored
+using whatever metrics you choose.
+
+It's important that these validation sets have gone through the same preprocessing as the training data. The function `lgb.Dataset.create.valid()` serves this purpose...it takes advantage of the fact that once a `Dataset` object has been set up, you can create other `Dataset` objects from new raw data but using the same bins and other preprocessing rules.
+
+```{r createValid}
+dtest <- lightgbm::lgb.Dataset.create.valid(
+  dataset = dtrain
+  , data = X_test
+  , label = y_test
+)
+
+mod <- lightgbm::lgb.train(
+  data = dtrain
+  , nrounds = 10L
+  , objective = "regression_l2"
+  , valids = list("test" = dtest)
+  , eval_freq = 10L
+  , params = list(
+    metric = "mae"
+  )
+)
+```
+
+Setting `eval_freq = 10L` above tells `{lightgbm}` "only compute evaluation results every 10 boosting rounds".
 
 ### Using Multiple Evaluation Metrics
 
-### Using Early Stopping
+You can pass multiple evaluation metrics. All of them will be used for evaluations and for early stopping.
+
+```{r multipleMetrics}
+mod <- lightgbm::lgb.train(
+  data = dtrain
+  , nrounds = 100L
+  , objective = "regression_l2"
+  , valids = list("test" = dtest)
+  , eval_freq = 10L
+  , params = list(
+    metric = c("mae", "rmse", "mape")
+  )
+)
+```
+All of the evaluation results can be accessed after training using `$record_evals`.
+
+```{r getEvalResults}
+eval_results <- mod$record_evals[["test"]]
+str(eval_results, max.level = 2)
+```
 
 ### Using Custom Metrics
 
+You can even supply your own metrics written in R functions!
+
+Such functions should accept two arguments:
+
+* `preds` = a numeric vector of predicted values
+* `dtrain` = the training data (an `lgb.Dataset` object)
+
+And should return a named list with the following elements:
+
+* `name` = a string with the name you want to give to the metric
+* `value` = a scalar value for the metric
+* `higher_better` = a boolean, `TRUE` if higher values of the metric indicate a better model
+
+As an example, the code below shows how to evaluation the `medAE` (median absolute error) for regression problems.
+
+```{r customMetric}
+.median_abs_error <- function(preds, dtrain) {
+  labels <- getinfo(dtrain, "label")
+  return(list(
+    name = "medAE"
+    , value = median(abs(labels - preds))
+    , higher_better = FALSE
+  ))
+}
+
+mod <- lightgbm::lgb.train(
+  data = dtrain
+  , nrounds = 100L
+  , objective = "regression_l2"
+  , valids = list("test" = dtest)
+  , eval_freq = 10L
+  , eval = .median_abs_error
+  , params = list(
+    metric = "mae"
+  )
+)
+```
+
+### Using Early Stopping
+
+Training speed can usually be improved without sacrificing model performance by enabling early stopping. Given one or more validation sets and one or more evaluation metrics, training will stop if the performance (measured by the metrics) on any of the validation sets fails to improve for several consecutive boosting rounds.
+
+The following parameters should be considered when enabling early stopping:
+
+* `early_stopping_round` = allowed number of consecutive rounds without improvement
+* `metric` = list of metrics to evaluate on each validation set
+* `first_metric_only` = boolean (default = FALSE). If TRUE, only perform early stopping based on the first metric supplied in `metric`.
+
+```{r earlyStopping}
+mod <- lightgbm::lgb.train(
+  data = dtrain
+  , nrounds = 100L
+  , objective = "regression_l2"
+  , valids = list("test" = dtest)
+  , eval = .median_abs_error
+  , params = list(
+    metric = "mae"
+    , early_stopping_round = 3L
+  )
+)
+```
+
+If early stopping was met, the following properties will have non-missing values:
+
+* `best_iter` = index of the final iteration performed
+* `best_score` = value of the first supplied metric, on the first validation set
+
+The code below can be used to inspect the impact of each additional iteration on the `medAE` metric (for example).
+
+```{r checkResults}
+med_ae <- unlist(
+  mod[["record_evals"]][["test"]][["medAE"]]
+  , use.names = FALSE
+)
+
+plot(
+    x = seq_len(length(med_ae))
+    , y = med_ae
+    , type = "l"
+    , main = "medAE progression during training"
+    , xlab = "iteration"
+    , ylab = "medAE"
+)
+```
+
+## Generating Predictions
+
+Training produces an object called a Booster. In R, this is an {R6} object. You can use `$predict()` or S3 method `predict()` to get predictions.
+
+```{r, get_predictions}
+preds <- predict(mod, X_test)
+mae <- mean(abs(y_test - preds))
+
+plot(
+  x = y_test
+  , y = preds
+  , pch = 20
+  , ylim = range(y_train)
+  , xlim = range(y_train)
+  , xlab = "actual"
+  , ylab = "predicted"
+  , main = sprintf("humidity predictions (MAE=%.2f)", mae)
+)
+abline(a = 0, b = 1, col = "red")
+```
+
 ## Inspecting Models
+
+```{r modelDataFrame}
+library(data.table)
+modelDT <- lightgbm::lgb.model.dt.tree(mod)
+modelDT[
+  tree_index == 0
+  , .(depth, split_feature, threshold, decision_type, leaf_count)
+]
+```
 
 ## Tuning Hyperparameters
 
-### Model Structure
+`lgb.cv()` can be used to perform k-fold cross validation. This can be used for hyperparameter tuning. The minimal example below demonstrates the use of this function to tune combinations of `learning_rate` and `num_iteration`.
 
-### Feature Importance
+```{r crossValidation}
+param_grid <- list(
+  list(num_iteration = 50, learning_rate = 0.1)
+  , list(num_iteration = 100, learning_rate = 0.05)
+  , list(num_iteration = 200, learning_rate = 0.025)
+)
+
+best_score <- -Inf
+best_params <- NULL
+for (params in param_grid) {
+  print(params)
+  cv_bst <- lightgbm::lgb.cv(
+    params = params
+    , data = dtrain
+    , objective = "regression_l1"
+    , verbose = -1L
+  )
+  this_score <- cv_bst$best_score
+  print(sprintf("score: %.2f", this_score))
+  if (this_score > best_score) {
+    print(sprintf("new best score: %.2f", this_score))
+    best_params <- params
+    best_score <- this_score
+  }
+}
+```
 
 ## Deployment
 
-# Other Libraries
+Boosters can be saved and loaded in several formats
 
-## `{catboost}` examples
+```{r serializeModels}
+# dump model to JSON
+model_json <- mod$dump_model()
 
-## `{xgboost}` examples
+# save model in LightGBM model string format
+model_str <- mod$save_model_to_string()
+mod2 <- lightgbm::lgb.load(model_str = model_str)
+
+# save model to text file
+lightgbm::lgb.save(mod, filename = "lightgbm.txt")
+mod3 <- lightgbm::lgb.load(filename = "lightgbm.txt")
+
+# save model to RDS
+lightgbm::saveRDS.lgb.Booster(mod, file = "lightgbm.rds")
+mod4 <- lightgbm::readRDS.lgb.Booster("lightgbm.rds")
+
+# all the models are the same
+preds <- predict(mod, X_test)
+identical(preds, predict(mod2, X_test))
+identical(preds, predict(mod3, X_test))
+identical(preds, predict(mod4, X_test))
+```

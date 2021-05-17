@@ -47,3 +47,28 @@ docker run --rm \
     -e DISABLE_AUTH=true \
     rocker/rstudio:4.0.5
 ```
+
+### Updating the Dependencies slide
+
+One slide in the talk compares the number of dependencies in `{catboost}`, `{lightgbm}`, and `{xgboost}`. To get a list of all recursive dependencies (e.g. dependencies of dependencies of dependencies...), install `{pkgnet}` from CRAN.
+
+```r
+install.packages("pkgnet", repos = "https://cran.r-project.org")
+```
+
+Then run the following. Change `package_name` and `dep_types` to get the different combinations of package name and dependency types.
+
+```r
+library(pkgnet)
+
+package_name <- "lightgbm"
+report_path <- sprintf("/home/rstudio/demo/%s.html", package_name)
+
+pkgnet::CreatePackageReport(
+    pkg_name = package_name
+    , report_path = report_path
+    , pkg_reporters = list(
+        DependencyReporter$new(dep_types = c("Depends"))
+    )
+)
+```

@@ -51,11 +51,14 @@
 *.rda
 *.Rdata
 *.rds
+*.tsv
 *.xls
 *.xlsm
 *.xlsx
 
 # files from local testing
+catboost_info/
+comparing-lightgbm-to-other-r-gbdt-libraries/*.html
 .coverage
 dask-worker-space/
 **/htmlcov/
