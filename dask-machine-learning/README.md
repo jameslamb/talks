@@ -19,4 +19,10 @@ If you'd prefer to not build docker images and run containers yourself, you can 
 * (virtual) [Chicago ML](https://www.meetup.com/Chicago-ML/events/275314043/), January 2021 ([slides](https://docs.google.com/presentation/d/1NNVcd0wQe5Dz8hbbV36065AczRL_Ugre0NaPa1BTSRw/edit?usp=sharing) | [video](https://www.youtube.com/watch?v=hK4fiXz8zXM))
 * (virtual) [Orlando ML & DS](https://www.meetup.com/Orlando-MLDS/events/276267258/), February 2021 ([slides](https://docs.google.com/presentation/d/1Z0lDBYIIiLMxypP_FEauyQJg1fzFWMsk2YsDZs4vKyQ/edit?usp=sharing))
 * (virtual) [DataDays 2021](https://sg.com.mx/dataday/session/workshop-scaling-lightgbm-with-python-and-dask/), March 2021 ([slides](https://docs.google.com/presentation/d/16P-kTtCIBTe9LnEm-7kM-pZwVKrdiTSeeBOL7yoHYfU/edit?usp=sharing))
-* (virtual) [ODSC East 2021](https://odsc.com/speakers/scaling-machine-learning-with-dask/), March 2021 ([slides](https://docs.google.com/presentation/d/12ZG8miqTldOpprrjKw6G7vP-PP2Xs0e8mjc2qwPCt6I/edit?usp=sharing))
+* (virtual) [ODSC East 2021](https://odsc.com/speakers/scaling-machine-learning-with-dask/), March 2021 ([slides](https://docs.google.com/presentation/d/12ZG8miqTldOpprrjKw6G7vP-PP2Xs0e8mjc2qwPCt6I/edit?usp=sharing) | [video](https://www.youtube.com/watch?v=8kKVrJC7op4))
+
+## Promo Images
+
+![](./data-days.png)
+
+![](./odsc-east.png)

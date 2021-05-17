@@ -24,7 +24,7 @@ Click the "title" links below for links to slides, code, and other background in
 |["Recent Developments in LightGBM"][19]                                                  | [LA Data Science Meetup (Jan 2021)][20] |
 |["Road to a Data Science Career"][3]                                                     | [iRisk Lab Hack Night (Aug 2020)][4]    |
 |["Scaling LightGBM with Python and Dask"][5]                                             | [PyData Montreal (Jan 2021)][21]<br>[Chicago ML (Jan 2021)][22] |
-|["Scaling Machine Learning with Python and Dask"][5]                                     | [Chicago Cloud Conference (Sep 2020)][6]|
+|["Scaling Machine Learning with Python and Dask"][5]                                     | [Chicago Cloud Conference (Sep 2020)][6]<br>[ODSC East (Apr 2021)][25]|
 |["Using Retry Logic in R HTTP Clients"][17]                                              | ---                                     |
 |["You can do Open Source"][1]                                                            | [satRdays Chicago (Apr 2019)][2]        |
 
@@ -53,6 +53,7 @@ Click the "title" links below for links to slides, code, and other background in
 [22]: https://www.youtube.com/watch?v=hK4fiXz8zXM
 [23]: ./r-from-the-command-line
 [24]: https://www.youtube.com/watch?v=5kmUE-qHziA
+[25]: https://www.youtube.com/watch?v=8kKVrJC7op4
 
 ## Writing
 

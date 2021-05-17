@@ -1,0 +1,42 @@
+{
+    "save_workspace": "never",
+    "always_save_history": false,
+    "reuse_sessions_for_project_links": true,
+    "initial_working_directory": "/home/rstudio/demo",
+    "num_spaces_for_tab": 4,
+    "enable_snippets": false,
+    "strip_trailing_whitespace": true,
+    "posix_terminal_shell": "bash",
+    "terminal_bell_style": "none",
+    "terminal_weblinks": false,
+    "panes": {
+        "quadrants": [
+            "Source",
+            "TabSet2",
+            "Console",
+            "TabSet1"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer"
+        ],
+        "hiddenTabSet": [],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 0
+    },
+    "editor_theme": "Cobalt",
+    "load_workspace": false
+}
