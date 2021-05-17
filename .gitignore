@@ -89,4 +89,5 @@ credentials.csv
 *_rsa
 
 # exclusions
+!comparing-lightgbm-to-other-r-gbdt-libraries/rstudio-prefs.json
 !recent-developments-in-lightgbm/image.env
