@@ -1,6 +1,6 @@
-
 IMAGE_NAME=r-gbdt-demo
 
+.PHONY: build
 build:
 	docker build \
 		--no-cache \
@@ -8,6 +8,7 @@ build:
 		-t ${IMAGE_NAME} \
 		.
 
+.PHONY: run
 run:
 	docker run --rm \
 		-v $$(pwd):/home/rstudio/demo \
