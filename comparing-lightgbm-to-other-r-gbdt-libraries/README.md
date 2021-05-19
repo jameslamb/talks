@@ -78,7 +78,7 @@ pkgnet::CreatePackageReport(
 
 ## Where this talk has been given:
 
-* (virtual) [New York Open Statistical Programming Meetup](https://www.meetup.com/nyhackr/events/277831968), May 2021 ([slides](https://docs.google.com/presentation/d/15KKUrzTrFVmT-XmjXLfLS1R0pP5r8qenSZHGzVg1LKI/edit?usp=sharing))
+* (virtual) [New York Open Statistical Programming Meetup](https://www.meetup.com/nyhackr/events/277831968), May 2021 ([video](https://www.youtube.com/watch?v=z64JFJQR_J0) | [slides](https://docs.google.com/presentation/d/15KKUrzTrFVmT-XmjXLfLS1R0pP5r8qenSZHGzVg1LKI/edit?usp=sharing))
 
 ## Promo Images
 

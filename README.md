@@ -13,6 +13,7 @@ Click the "title" links below for links to slides, code, and other background in
 
 | title                                                                                   | video(s)                                |
 |:----------------------------------------------------------------------------------------|:---------------------------------------:|
+|["Comparing `{lightgbm}` to other R GBDT libraries"][26]                                 | [New York Stats Meetup (May 2021)][27]  |
 |["Economics Consulting"][14]                                                             | ---                                     |
 |["Economics as a Science"][13]                                                           | ---                                     |
 |["Economists Should Learn Data Science"][18]                                             | ---                                     |
@@ -54,6 +55,8 @@ Click the "title" links below for links to slides, code, and other background in
 [23]: ./r-from-the-command-line
 [24]: https://www.youtube.com/watch?v=5kmUE-qHziA
 [25]: https://www.youtube.com/watch?v=8kKVrJC7op4
+[26]: ./comparing-lightgbm-to-other-r-gbdt-libraries
+[27]: https://www.youtube.com/watch?v=z64JFJQR_J0
 
 ## Writing
 
