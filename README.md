@@ -20,6 +20,7 @@ Click the "title" links below for links to slides, code, and other background in
 |["Intro to Cloud Computing"][15]                                                         | [iRisk Lab Hack Night (Apr 2020)][16]   |
 |["LightGBM's Road to CRAN"][7]                                                           | [satRdays Chicago (Apr 2020)][8]        |
 |["People Shape Software"][9]                                                             | [satRdays Chicago (Apr 2019)][10]       |
+|["Prefect in 5 Minutes"][28]                                                             | ---                                     |
 |["Proliferation of New Database Technologies <br>and Implications for Data Science"][11] | [Domino Data Science Pop-Up (Oct 2017)][12] |
 |["R From the Command Line"][23]                                                          | [LA R Users (Mar 2021)][24]             |
 |["Recent Developments in LightGBM"][19]                                                  | [LA Data Science Meetup (Jan 2021)][20] |
@@ -57,6 +58,7 @@ Click the "title" links below for links to slides, code, and other background in
 [25]: https://www.youtube.com/watch?v=8kKVrJC7op4
 [26]: ./comparing-lightgbm-to-other-r-gbdt-libraries
 [27]: https://www.youtube.com/watch?v=z64JFJQR_J0
+[28]: ./prefect-in-5-minutes
 
 ## Writing
 
