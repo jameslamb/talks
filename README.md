@@ -17,6 +17,7 @@ Click the "title" links below for links to slides, code, and other background in
 |["Economics Consulting"][14]                                                             | ---                                     |
 |["Economics as a Science"][13]                                                           | ---                                     |
 |["Economists Should Learn Data Science"][18]                                             | ---                                     |
+|["How Distributed LightGBM on Dask Works"][29]                                           | ---                                     |
 |["Intro to Cloud Computing"][15]                                                         | [iRisk Lab Hack Night (Apr 2020)][16]   |
 |["LightGBM's Road to CRAN"][7]                                                           | [satRdays Chicago (Apr 2020)][8]        |
 |["People Shape Software"][9]                                                             | [satRdays Chicago (Apr 2019)][10]       |
@@ -59,6 +60,7 @@ Click the "title" links below for links to slides, code, and other background in
 [26]: ./comparing-lightgbm-to-other-r-gbdt-libraries
 [27]: https://www.youtube.com/watch?v=z64JFJQR_J0
 [28]: ./prefect-in-5-minutes
+[29]: ./how-distributed-lightgbm-on-dask-works
 
 ## Writing
 
