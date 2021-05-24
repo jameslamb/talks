@@ -1,12 +1,13 @@
-import boto3
 import json
 import os
-import numpy as np
 import pickle
+
+import boto3
+import numpy as np
 import pandas as pd
-from ticket_closure_lib.transformers import OrdinalConverter  # noqa
 from ticket_closure_lib.transformers import DateColTransformer  # noqa
 from ticket_closure_lib.transformers import FeatureRemover  # noqa
+from ticket_closure_lib.transformers import OrdinalConverter  # noqa
 
 
 class TicketPredictor:

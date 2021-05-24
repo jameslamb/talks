@@ -1,8 +1,8 @@
 import json
-import numpy as np
 import sys
-from datetime import datetime
-from datetime import timedelta
+from datetime import datetime, timedelta
+
+import numpy as np
 
 
 def _get_one_record():
