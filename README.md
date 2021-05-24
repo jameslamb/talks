@@ -17,11 +17,11 @@ Click the "title" links below for links to slides, code, and other background in
 |["Economics Consulting"][14]                                                             | ---                                     |
 |["Economics as a Science"][13]                                                           | ---                                     |
 |["Economists Should Learn Data Science"][18]                                             | ---                                     |
-|["How Distributed LightGBM on Dask Works"][29]                                           | ---                                     |
+|["How Distributed LightGBM on Dask Works"][29]                                           | [Dask Distributed Summit (May 2021)][30]|
 |["Intro to Cloud Computing"][15]                                                         | [iRisk Lab Hack Night (Apr 2020)][16]   |
 |["LightGBM's Road to CRAN"][7]                                                           | [satRdays Chicago (Apr 2020)][8]        |
 |["People Shape Software"][9]                                                             | [satRdays Chicago (Apr 2019)][10]       |
-|["Prefect in 5 Minutes"][28]                                                             | ---                                     |
+|["Prefect in 5 Minutes"][28]                                                             | [ChiPy Data SIG (May 2021)][31]         |
 |["Proliferation of New Database Technologies <br>and Implications for Data Science"][11] | [Domino Data Science Pop-Up (Oct 2017)][12] |
 |["R From the Command Line"][23]                                                          | [LA R Users (Mar 2021)][24]             |
 |["Recent Developments in LightGBM"][19]                                                  | [LA Data Science Meetup (Jan 2021)][20] |
@@ -61,6 +61,8 @@ Click the "title" links below for links to slides, code, and other background in
 [27]: https://www.youtube.com/watch?v=z64JFJQR_J0
 [28]: ./prefect-in-5-minutes
 [29]: ./how-distributed-lightgbm-on-dask-works
+[30]: https://zoom.us/rec/share/2MDNheUjidMT7EOcVuD0qnCph3OGnk9Wjf6QZo-8YLO95bzCEHaiDH6I5LmeqXE.Y87S6St0o2DuG29G
+[31]: https://www.youtube.com/watch?v=z7v40C99wO4&t=3415s
 
 ## Writing
 

@@ -8,4 +8,4 @@
 
 ## Where this talk has been given
 
-* (virtual) [Dask Distributed Summit 2021](https://summit.dask.org/schedule/presentation/29/how-distributed-lightgbm-on-dask-works/), May 2021 ([slides](https://docs.google.com/presentation/d/1ZsM0aOfRG0ZS3rG5T-Prf0NNUY3ZAsP-G-WTDZ-zi-0/edit?usp=sharing))
+* (virtual) [Dask Distributed Summit 2021](https://summit.dask.org/schedule/presentation/29/how-distributed-lightgbm-on-dask-works/), May 2021 ([video](https://zoom.us/rec/share/2MDNheUjidMT7EOcVuD0qnCph3OGnk9Wjf6QZo-8YLO95bzCEHaiDH6I5LmeqXE.Y87S6St0o2DuG29G) | [slides](https://docs.google.com/presentation/d/1ZsM0aOfRG0ZS3rG5T-Prf0NNUY3ZAsP-G-WTDZ-zi-0/edit?usp=sharing))
