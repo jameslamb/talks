@@ -1,6 +1,6 @@
 import json
-import falcon
 
+import falcon
 from lambdas.predict import TicketPredictor
 
 

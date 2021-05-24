@@ -1,6 +1,6 @@
 name: Continuous Integration
 
-# alwas run CI on new commits to any branch
+# always run CI on new commits to any branch
 on: push
 
 jobs:
@@ -14,16 +14,16 @@ jobs:
           - task: linting
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Set up Python 3.7
-        uses: s-weigand/setup-conda@v1
+        uses: conda-incubator/setup-miniconda@v2
         with:
           python-version: 3.7
       - name: linting
         if: matrix.task == 'linting'
         shell: bash
         run: |
-          pip install --upgrade black flake8 nbqa
+          pip install --upgrade black flake8 isort nbqa
           conda install -c conda-forge shellcheck
           make lint
   all-successful:
