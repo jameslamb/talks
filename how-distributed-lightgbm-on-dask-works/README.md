@@ -1,4 +1,4 @@
-# How Distributed LightGBM Works
+# How Distributed on Dask LightGBM Works
 
 > In this talk, attendees will learn about LightGBM, a popular gradient boosting library from Microsoft. After a high-level overview of the LightGBM algorithm, the talk will describe strategies for distributed training of gradient boosted decision tree (GBDT) models generally, and distributed training of LightGBM models specifically.
 
