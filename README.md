@@ -30,7 +30,7 @@ Click the "title" links below for links to slides, code, and other background in
 |["Scaling Machine Learning with Python and Dask"][5]                                     | [Chicago Cloud Conference (Sep 2020)][6]<br>[ODSC East (Apr 2021)][25]|
 |["Using Retry Logic in R HTTP Clients"][17]                                              | ---                                     |
 |["You can do Open Source"][1]                                                            | [satRdays Chicago (Apr 2019)][2]        |
-
+|["You can and should do Open Source"][32]                                                | [CatBoost: от 0 до 1.0.0][33]           |
 
 [1]: ./you-can-do-open-source
 [2]: https://www.youtube.com/watch?v=quFhQvizBE8&t=4h35m15s
@@ -63,6 +63,8 @@ Click the "title" links below for links to slides, code, and other background in
 [29]: ./how-distributed-lightgbm-on-dask-works
 [30]: https://zoom.us/rec/share/2MDNheUjidMT7EOcVuD0qnCph3OGnk9Wjf6QZo-8YLO95bzCEHaiDH6I5LmeqXE.Y87S6St0o2DuG29G
 [31]: https://www.youtube.com/watch?v=z7v40C99wO4&t=3415s
+[32]: ./you-can-and-should-do-open-source
+[33]: https://www.youtube.com/watch?v=ObzrXjqWcTY&t=9200s
 
 ## Writing
 
