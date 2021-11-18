@@ -14,6 +14,7 @@ Click the "title" links below for links to slides, code, and other background in
 | title                                                                                   | video(s)                                |
 |:----------------------------------------------------------------------------------------|:---------------------------------------:|
 |["Comparing `{lightgbm}` to other R GBDT libraries"][26]                                 | [New York Stats Meetup (May 2021)][27]  |
+|["Dask and LightGBM (light intro)"][34]                                                  | [Austin Python Meetup (November 2021)][35]  |
 |["Economics Consulting"][14]                                                             | ---                                     |
 |["Economics as a Science"][13]                                                           | ---                                     |
 |["Economists Should Learn Data Science"][18]                                             | ---                                     |
@@ -65,6 +66,8 @@ Click the "title" links below for links to slides, code, and other background in
 [31]: https://www.youtube.com/watch?v=z7v40C99wO4&t=3415s
 [32]: ./you-can-and-should-do-open-source
 [33]: https://www.youtube.com/watch?v=ObzrXjqWcTY&t=9200s
+[34]: ./dask-lightgbm-short-talk
+[35]: https://www.youtube.com/watch?v=Yh-jK497VZU
 
 ## Writing
 
