@@ -13,6 +13,7 @@ Click the "title" links below for links to slides, code, and other background in
 
 | title                                                                                   | video(s)                                |
 |:----------------------------------------------------------------------------------------|:---------------------------------------:|
+|["Building for Small Data Science Teams"][36]                                            | [MLOps Community Podcast][37]           |
 |["Comparing `{lightgbm}` to other R GBDT libraries"][26]                                 | [New York Stats Meetup (May 2021)][27]  |
 |["Dask and LightGBM (light intro)"][34]                                                  | [Austin Python Meetup (November 2021)][35]  |
 |["Economics Consulting"][14]                                                             | ---                                     |
@@ -68,6 +69,8 @@ Click the "title" links below for links to slides, code, and other background in
 [33]: https://www.youtube.com/watch?v=ObzrXjqWcTY&t=9200s
 [34]: ./dask-lightgbm-short-talk
 [35]: https://www.youtube.com/watch?v=Yh-jK497VZU
+[36]: ./building-for-small-data-science-teams
+[37]: https://www.youtube.com/watch?v=yAsPfhI5Jd8
 
 ## Writing
 

@@ -1,4 +1,4 @@
-# People Shape Software: What I Learned Comparing Python And R Apis
+# People Shape Software: What I Learned Comparing Python And R APIs
 
 ## Description
 
