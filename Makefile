@@ -4,7 +4,7 @@ SHELL=/bin/bash
 format:
 	black .
 	isort .
-	nbqa black . --nbqa-mutate
+	nbqa black .
 
 .PHONY: shellcheck
 shellcheck:
