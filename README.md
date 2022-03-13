@@ -19,6 +19,7 @@ Click the "title" links below for links to slides, code, and other background in
 |["Economics Consulting"][14]                                                             | ---                                     |
 |["Economics as a Science"][13]                                                           | ---                                     |
 |["Economists Should Learn Data Science"][18]                                             | ---                                     |
+|["Every Way SpotHero Uses Python"][38]                                                   | [ChiPy `__main__` meeting (Mar 2022)][39]|
 |["How Distributed LightGBM on Dask Works"][29]                                           | [Dask Distributed Summit (May 2021)][30]|
 |["Intro to Cloud Computing"][15]                                                         | [iRisk Lab Hack Night (Apr 2020)][16]   |
 |["LightGBM's Road to CRAN"][7]                                                           | [satRdays Chicago (Apr 2020)][8]        |
@@ -71,6 +72,8 @@ Click the "title" links below for links to slides, code, and other background in
 [35]: https://www.youtube.com/watch?v=Yh-jK497VZU
 [36]: ./building-for-small-data-science-teams
 [37]: https://www.youtube.com/watch?v=yAsPfhI5Jd8
+[38]: ./every-way-spothero-uses-python
+[39]: https://www.youtube.com/watch?v=d5iZONHGQT0&t=38m34s
 
 ## Writing
 
