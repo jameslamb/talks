@@ -16,6 +16,9 @@ LATEST_VERSION=$(
 echo "latest version of '${PACKAGE_NAME}': ${LATEST_VERSION}"
 echo "this release contains the following files:"
 
+CSV_FILE="./${PACKAGE_NAME}.csv"
+echo "file_name,size_bytes,download_url" > "${CSV_FILE}"
+
 for file_info in $(
         jq \
             -r \
@@ -38,4 +41,5 @@ do
         | jq -r '."url"'
     )
     echo "  * (${file_size_bytes}) ${file_name}"
+    echo "${file_name},${file_size_bytes},${download_url}" >> "${CSV_FILE}"
 done
