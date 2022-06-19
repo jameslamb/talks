@@ -1,11 +1,13 @@
 #!/bin/bash
 
+set -e -u -o pipefail
+
 PACKAGE_NAME="${1}"
 PYPI_URL="https://pypi.org"
 
 curl \
     "${PYPI_URL}/pypi/${PACKAGE_NAME}/json" \
-    -o out.json
+    -o ./out.json
 
 LATEST_VERSION=$(
     jq -r '."info"."version"' ./out.json
@@ -14,12 +16,14 @@ LATEST_VERSION=$(
 echo "latest version of '${PACKAGE_NAME}': ${LATEST_VERSION}"
 echo "this release contains the following files:"
 
-# for d in $(jq -r '."releases"."1.4.2"[]' ./out.json); do
-#     echo "----"
-#     echo ${d}
-# done
-
-for file_info in $(jq -r '."releases"."1.4.2"| keys[] as $k | "\(.[$k])"' ./out.json); do
+for file_info in $(
+        jq \
+            -r \
+            --arg version "${LATEST_VERSION}" \
+            '."releases"[$version] | keys[] as $k | "\(.[$k])"' \
+            ./out.json
+    );
+do
     echo "----"
     file_name=$(
         echo ${file_info} \
