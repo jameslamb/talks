@@ -10,33 +10,51 @@
 
 set -e -u -o pipefail
 
-DOWNLOAD_URL="https://files.pythonhosted.org/packages/5a/ac/b3b9aa2318de52e40c26ae7b9ce6d4e9d1bcdaf5da0899a691642117cf60/pandas-1.4.2.tar.gz"
-LOCAL_FILE="pandas.tar.gz"
+INFO_CSV="${1}"
+ARTIFACT_NAME="${2}"
 
-if [ -f "${LOCAL_FILE}" ]; then
-    echo "file '${LOCAL_FILE}' exists, not re-downloading it"
+DOWNLOAD_URL=$(
+    cat "${INFO_CSV}" \
+    | grep "^${ARTIFACT_NAME}," \
+    | awk -F"," '{print $3}'
+)
+
+if [ -f "${ARTIFACT_NAME}" ]; then
+    echo "file '${ARTIFACT_NAME}' exists, not re-downloading it"
 else
     curl \
-        -o "${LOCAL_FILE}" \
+        -o "${ARTIFACT_NAME}" \
         ${DOWNLOAD_URL}
 fi
-PACKAGE_TARBALL="${LOCAL_FILE}"
-
-#PACKAGE_TARBALL="${1}"
+PACKAGE_TARBALL="${ARTIFACT_NAME}"
 TEMP_PATH="$(pwd)/tmp-dir"
+
+FILE_EXTENSION=$(
+    echo "${PACKAGE_TARBALL}" \
+    | egrep -o "\.*[tar]*\.[a-zA-Z0-9]+$"
+)
+TEMP_FILE_NAME="package${FILE_EXTENSION}"
 
 rm -rf ./tmp-dir
 mkdir -p "${TEMP_PATH}"
-cp "${PACKAGE_TARBALL}" "${TEMP_PATH}/package.tar.gz"
+cp "${PACKAGE_TARBALL}" "${TEMP_PATH}/${TEMP_FILE_NAME}"
 
 pushd "${TEMP_PATH}"
 
 echo "checking compressed size..."
-du --si ./package.tar.gz
+du --si ./${TEMP_FILE_NAME}
 
 echo "decompressing..."
-tar -xzf ./package.tar.gz
-rm ./package.tar.gz
+if [[ "${FILE_EXTENSION}" == ".tar.gz" ]]; then
+    tar -xzf ./${TEMP_FILE_NAME}
+elif [[ "${FILE_EXTENSION}" == ".zip" ]]; then
+    unzip -q ./${TEMP_FILE_NAME}
+else
+    echo "did not recognize extension '${FILE_EXTENSION}'"
+    exit 1
+fi
+
+rm ./${TEMP_FILE_NAME}
 
 echo "checking decompressed size..."
 du -sh .
@@ -44,7 +62,6 @@ du -sh .
 echo "summarizing contents"
 # references:
 # - https://unix.stackexchange.com/a/41552
-# - 
 ALL_FILE_EXTENSIONS=$(
     find \
         "${TEMP_PATH}" \
@@ -54,7 +71,6 @@ ALL_FILE_EXTENSIONS=$(
     | sort -u
 )
 echo "Found the following file extensions"
-#echo " ${ALL_FILE_EXTENSIONS}"
 
 echo "Summarizing file sizes by extension"
 CSV_FILE="sizes.csv"

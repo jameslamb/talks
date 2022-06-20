@@ -68,6 +68,7 @@ prefect-fork/*
 r-from-the-command-line/critiquer
 r-from-the-command-line/stderr.txt
 r-from-the-command-line/stdout.txt
+scipy-talk/tmp-dir/*
 
 # editor files
 **/.idea/

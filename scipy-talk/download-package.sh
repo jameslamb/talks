@@ -5,9 +5,15 @@ set -e -u -o pipefail
 PACKAGE_NAME="${1}"
 PYPI_URL="https://pypi.org"
 
-curl \
-    "${PYPI_URL}/pypi/${PACKAGE_NAME}/json" \
-    -o ./out.json
+if [ -f ./out.json ]; then
+    echo "file './out.json' exists, not recreating it"
+    exit 0
+else
+    echo "downloading PyPI details for package '${PACKAGE_NAME}'"
+    curl \
+        "${PYPI_URL}/pypi/${PACKAGE_NAME}/json" \
+        -o ./out.json
+fi
 
 LATEST_VERSION=$(
     jq -r '."info"."version"' ./out.json
