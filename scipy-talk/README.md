@@ -34,3 +34,8 @@ Ideas for a file content linter:
 
 * Python packaging guides: https://packaging.python.org/en/latest/guides/#
 * PyPI APIs: https://warehouse.pypa.io/api-reference/index.html
+* removing unnecessary stuff from Python packages:
+    - https://towardsdatascience.com/how-to-shrink-numpy-scipy-pandas-and-matplotlib-for-your-data-product-4ec8d7e86ee4
+    - https://uwekorn.com/2021/03/03/deploying-conda-environments-in-docker-cheatsheet.html
+    - https://jcristharif.com/conda-docker-tips.html
+* https://dustingram.com/articles/2021/04/14/powering-the-python-package-index-in-2021/
