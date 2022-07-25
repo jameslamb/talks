@@ -16,7 +16,7 @@ Click the "title" links below for links to slides, code, and other background in
 | ["Building for Small Data Science Teams"][36]                                             |                     [MLOps Community Podcast][37]                      |
 | ["Comparing `{lightgbm}` to other R GBDT libraries"][26]                                  |                 [New York Stats Meetup (May 2021)][27]                 |
 | ["Dask and LightGBM (light intro)"][34]                                                   |               [Austin Python Meetup (November 2021)][35]               |
-| ["Does that CSV belong on PyPI? Probably not"][40]                                        |                                  ---                                   |
+| ["Does that CSV belong on PyPI? Probably not"][40]                                        |                             [SciPy 2022][41]                           |
 | ["Economics Consulting"][14]                                                              |                                  ---                                   |
 | ["Economics as a Science"][13]                                                            |                                  ---                                   |
 | ["Economists Should Learn Data Science"][18]                                              |                                  ---                                   |
@@ -76,6 +76,7 @@ Click the "title" links below for links to slides, code, and other background in
 [38]: ./every-way-spothero-uses-python
 [39]: https://www.youtube.com/watch?v=d5iZONHGQT0&t=38m34s
 [40]: ./does-that-csv-belong-on-pypi
+[41]: https://www.youtube.com/watch?v=-Jqx5QxaNmA&list=PLYx7XA2nY5GcuVaU-l1hPOFgtnhmcHZzC&index=10&t=3h24m50s
 
 ## Writing
 
