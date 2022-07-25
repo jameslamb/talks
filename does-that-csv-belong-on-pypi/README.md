@@ -9,4 +9,6 @@
 
 ## Where this talk has been given
 
-* (Austin, TX) [SciPy 2022](https://www.scipy2022.scipy.org/), July 2022 ([slides](https://docs.google.com/presentation/d/1fpKe2Qgdo1JETa1fFjUqWtXqFiCG_5mIUqrTsCK8CSI/edit?usp=sharing))
+* (Austin, TX) [SciPy 2022](https://www.scipy2022.scipy.org/), July 2022 ([slides](https://docs.google.com/presentation/d/1fpKe2Qgdo1JETa1fFjUqWtXqFiCG_5mIUqrTsCK8CSI/edit?usp=sharing) | [video](https://www.youtube.com/watch?v=-Jqx5QxaNmA&list=PLYx7XA2nY5GcuVaU-l1hPOFgtnhmcHZzC&index=10&t=3h24m50s))
+
+3:24:53
