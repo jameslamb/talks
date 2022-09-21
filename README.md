@@ -81,3 +81,4 @@ Click the "title" links below for links to slides, code, and other background in
 ## Writing
 
 * ["Scaling LightGBM with Dask"](https://opendatascience.com/scaling-lightgbm-with-dask/) (ODSC Blog)
+* ["What does a Machine Learning Engineer Do?"](https://mlops.community/james-lamb-machine-learning-engineer/) (MLOps Community Blog)
