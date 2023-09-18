@@ -12,7 +12,7 @@
 
 ## Where this talk has been given:
 
-* (virtual) Mercado Libre SyncTech talk series, September 2023 ([slides](https://docs.google.com/presentation/d/1V_OIsd2-lI3OX4oLvYVttlJa_vPTe_wF7oDIvqkVfuA/edit?usp=sharing)
+* (virtual) Mercado Libre SyncTech talk series, September 2023 ([slides](https://docs.google.com/presentation/d/1V_OIsd2-lI3OX4oLvYVttlJa_vPTe_wF7oDIvqkVfuA/edit?usp=sharing))
 
 ### Useful Links
 
