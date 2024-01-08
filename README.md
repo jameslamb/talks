@@ -9,13 +9,14 @@ If you attended one of these talks and have follow-up questions
 
 ## Gallery
 
+### Conferences and Meetups
+
 Click the "title" links below for links to slides, code, and other background information.
 
 | title                                                                                     |                                video(s)                                |
 |:------------------------------------------------------------------------------------------|:----------------------------------------------------------------------:|
-| ["Building for Small Data Science Teams"][36]                                             |                     [MLOps Community Podcast][37]                      |
 | ["Comparing `{lightgbm}` to other R GBDT libraries"][26]                                  |                 [New York Stats Meetup (May 2021)][27]                 |
-| ["Dask and LightGBM (light intro)"][34]                                                   |               [Austin Python Meetup (November 2021)][35]               |
+| ["Dask and LightGBM (light intro)"][34]                                                   |               [Austin Python Meetup (Nov 2021)][35]               |
 | ["Does that CSV belong on PyPI? Probably not"][40]                                        |                             [SciPy 2022][41]                           |
 | ["Economics Consulting"][14]                                                              |                                  ---                                   |
 | ["Economics as a Science"][13]                                                            |                                  ---                                   |
@@ -35,6 +36,17 @@ Click the "title" links below for links to slides, code, and other background in
 | ["Using Retry Logic in R HTTP Clients"][17]                                               |                                  ---                                   |
 | ["You can do Open Source"][1]                                                             |                    [satRdays Chicago (Apr 2019)][2]                    |
 | ["You can and should do Open Source"][32]                                                 |                     [CatBoost: от 0 до 1.0.0][33]                      |
+
+### Podcasts
+
+* ["Building for Small Data Science Teams"][36] ([MLOps Community podcast (Dec 2021)][37])
+* ["From Open Source to Traditional ML"][42] ([Top End Devs (Dec 2023)][43])
+
+### Writing
+
+* "Scaling LightGBM with Dask" ([ODSC Blog (Feb 2021)][44])
+* "What does a Machine Learning Engineer Do?" ([MLOps Community Blog (Sep 2022)][45])
+* "Once A Maintainer: James Lamb" ([Allison Pike's "Once a Maintainer" Blog (Oct 2023)][46])
 
 [1]: ./you-can-do-open-source
 [2]: https://www.youtube.com/watch?v=quFhQvizBE8&t=4h35m15s
@@ -77,8 +89,8 @@ Click the "title" links below for links to slides, code, and other background in
 [39]: https://www.youtube.com/watch?v=d5iZONHGQT0&t=38m34s
 [40]: ./does-that-csv-belong-on-pypi
 [41]: https://www.youtube.com/watch?v=-Jqx5QxaNmA&list=PLYx7XA2nY5GcuVaU-l1hPOFgtnhmcHZzC&index=10&t=3h24m50s
-
-## Writing
-
-* ["Scaling LightGBM with Dask"](https://opendatascience.com/scaling-lightgbm-with-dask/) (ODSC Blog)
-* ["What does a Machine Learning Engineer Do?"](https://mlops.community/james-lamb-machine-learning-engineer/) (MLOps Community Blog)
+[42]: ./from-open-source-to-traditional-ml
+[43]: https://topenddevs.com/podcasts/adventures-in-machine-learning/episodes/from-open-source-to-traditional-ml-with-james-lamb-ml-138
+[44]: https://opendatascience.com/scaling-lightgbm-with-dask/
+[45]: https://mlops.community/james-lamb-machine-learning-engineer/
+[46]: https://onceamaintainer.substack.com/p/once-a-maintainer-james-lamb
