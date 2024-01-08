@@ -16,7 +16,7 @@ Click the "title" links below for links to slides, code, and other background in
 | title                                                                                     |                                video(s)                                |
 |:------------------------------------------------------------------------------------------|:----------------------------------------------------------------------:|
 | ["Comparing `{lightgbm}` to other R GBDT libraries"][26]                                  |                 [New York Stats Meetup (May 2021)][27]                 |
-| ["Dask and LightGBM (light intro)"][34]                                                   |               [Austin Python Meetup (November 2021)][35]               |
+| ["Dask and LightGBM (light intro)"][34]                                                   |               [Austin Python Meetup (Nov 2021)][35]               |
 | ["Does that CSV belong on PyPI? Probably not"][40]                                        |                             [SciPy 2022][41]                           |
 | ["Economics Consulting"][14]                                                              |                                  ---                                   |
 | ["Economics as a Science"][13]                                                            |                                  ---                                   |
@@ -39,14 +39,14 @@ Click the "title" links below for links to slides, code, and other background in
 
 ### Podcasts
 
-* ["Building for Small Data Science Teams"][36] ([MLOps Community podcast (December 2021)][37])
-* ["From Open Source to Traditional ML"][42] ([Top End Devs (December 2023)][43])
+* ["Building for Small Data Science Teams"][36] ([MLOps Community podcast (Dec 2021)][37])
+* ["From Open Source to Traditional ML"][42] ([Top End Devs (Dec 2023)][43])
 
 ### Writing
 
-* "Scaling LightGBM with Dask" ([ODSC Blog][44])
-* "What does a Machine Learning Engineer Do?" ([MLOps Community Blog][45])
-* "Once A Maintainer: James Lamb" ([Allison Pike's "Once a Maintainer" Blog][46])
+* "Scaling LightGBM with Dask" ([ODSC Blog (Feb 2021)][44])
+* "What does a Machine Learning Engineer Do?" ([MLOps Community Blog (Sep 2022)][45])
+* "Once A Maintainer: James Lamb" ([Allison Pike's "Once a Maintainer" Blog (Oct 2023)][46])
 
 [1]: ./you-can-do-open-source
 [2]: https://www.youtube.com/watch?v=quFhQvizBE8&t=4h35m15s
