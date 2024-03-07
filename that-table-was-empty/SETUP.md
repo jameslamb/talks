@@ -4,15 +4,9 @@ To support this talk, I tried to replicate this situation with a little Redshift
 
 * nodes: 1
 * instance type: `dc2.large`
-* 
+* region: `us-east-1`
 
-Created a database (https://docs.aws.amazon.com/redshift/latest/gsg/t_creating_database.html):
-
-```sql
-CREATE DATABASE prod;
-```
-
-* created a role per https://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-iam-policies.html
+Created an IAM role per https://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-iam-policies.html and attached it to the cluster.
 
 ```json
 {
@@ -63,14 +57,22 @@ CREATE DATABASE prod;
 }
 ```
 
+I went into the Redshift query editor in the AWS console to run SQL.
+
+Created a database (https://docs.aws.amazon.com/redshift/latest/gsg/t_creating_database.html):
+
+```sql
+CREATE DATABASE prod;
+```
+
 Then ran this to create both a Redshift schema and a database in Glue data catalog
 
 ```sql
 CREATE EXTERNAL SCHEMA
-    conda
+    search_tracking
 FROM DATA CATALOG
 DATABASE
-    'conda' 
+    'search_tracking'
 IAM_ROLE
     'arn:aws:iam::${ACCOUNT}:role/redshift-glue-access'
 CREATE EXTERNAL DATABASE IF NOT EXISTS;
@@ -80,26 +82,44 @@ Then created a table for the `conda` download stats.
 
 ```sql
 CREATE EXTERNAL TABLE
-    conda.download_stats
-(data_source VARCHAR, time TIMESTAMP, pkg_name VARCHAR, pkg_version VARCHAR, pkg_platform VARCHAR, pkg_python VARCHAR, counts BIGINT)
+    search_tracking.download_stats
+(data_source VARCHAR, time TIMESTAMP, pkg_name VARCHAR,
+ pkg_version VARCHAR, pkg_platform VARCHAR, pkg_python VARCHAR,
+ counts BIGINT)
 PARTITIONED BY (
-    date_year 
+    date_year int,
+    date_month int,
+    date_day TIMESTAMP
 )
 STORED AS PARQUET
-LOCATION { 's3://anaconda-package-data/conda/hourly/' }
+LOCATION 's3://anaconda-package-data/conda/hourly/'
 ```
 
-data_source: anaconda for Anaconda distribution, conda-forge for the conda-forge channel on Anaconda.org, and bioconda for the bioconda channel on Anaconda.org.
-time: UTC time, binned by hour
-pkg_name: Package name (Ex: pandas)
-pkg_version: Package version (Ex: 0.23.0)
-pkg_platform: One of linux-32, linux-64, osx-64, win-32, win-64, linux-armv7, linux-ppcle64, linux-aarch64, or noarch
-pkg_python: Python version required by the package, if any (Ex: 3.7)
-counts: Number of downloads for this combination of attributs
+Then rregistered a partition
 
-Registered this data in Glue:
+```shell
+aws --region us-west-2 \
+    glue create-partition \
+        --database-name 'search_tracking' \
+        --table-name 'download_stats' \
+        --partition-input '
+            {
+                "Values": ["2017", "01", "2017-01-01"],
+                "StorageDescriptor": {
+                    "Location": "s3://anaconda-package-data/conda/hourly/2017/01/2017-01-01",
+                    "InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+                    "OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+                    "SerdeInfo": {
+                        "SerializationLibrary": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe"
+                    }
+                }
+            }'
+```
+
+References:
 
 * https://www.anaconda.com/blog/announcing-public-anaconda-package-download-data
 * https://anaconda-package-data.s3.amazonaws.com/
 * https://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-external-schemas.html
 * https://github.com/ContinuumIO/anaconda-package-data
+* https://docs.aws.amazon.com/cli/latest/reference/glue/create-partition.html
