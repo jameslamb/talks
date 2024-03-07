@@ -33,7 +33,7 @@ Click the "title" links below for links to slides, code, and other background in
 | ["Road to a Data Science Career"][3]                                                      |                  [iRisk Lab Hack Night (Aug 2020)][4]                  |
 | ["Scaling LightGBM with Python and Dask"][5]                                              |    [PyData Montreal (Jan 2021)][21]<br>[Chicago ML (Jan 2021)][22]     |
 | ["Scaling Machine Learning with Python and Dask"][5]                                      | [Chicago Cloud Conference (Sep 2020)][6]<br>[ODSC East (Apr 2021)][25] |
-| ["That table was empty!"][47]                                                             | ---  |
+| ["Those tables were empty!"][47]                                                             | ---  |
 | ["Using Retry Logic in R HTTP Clients"][17]                                               |                                  ---                                   |
 | ["You can do Open Source"][1]                                                             |                    [satRdays Chicago (Apr 2019)][2]                    |
 | ["You can and should do Open Source"][32]                                                 |                     [CatBoost: от 0 до 1.0.0][33]                      |
@@ -95,4 +95,4 @@ Click the "title" links below for links to slides, code, and other background in
 [44]: https://opendatascience.com/scaling-lightgbm-with-dask/
 [45]: https://mlops.community/james-lamb-machine-learning-engineer/
 [46]: https://onceamaintainer.substack.com/p/once-a-maintainer-james-lamb
-[47]: ./that-table-was-empty
+[47]: ./those-tables-were-empty
