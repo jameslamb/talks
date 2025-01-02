@@ -106,4 +106,3 @@ SlideController.prototype.sendMsg = function(msg) {
 window.SlideController = SlideController;
 
 })(window);
-

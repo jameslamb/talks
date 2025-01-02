@@ -3,14 +3,14 @@ title       : Economic Consulting
 subtitle    : Practicing Economics in the Hellabyte Era
 author      : James Lamb
 job         : Analyst | IHS Economics | Market Planning & Consulting
-logo        : 
+logo        :
 framework   : io2012  # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
+hitheme     : tomorrow      #
 widgets     : [bootstrap]            # {mathjax, quiz}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
---- 
+---
 
 <footer>
   <hr></hr>
@@ -139,11 +139,11 @@ knit        : slidify::knit2slides
 >- <b>My Marquette Experience:</b>
     - B.S., Economics & Marketing (2013)
     - M.S.A.E., Marketing Research Specialization (2014)
-    
+
 >- <b>Since Marquette:</b>
     - Analyst @ [IHS Economics](https://www.ihs.com/industry/economics-country-risk.html) in Lexington, MA
     - Student in Johns Hopkins Data Science program via [Coursera](https://www.coursera.org/specialization/jhudatascience/1?utm_medium=listingPage)
-    
+
 >- <b>Research Interests:</b>
     - IoT/IIoT --> Confluence of cybernetics, information theory, complex systems, economics, cognitive science. See [here](http://dspace.mit.edu/bitstream/handle/1721.1/86935/EQM%20_%20work%20in%20progress.pdf?sequence=135) for more
     - Economic Complexity --> Just an observer for now. Guiding Projects: [*Complexity and the Economy*](https://global.oup.com/academic/product/complexity-and-the-economy-9780199334292?cc=us&lang=en&) | [Atlas of Economic Complexity](http://atlas.cid.harvard.edu/) | [Retail as a Complex System](http://www.epjdatascience.com/content/3/1/33)
@@ -158,8 +158,8 @@ knit        : slidify::knit2slides
 
 <h2 style="color: #00C990">The Hellabyte Era</h2>
 
->- <b>Andrew McAfee, [Washington Post](http://www.washingtonpost.com/blogs/innovations/wp/2013/10/25/welcome-to-the-hellabyte-era-as-in-a-helluva-lot-of-data/) 2013: </b> 
-    > "We started by measuring data creation in kilobytes and megabytes and gigabytes and we are now at exabytes,         
+>- <b>Andrew McAfee, [Washington Post](http://www.washingtonpost.com/blogs/innovations/wp/2013/10/25/welcome-to-the-hellabyte-era-as-in-a-helluva-lot-of-data/) 2013: </b>
+    > "We started by measuring data creation in kilobytes and megabytes and gigabytes and we are now at exabytes,
     > zettabytes and yottabytes.
     > ...
     > Andrew McAfee and others have actually proposed that we settle on <b>hellabyte, as in 'helluva lot of data'</b>"
@@ -167,7 +167,7 @@ knit        : slidify::knit2slides
 >- Drivers Behind the "[Data Deluge](http://www.economist.com/node/15579717)"
     - Proliferation of [embedded systems](http://leeseshia.org/) (data creators)
     - Resulting IP namespace explosion - [IPv6](http://securityintelligence.com/the-importance-of-ipv6-and-the-internet-of-things/#.VRFU4_nF_3c)
-    - Better tools for using high-dimension datasets: 
+    - Better tools for using high-dimension datasets:
     - [Massive Parallelization](http://www.zdnet.com/article/mapreduce-and-mpp-two-sides-of-the-big-data-coin/) | [Machine Learning](http://en.wikipedia.org/wiki/Machine_learning) | [Distributed Storage](http://en.wikipedia.org/wiki/Apache_Hadoop)
     - Cloud Computing (e.g. [AWS](http://aws.amazon.com/what-is-cloud-computing/)) --> Convert fixed cost of capacity to variable cost
 
@@ -187,7 +187,7 @@ knit        : slidify::knit2slides
 >- <b> Rich Data </b>
     - [Berners-Lee (2014)](http://www.theguardian.com/technology/2014/oct/08/sir-tim-berners-lee-speaks-out-on-data-ownership): How we combine data is more important than how much we have
     - Decision-making is context dependent --> We can rebuild context with [recombinant data](http://www.google.com/patents/US8768873)
-    - Imagine new transactions - [Varian (2014)](http://people.ischool.berkeley.edu/~hal/Papers/2013/BeyondBigDataPaperFINAL.pdf) --> reduction of information asymmetries 
+    - Imagine new transactions - [Varian (2014)](http://people.ischool.berkeley.edu/~hal/Papers/2013/BeyondBigDataPaperFINAL.pdf) --> reduction of information asymmetries
 
 --- bg:#FFFFFF;
 
@@ -203,9 +203,9 @@ knit        : slidify::knit2slides
 
 >- Economists increasingly using large data sets (private & administrative)
     > "Economic models bring a simplifying conceptual framework to to help make sense of large data sets"
-    
+
 >- A major challenge:
-    > "...developing appropriate data management and programming capabilities, as well as designing creative 
+    > "...developing appropriate data management and programming capabilities, as well as designing creative
     > and scalable approaches to summarize, describe, and analyze...data sets"
 
 </br></br>
@@ -229,11 +229,11 @@ knit        : slidify::knit2slides
 <h2 style="color: #00C990">What is Reproducibility?</h2>
 
 >- NOT about replication in the empirical sense
-    - i.e. "Do other people with different data find similar results?" 
+    - i.e. "Do other people with different data find similar results?"
 >- More like:
     - "If you give someone else your data (in its rawest form) and code, do they get the same results you presented?"
 </br></br></br></br></br></br></br>
-    
+
 >- *Note: Much of the content in this section is adopted from ["Reproducible Research"](https://www.coursera.org/course/repdata), a MOOC from Johns Hopkins. See [here](https://github.com/jtleek/modules/tree/master/05_ReproducibleResearch) for more.*
 
 --- bg:#FFFFFF;
@@ -257,7 +257,7 @@ knit        : slidify::knit2slides
     * The exercise will make you assess many dimensions of project work
     * Participate in "big picture" thinking that might be lost in piecemeal efforts
 
---- &twocol bg:#FFFFFF; 
+--- &twocol bg:#FFFFFF;
 
 <footer>
   <hr></hr>
@@ -340,12 +340,12 @@ Reproducible economic research requires programming. There is no way around it. 
     > "I suggest the we confine ourselves to ... intellectually manageable problems."
 
 >- More parsimonious code is not necessarily desirable:
-    > "...one programmer places a one-line program on the desk of another and either he proudly tells 
-    > what is does and adds the questions "Can you code this in less symbols?" - as if this were of 
+    > "...one programmer places a one-line program on the desk of another and either he proudly tells
+    > what is does and adds the questions "Can you code this in less symbols?" - as if this were of
     > any conceptual relevance!- or he just asks 'Guess what it does!' "
-    
->- A given programming task can be approached many ways 
-    - A commitment to "intellectually manageable" programs reduces the set of possible programs to choose from. 
+
+>- A given programming task can be approached many ways
+    - A commitment to "intellectually manageable" programs reduces the set of possible programs to choose from.
 
 --- bg:#FFFFFF;
 
@@ -445,7 +445,7 @@ Not all data are tidy and clean.
     - The seed is the vector used to initialize the random-number generator
     - If your work has any stochastic elements, someone else might get slightly different results as a result of using a different seed
 >- <b>Consider the use case</b>
-    - Understand how your analyses will be used 
+    - Understand how your analyses will be used
     - e.g. Multicollinearity matters more if clients can introduce exogenous shocks
 
 --- bg:#FFFFFF;
@@ -493,7 +493,7 @@ You got the data, cleaned it, and analyzed it. But you can't give the client an 
     - Web Applications ([Shiny](http://www.shinyapps.io/), custom front-end + [yhat](https://yhathq.com/) background, [GitHub pages](https://pages.github.com/), custom web portals)
 >- <b>Elements</b>
     - Text (contextual, tied to the data)
-    - Static graphics (png, bmp) vs. Interactive ([rCharts](http://rcharts.io/), [GoogleVis](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis.pdf), [JavaScript D3.js](http://techslides.com/over-2000-d3-js-examples-and-demos))   
+    - Static graphics (png, bmp) vs. Interactive ([rCharts](http://rcharts.io/), [GoogleVis](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis.pdf), [JavaScript D3.js](http://techslides.com/over-2000-d3-js-examples-and-demos))
 
 --- &twocol bg:#FFFFFF;
 
@@ -603,10 +603,10 @@ When the data or statistical analyses change, your deliverables should change wi
     - Usual workflow: Do stuff to data, get the output, use it to create a final report
     - LSP workflow: code and final text live in one document. Code is run when report is compiled.
     - [Example video](https://www.youtube.com/watch?v=YcJb1HBc-1Q&t=18m15s) (Click me!)
-    
+
 >- <b>[Knuth (1992)](http://www.literateprogramming.com/index.html)</b>
     > "The practitioner of literate programming can be regarded as an essayist, whose main concern is with exposition"
-    
+
 >- <b>Practical Applications</b>
     - LSP offers a uniquely powerful method for authoring documentation.
     - It is superior to commenting code (but don't stop commenting!)
@@ -762,9 +762,9 @@ All software have strengths and weaknesses. You might, for example, want to do d
 </br>
 
  <center>[jaylamb20@gmail.com](jaylamb20@gmail.com) | [Twitter](https://twitter.com/i/notifications) | [LinkedIN](https://www.linkedin.com/in/jameslamb1) | [GitHub](https://github.com/JayLamb20)</center>
-    
+
 </br>
-    
+
 <center><b>Want to Work with me at IHS? Or pay my team to forecast stuff?</b></center>
 
 <br>
@@ -816,4 +816,3 @@ The resources listed here have shaped my view of the near-term future of economi
 - [Kahneman (2013)](http://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555). *Thinking, Fast and Slow*.
 - [Varian (2014)](http://people.ischool.berkeley.edu/~hal/Papers/2013/BeyondBigDataPaperFINAL.pdf). Beyond Big Data.
 - [Varian (2013)](http://people.ischool.berkeley.edu/~hal/Papers/2013/ml.pdf). Big Data: New Tricks for Econometrics.
-

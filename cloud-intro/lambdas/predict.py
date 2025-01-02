@@ -5,14 +5,17 @@ import pickle
 import boto3
 import numpy as np
 import pandas as pd
-from ticket_closure_lib.transformers import DateColTransformer  # noqa
-from ticket_closure_lib.transformers import FeatureRemover  # noqa
-from ticket_closure_lib.transformers import OrdinalConverter  # noqa
+from ticket_closure_lib.transformers import (  # noqa: F401
+    DateColTransformer,
+    FeatureRemover,
+    OrdinalConverter,
+)
 
 
 class TicketPredictor:
     def __init__(self, model_file="model.pkl"):
-        self.mod = pickle.load(open(model_file, "rb"))
+        with open(model_file, "rb") as f:
+            self.mod = pickle.load(f)
         self.columns = [
             "reassignment_count",
             "reopen_count",

@@ -4,7 +4,7 @@ import falcon
 from lambdas.predict import TicketPredictor
 
 
-class PredictionEndpoint(object):
+class PredictionEndpoint:
     def __init__(self):
         self.model = TicketPredictor("model.pkl")
 

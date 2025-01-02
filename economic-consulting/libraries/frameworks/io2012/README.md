@@ -1,9 +1,9 @@
 ## Google IO 2012 HTML5 Slides
 
-Authors: 
+Authors:
   Eric Bidelman <ebidel@gmail.com>
   Luke Mahé <lukem@google.com>
-  
+
 Modified By:
   Ramnath Vaidyanathan
 

@@ -7,18 +7,13 @@ jobs:
   test:
     name: ${{ matrix.task }}
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - task: linting
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Set up Python
         uses: conda-incubator/setup-miniconda@v2
         with:
-          python-version: 3.9
+          python-version: 3.10
       - name: linting
         if: matrix.task == 'linting'
         shell: bash
@@ -31,5 +26,5 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test]
     steps:
-    - name: Note that all tests succeeded
-      run: echo "🎉"
+      - name: Note that all tests succeeded
+        run: echo "🎉"

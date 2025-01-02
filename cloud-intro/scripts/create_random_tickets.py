@@ -1474,7 +1474,9 @@ def _get_one_record():
         "opened_at": _random_timestamp().strftime("%d/%m/%Y %H:%M"),
         "sys_created_at": _random_timestamp().strftime("%d/%m/%Y %H:%M"),
         "sys_updated_at": _random_timestamp().strftime("%d/%m/%Y %H:%M"),
-        "u_priority_confirmation": bool(np.random.choice([True, False], 1, p=[0.28, 0.72])[0]),
+        "u_priority_confirmation": bool(
+            np.random.choice([True, False], 1, p=[0.28, 0.72])[0]
+        ),
         "contact_type": np.random.choice(
             ["Phone", "Email", "Self service", "Direct opening", "IVR"],
             1,
@@ -1487,9 +1489,13 @@ def _get_one_record():
         "cmdb_ci": np.random.choice(cmdb_cis, 1)[0],
         "impact": np.random.choice(["2 - Medium", "1 - High", "3 - Low"], 1)[0],
         "urgency": np.random.choice(["2 - Medium", "1 - High", "3 - Low"], 1)[0],
-        "priority": np.random.choice(["3 - Moderate", "2 - High", "4 - Low", "1 - Critical"], 1)[0],
+        "priority": np.random.choice(
+            ["3 - Moderate", "2 - High", "4 - Low", "1 - Critical"], 1
+        )[0],
         "assignment_group": np.random.choice(groups, 1)[0],
-        "notify": np.random.choice(["Do Not Notify", "Send Email"], 1, p=[0.98, 0.02])[0],
+        "notify": np.random.choice(["Do Not Notify", "Send Email"], 1, p=[0.98, 0.02])[
+            0
+        ],
         "problem_id": np.random.choice(problem_ids, 1)[0],
     }
 

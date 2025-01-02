@@ -36,18 +36,18 @@ Resources:
           PolicyDocument:
             Version: '2012-10-17'
             Statement:
-            - Resource:
-                - !Sub "arn:aws:s3:::${pTrainingArtifactBucketName}"
-              Effect: 'Allow'
-              Action:
-                - 's3:ListBucket'
-                - 's3:ListBucketVersion'
-            - Resource:
-                - !Sub "arn:aws:s3:::${pTrainingArtifactBucketName}/*"
-              Effect: 'Allow'
-              Action:
-                - 's3:GetObject'
-                - 's3:GetObjectVersion'
+              - Resource:
+                  - !Sub "arn:aws:s3:::${pTrainingArtifactBucketName}"
+                Effect: 'Allow'
+                Action:
+                  - 's3:ListBucket'
+                  - 's3:ListBucketVersion'
+              - Resource:
+                  - !Sub "arn:aws:s3:::${pTrainingArtifactBucketName}/*"
+                Effect: 'Allow'
+                Action:
+                  - 's3:GetObject'
+                  - 's3:GetObjectVersion'
   #################
   # Lambda Layers #
   #################

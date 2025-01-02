@@ -87,6 +87,7 @@ credentials.csv
 *.pub
 *.rdp
 *_rsa
+.ruff_cache
 
 # exclusions
 !comparing-lightgbm-to-other-r-gbdt-libraries/rstudio-prefs.json

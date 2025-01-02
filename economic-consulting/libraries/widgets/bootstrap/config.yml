@@ -1,4 +1,3 @@
 bootstrap:
   css: css/bootstrap.css
   js: [js/bootstrap.min.js, "js/bootbox.min.js"]
-
