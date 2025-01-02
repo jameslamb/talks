@@ -25,7 +25,6 @@ class OrdinalConverter(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X, y=None):
-        assert isinstance(X, pd.DataFrame)
         X = X.copy()
         for feat_col, levels in self.feature_map.items():
             X[feat_col] = X[feat_col].map(levels).astype("int")
@@ -43,11 +42,12 @@ class DateColTransformer(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
 
-    def transform(self, X, y=None):
-        # assert isinstance(X, pd.DataFrame)
+    def transform(self, X: pd.DataFrame, y=None):
         X = X.copy()
         creation_col = "opened_at"
-        X["time_til_update"] = (X["sys_updated_at"] - X[creation_col]) / np.timedelta64(1, "s")
+        X["time_til_update"] = (X["sys_updated_at"] - X[creation_col]) / np.timedelta64(
+            1, "s"
+        )
         X["open_hour_of_day"] = X[creation_col].dt.hour
         return X
 
@@ -65,7 +65,7 @@ class FeatureRemover(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
 
-    def transform(self, X, y=None):
+    def transform(self, X: pd.DataFrame, y=None):
         X = X.copy()
         for col in self.cols_to_drop:
             if col in X.columns:

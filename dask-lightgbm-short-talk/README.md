@@ -2,7 +2,7 @@
 
 ## Description
 
-> This talk provided a brief introduction to LightGBM, followed by more than an 
+> This talk provided a brief introduction to LightGBM, followed by more than an
 
 ## Where this talk has been given:
 

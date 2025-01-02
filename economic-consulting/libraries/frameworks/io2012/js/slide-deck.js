@@ -22,7 +22,7 @@ function SlideDeck(el) {
 
   // Call this explicitly. Modernizr.load won't be done until after DOM load.
   this.onDomLoaded_.bind(this)();
-  
+
   // Trigger links from Table of Contents to Slides.
   this.showContents();
 }
@@ -129,11 +129,11 @@ SlideDeck.prototype.addEventListeners_ = function() {
   //   'msTransition': 'MSTransitionEnd',
   //   'transition': 'transitionend'
   // };
-  // 
+  //
   // // Find the correct transitionEnd vendor prefix.
   // window.transEndEventName = transEndEventNames[
   //     Modernizr.prefixed('transition')];
-  // 
+  //
   // // When slides are done transitioning, kickoff loading iframes.
   // // Note: we're only looking at a single transition (on the slide). This
   // // doesn't include autobuilds the slides may have. Also, if the slide
@@ -191,7 +191,7 @@ SlideDeck.prototype.onBodyKeyDown_ = function(e) {
       this.recordTimings(false);
       e.preventDefault();
       break;
-      
+
     case 76: //l
       this.recordTimings(true);
       e.preventDefault();
@@ -213,15 +213,15 @@ SlideDeck.prototype.onBodyKeyDown_ = function(e) {
       this.prevSlide();
       e.preventDefault();
       break;
-      
-    // inserted to work with popcorn.js 
+
+    // inserted to work with popcorn.js
     case 71: // G: Go to slide
       var slideNumber = prompt('Go to slide: ');
       if (slideNumber != null) {
         this.gotoSlide(parseInt(slideNumber) - 1);
       }
     break;
-    
+
     // inserted to display table of contents
     case 84: // T: Toggle Table of Contents
        $("#io2012-ptoc").toggle();
@@ -551,7 +551,7 @@ SlideDeck.prototype.triggerSlideEvent = function(type, slideNo) {
 };
 
 
-// Inserted to work with popcorn.js 
+// Inserted to work with popcorn.js
 SlideDeck.prototype.gotoSlide = function(curSlide) {
   if (curSlide < 0) {
     curSlide = 0;
@@ -596,12 +596,12 @@ SlideDeck.prototype.highlightCurSlide = function(){
   self = this;
   var _i = this.curSlide_ - 2;
   $('ul.dropdown-menu li').removeClass('current');
-  $('ul.dropdown-menu li:eq(' + _i + ')').addClass('current'); 
+  $('ul.dropdown-menu li:eq(' + _i + ')').addClass('current');
   $('div.pagination li').removeClass('active');
-  $('div.pagination li:eq(' + _i + ')').addClass('active'); 
+  $('div.pagination li:eq(' + _i + ')').addClass('active');
   $('div.pagination li a').live('click', function(){
     var i = $(this).data('slide');
-    self.gotoSlide(i + 1); 
+    self.gotoSlide(i + 1);
   });
 };
 
@@ -639,7 +639,7 @@ SlideDeck.prototype.updateSlides_ = function(opt_dontPush) {
   this.triggerSlideEvent('slideenter', curSlide);
 
 // window.setTimeout(this.disableSlideFrames_.bind(this, curSlide - 2), 301);
-// 
+//
 // this.enableSlideFrames_(curSlide - 1); // Previous slide.
 // this.enableSlideFrames_(curSlide + 1); // Current slide.
 // this.enableSlideFrames_(curSlide + 2); // Next slide.
@@ -657,7 +657,7 @@ SlideDeck.prototype.updateSlides_ = function(opt_dontPush) {
     this.focusOverview_();
     return;
   }
-  
+
   // highlight current slide in table of contents
   this.highlightCurSlide();
 };

@@ -17,6 +17,6 @@ doppel-describe \
     --data-dir "${DATA_DIR}"
 
 doppel-test \
-    --files "${DATA_DIR}/python_xgboost.json,${DATA_DIR}/r_xgboost.json" \
-    | tee out.log \
-    | cat
+    --files "${DATA_DIR}/python_xgboost.json,${DATA_DIR}/r_xgboost.json" |
+    tee out.log |
+    cat

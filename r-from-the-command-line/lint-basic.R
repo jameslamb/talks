@@ -33,4 +33,3 @@ lintr::lint_dir(
     path = DIR_TO_LINT
     , linters = LINTERS_TO_USE
 )
-

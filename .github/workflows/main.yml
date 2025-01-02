@@ -4,32 +4,19 @@ name: Continuous Integration
 on: push
 
 jobs:
-  test:
-    name: ${{ matrix.task }}
+  lint:
+    name: lint
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - task: linting
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: conda-incubator/setup-miniconda@v2
-        with:
-          python-version: 3.9
-      - name: linting
-        if: matrix.task == 'linting'
-        shell: bash
-        run: |
-          pip install --upgrade black flake8 isort nbqa
-          conda install -c conda-forge shellcheck
-          make lint
+      - uses: actions/checkout@v4
+      - uses: pre-commit/action@v3.0.1
   all-successful:
-    # https://github.community/t/is-it-possible-to-require-all-github-actions-tasks-to-pass-without-enumerating-them/117957/4?u=graingert
+    if: always()
     runs-on: ubuntu-latest
-    needs: [test]
+    needs:
+      - lint
     steps:
-    - name: Note that all tests succeeded
-      run: echo "🎉"
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@v1.2.2
+        with:
+          jobs: ${{ toJSON(needs) }}

@@ -2,7 +2,7 @@
 
 ## Description
 
-> In this conversation, James shares some hard-won lessons on how to effectively use technology to create applications powered by machine learning models. 
+> In this conversation, James shares some hard-won lessons on how to effectively use technology to create applications powered by machine learning models.
 
 > James also talks about how making the "right" architecture decisions is as much about org structure and hiring plans as it is about technological features.
 
