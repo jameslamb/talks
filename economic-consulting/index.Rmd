@@ -359,7 +359,7 @@ Reproducible economic research requires programming. There is no way around it. 
 
 "Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later." - [Git documentation](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
-- The software: [Git](http://en.wikipedia.org/wiki/Git_%28software%29) | [GitHub](https://github.com/JayLamb20/MSAE_Alumni_2015/commits/gh-pages) (online extension)
+- The software: [Git](http://en.wikipedia.org/wiki/Git_%28software%29) | [GitHub](https://github.com/jameslamb/MSAE_Alumni_2015/commits/gh-pages) (online extension)
     - Distributed revision control and collaboration system
     - Tracks project history, lets you revert back to old versions
 - An example:
@@ -753,15 +753,13 @@ All software have strengths and weaknesses. You might, for example, want to do d
 
 </br>
 
-<center>Umm thanks? You can click through the slides [here](http://jaylamb20.github.io/MSAE_Alumni_2015/index.html#1) or view the raw code [here](https://github.com/JayLamb20/MSAE_Alumni_2015).
+<center>Umm thanks? You can click through the slides or view the raw code [here](https://github.com/jameslamb/MSAE_Alumni_2015).
 
 </br>
 
 <center><b>Questions? Comments? Profanity-Laced Criticisms?</b></center>
 
 </br>
-
- <center>[jaylamb20@gmail.com](jaylamb20@gmail.com) | [Twitter](https://twitter.com/i/notifications) | [LinkedIN](https://www.linkedin.com/in/jameslamb1) | [GitHub](https://github.com/JayLamb20)</center>
 
 </br>
 

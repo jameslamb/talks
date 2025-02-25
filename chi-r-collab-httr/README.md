@@ -78,16 +78,9 @@ It looks something like this.
     "notifications": {
         "num_bells": 1,
         "num_messages": 1,
-        "notifications": [
-            {"type": "direct-message", "preview": "Emily sent you a message", "url": "https://twitter.com/messages/917780412134457344"},
-            {"type": "like", "preview": "Edward liked your tweet", "url": "https://twitter.com/LilNasX/status/1248356745816109056"}
-        ]
+        "notifications": []
     },
-    "timeline": [
-        "https://twitter.com/Corey_Yanofsky/status/1248110948122013696",
-        "https://twitter.com/_ColinFay/status/1245458045376892930",
-        "https://twitter.com/Chas10Buttigieg/status/1243975360800346113"
-    ]
+    "timeline": []
 }
 ```
 
@@ -103,16 +96,9 @@ social_profile <- list(
     , "notificationos" = list(
         "num_bells" = 1
         , "num_messages" = 1
-        , "notifications" = list(
-            list("type" = "direct-message", "preview" = "Emily sent you a message", "url" = "https://twitter.com/messages/917780412134457344")
-            , list("type" = "like", "preview" = "Edward liked your tweet", "url" = "https://twitter.com/LilNasX/status/1248356745816109056")
-        )
+        , "notifications" = list()
     )
-    , "timelines" = c(
-        "https://twitter.com/Corey_Yanofsky/status/1248110948122013696",
-        "https://twitter.com/_ColinFay/status/1245458045376892930",
-        "https://twitter.com/Chas10Buttigieg/status/1243975360800346113"
-    )
+    , "timelines" = character()
 )
 ```
 
