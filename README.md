@@ -5,7 +5,7 @@ This repository holds information on talks I've given at conferences and meetups
 If you attended one of these talks and have follow-up questions
 
 1. Thank you so much for attending!
-2. Open [an issue](https://github.com/jameslamb/talks/issues) or message me [on Twitter](https://twitter.com/_jameslamb)
+2. Open [an issue](https://github.com/jameslamb/talks/issues) or message me at the contact information at https://github.com/jameslamb
 
 ## Gallery
 
