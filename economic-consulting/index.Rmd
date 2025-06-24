@@ -359,7 +359,7 @@ Reproducible economic research requires programming. There is no way around it. 
 
 "Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later." - [Git documentation](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
-- The software: [Git](http://en.wikipedia.org/wiki/Git_%28software%29) | [GitHub](https://github.com/jameslamb/MSAE_Alumni_2015/commits/gh-pages) (online extension)
+- The software: [Git](http://en.wikipedia.org/wiki/Git_%28software%29) | [GitHub](https://github.com/jameslamb/MSAE_Alumni_2015)
     - Distributed revision control and collaboration system
     - Tracks project history, lets you revert back to old versions
 - An example:

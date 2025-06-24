@@ -10,4 +10,4 @@
 
 ## Links
 
-**slides**: https://jameslamb.github.io/MSAE_Alumni_2016/index.html#1
+Archived repo: https://github.com/jameslamb/MSAE_Alumni_2016
