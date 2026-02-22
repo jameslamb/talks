@@ -1,33 +1,30 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-toml
       - id: end-of-file-fixer
       - id: trailing-whitespace
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    # Ruff version.
-    rev: v0.12.0
+    rev: v0.15.2
     hooks:
-      # Run the linter.
-      - id: ruff
+      - id: ruff-check
         args: ["--config", "pyproject.toml", "--fix"]
-      # Run the formatter.
       - id: ruff-format
         args: ["--config", "pyproject.toml"]
         types_or: [python, jupyter]
   - repo: https://github.com/maxwinterstein/shfmt-py
-    rev: v3.11.0.2
+    rev: v3.12.0.1
     hooks:
       - id: shfmt
         args: ["--indent=4", "--space-redirects", "--write"]
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.10.0.1
+    rev: v0.11.0.1
     hooks:
       - id: shellcheck
         args: ["--exclude=SC2002"]
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.37.1
+    rev: v1.38.0
     hooks:
       - id: yamllint
