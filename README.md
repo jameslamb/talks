@@ -28,6 +28,7 @@ Click the "title" links below for links to slides, code, and other background in
 | ["People Shape Software"][9]                                                              |                   [satRdays Chicago (Apr 2019)][10]                    |
 | ["Prefect in 5 Minutes"][28]                                                              |                    [ChiPy Data SIG (May 2021)][31]                     |
 | ["Proliferation of New Database Technologies <br>and Implications for Data Science"][11]  |              [Domino Data Science Pop-Up (Oct 2017)][12]               |
+| ["pydistcheck: detect portability issues in Python package distributions][48] | [SciPy 2025][49] |
 | ["R From the Command Line"][23]                                                           |                      [LA R Users (Mar 2021)][24]                       |
 | ["Recent Developments in LightGBM"][19]                                                   |                [LA Data Science Meetup (Jan 2021)][20]                 |
 | ["Road to a Data Science Career"][3]                                                      |                  [iRisk Lab Hack Night (Aug 2020)][4]                  |
@@ -96,3 +97,5 @@ Click the "title" links below for links to slides, code, and other background in
 [45]: https://mlops.community/james-lamb-machine-learning-engineer/
 [46]: https://onceamaintainer.substack.com/p/once-a-maintainer-james-lamb
 [47]: ./those-tables-were-empty
+[48]: ./pydistcheck-a-portability-linter/
+[49]: https://youtu.be/Q1fDDprEDS8?si=ER5i04KBhhvUgKSg&t=2101
