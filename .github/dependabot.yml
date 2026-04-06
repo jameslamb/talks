@@ -13,3 +13,5 @@ updates:
       prefix: "[ci]"
     labels:
       - maintenance
+    cooldown:
+      default-days: 7
